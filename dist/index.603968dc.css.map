@@ -1,0 +1,1 @@
+{"mappings":"","sources":["src/scss/main.scss"],"sourcesContent":["@use \"mixins\";\n@use \"variables\";\n\n"],"names":[],"version":3,"file":"index.603968dc.css.map","sourceRoot":"/__parcel_source_root/"}
