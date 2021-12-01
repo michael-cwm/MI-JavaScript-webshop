@@ -2,4 +2,90 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+.hero {
+  background-image: url("hero-lg.fa4b6c50.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .hero {
+    height: 100vh;
+    background-position: top;
+  }
+}
+.hero-text {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: #fff;
+  padding: 170px 0px 30px;
+}
+@media screen and (min-width: 768px) {
+  .hero-text {
+    padding: 350px 0px 30px;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .hero-text {
+    font-size: 1.7rem;
+    padding: 450px 0px 10px;
+  }
+}
+.hero-text .btn {
+  border-radius: 10px;
+  border: none;
+  background-color: #ef233c;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 8px;
+}
+.hero-text .btn:hover {
+  background-color: #2b2d42;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .hero-text .btn {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .hero-text .btn {
+    font-size: 1rem;
+    padding: 17px 20px;
+  }
+}
+.hero-text h1 {
+  padding: 10px;
+  font-weight: 700;
+  margin: 0px 0px 10px;
+}
+@media screen and (min-width: 768px) {
+  .hero-text h1 {
+    padding: 0px 100px;
+    margin: 0px 0px 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .hero-text h1 {
+    margin: 0px 0px 20px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
 /*# sourceMappingURL=index.603968dc.css.map */

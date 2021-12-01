@@ -1,0 +1,77 @@
+@use "../fonts";
+@use "../variables";
+@use "../mixins";
+
+.hero {
+  background-image: url("../assets/hero-lg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mixins.tablet-only {
+    height: 60vh;
+  }
+
+  @include mixins.desktop-only {
+    height: 100vh;
+    background-position: top;
+  }
+}
+
+
+.hero-text {
+  font-family: fonts.$secondary-font;
+  text-align: center;
+  color: #fff;
+  padding: 170px 0px 30px;
+
+  @include mixins.tablet-only {
+    padding: 350px 0px 30px;
+    font-size: 1.5rem;
+  }
+
+  @include mixins.desktop-only {
+    font-size: 1.7rem;
+    padding: 450px 0px 10px;
+  }
+
+  .btn {
+    border-radius: 10px;
+    border: none;
+    background-color: variables.$color-lightred;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 8px;
+
+    &:hover {
+      background-color: variables.$color-dkblue;
+      color: white;
+    }
+
+    @include mixins.tablet-only {
+      font-size: 1rem;
+    }
+
+    @include mixins.desktop-only {
+      font-size: 1rem;
+      padding: 17px 20px;
+    }
+  }
+
+  h1 {
+    padding: 10px;
+    font-weight: 700;
+    margin: 0px 0px 10px;
+
+    @include mixins.tablet-only {
+      padding: 0px 100px;
+      margin: 0px 0px 20px;
+    }
+
+    @include mixins.desktop-only {
+      margin: 0px 0px 20px;
+    }
+  }
+}
