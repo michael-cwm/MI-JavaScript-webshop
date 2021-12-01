@@ -46,6 +46,7 @@ body {
   cursor: pointer;
   font-weight: 700;
   box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 8px;
+  transition: background-color 0.3s;
 }
 .hero-text .btn:hover {
   background-color: #2b2d42;
