@@ -1,0 +1,53 @@
+@use "../fonts";
+@use "../variables";
+@use "../mixins";
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$color-dkblue;
+
+    @include mixins.tablet-only {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px 0px;
+      }
+    
+      @include mixins.desktop-only {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 60px 0px;
+      }
+
+    section {
+        color: white;
+        line-height: 1.4rem;
+        padding: 10px 20px;
+
+        @include mixins.tablet-only {
+           padding: 0;
+          }
+        
+          @include mixins.desktop-only {
+            padding: 0;
+          }
+
+        span {
+            display: block;
+        }
+    }
+
+    section:last-child span {
+        display: inline;
+        padding: 0px 20px 0px 0px;
+    }
+
+    .bi {
+        font-size: 2rem;
+
+        &:hover {
+            color: variables.$color-lightred;
+        }
+    }
+}
