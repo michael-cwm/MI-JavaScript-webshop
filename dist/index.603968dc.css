@@ -7,23 +7,41 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 50vh;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 60vh;
+    height: 70vh;
+  }
+}
+.hero .hero-video {
+  display: none;
+}
+@media screen and (min-width: 1100px) {
+  .hero .hero-video {
+    display: block;
   }
 }
 @media screen and (min-width: 1100px) {
-  .hero {
+  .hero .hero-video video {
+    object-fit: cover;
+    object-position: center;
+    width: 100vw;
     height: 100vh;
-    background-position: top;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 }
 .hero-text {
+  position: absolute;
+  z-index: 2;
   font-family: "Playfair Display", serif;
   text-align: center;
   color: #fff;
-  padding: 170px 0px 30px;
+  padding: 200px 0px 30px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .hero-text {
@@ -34,23 +52,26 @@ body {
 @media screen and (min-width: 1100px) {
   .hero-text {
     font-size: 1.7rem;
-    padding: 450px 0px 10px;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 .hero-text .btn {
   border-radius: 10px;
-  border: none;
-  background-color: #ef233c;
-  padding: 15px 20px;
+  border: 6px inset #2b2d42;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 700;
-  box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 8px;
-  transition: background-color 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
+  transition: 0.4s;
 }
 .hero-text .btn:hover {
-  background-color: #2b2d42;
-  color: white;
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
 }
 @media screen and (min-width: 768px) {
   .hero-text .btn {
@@ -59,12 +80,15 @@ body {
 }
 @media screen and (min-width: 1100px) {
   .hero-text .btn {
+    background-color: #2b2d42;
+    color: #fff;
+    border: none;
     font-size: 1rem;
     padding: 17px 20px;
   }
 }
 .hero-text h1 {
-  padding: 10px;
+  padding: 10px 30px;
   font-weight: 700;
   margin: 0px 0px 10px;
 }
@@ -76,7 +100,10 @@ body {
 }
 @media screen and (min-width: 1100px) {
   .hero-text h1 {
+    font-size: 3rem;
+    padding: 60px 10px 20px;
     margin: 0px 0px 20px;
+    text-shadow: -2px 2px black;
   }
 }
 * {
