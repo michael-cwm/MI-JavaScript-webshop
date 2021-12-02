@@ -2,6 +2,9 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+.test {
+  font-size: 5rem;
+}
 .hero {
   background-image: url("hero-lg.fa4b6c50.jpg");
   background-position: center;
@@ -29,7 +32,7 @@ body {
     object-position: center;
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
   }
@@ -37,6 +40,8 @@ body {
 .hero-text {
   position: absolute;
   z-index: 2;
+  top: 0;
+  left: 0;
   font-family: "Playfair Display", serif;
   text-align: center;
   color: #fff;
