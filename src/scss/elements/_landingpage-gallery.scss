@@ -1,0 +1,171 @@
+@use "../fonts";
+@use "../variables";
+@use "../mixins";
+
+
+.wrapper {
+    @include mixins.desktop-only {
+        background-color: variables.$color-lightgrey;
+    }
+}
+
+.section-header h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 30px 10px 20px;
+    margin: 0;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    width: 100%;
+
+    @include mixins.tablet-only {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        width: 100%;
+        padding: 40px 0px;
+    }
+
+    @include mixins.desktop-only {
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: center;
+        width: 70%;
+        padding: 40px 0px;
+
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0px;
+
+        @include mixins.tablet-only {
+            width: 30%;
+            margin: 0;
+            background-color: #fff;
+            border: 2px solid variables.$color-dkblue;
+        }
+
+        @include mixins.desktop-only {
+            width: 30%;
+            background-color: #fff;
+            border: 2px solid variables.$color-dkblue;
+            margin: 0;
+        }
+
+        span {
+            display: block;
+            margin: 10px 0px;
+        }
+
+    }
+}
+
+.product-card {
+
+    @include mixins.tablet-only {
+        padding: 0px 10px;
+
+    }
+    @include mixins.desktop-only {
+        padding: 0px 15px;
+
+    }
+}
+
+.product:nth-child(2) {
+    @include mixins.tablet-only {
+        margin: 0px 20px;
+    }
+
+    @include mixins.desktop-only {
+        margin: 0px 40px;
+    }
+
+}
+
+.product-name {
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    @include mixins.desktop-only {
+        font-size: 1.3rem;
+
+    }
+}
+
+.product-details {
+    font-size: 1.1rem;
+    text-align: justify;
+    word-break: break-all;
+    line-height: 1.8rem;
+
+    @include mixins.tablet-only {
+        font-size: 1rem;
+
+    }
+    @include mixins.desktop-only {
+        font-size: 1rem;
+        line-height: 1.6rem;
+
+    }
+}
+
+.price {
+    text-align: right;
+    font-weight: 700;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    @include mixins.desktop-only {
+        height: 300px;
+    }
+}
+
+.product-buttons {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 10px;
+
+        @include mixins.tablet-only {
+            font-size: 0.8rem;
+            padding: 9px 20px;
+    
+        }
+
+        @include mixins.desktop-only {
+            padding: 12px 25px;
+    
+        }
+    }
+
+    button:first-child {
+        background-color: variables.$color-dkblue;
+        color: white;
+    }
+
+    button:last-child {
+        background-color: variables.$color-lightred;
+        color: white;
+    }
+}

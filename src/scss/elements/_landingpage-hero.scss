@@ -29,7 +29,7 @@
         object-position: center;
         width: 100vw;
         height: 100vh;
-        position: fixed;
+        position: relative;
         top: 0;
         left: 0;
 
@@ -43,10 +43,11 @@
 .hero-text {
   position: absolute;
   z-index: 2;
+  top: 0;
+  left: 0;
   font-family: fonts.$secondary-font;
   text-align: center;
   color: #fff;
-  padding: 200px 0px 30px;
   width: 100%;
 
   @include mixins.tablet-only {
