@@ -7,11 +7,11 @@ body {
 }
 header {
   background-color: #2b2d42;
-  height: 9vh;
+  height: 10vh;
   display: flex;
   align-items: center;
 }
-header .burgerContainer {
+header .menu-btn {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -29,6 +29,52 @@ header .logoContainer {
 .inputContainer {
   display: none;
 }
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
 @media screen and (min-width: 768px) {
   header {
     display: flex;
@@ -41,7 +87,7 @@ header .logoContainer {
   header .bi.bi-search {
     margin-left: -30px;
     font-weight: bold;
-    font-size: 15pt;
+    font-size: 12pt;
   }
   header form {
     display: flex;
@@ -52,85 +98,5 @@ header .logoContainer {
     height: 25px;
     width: 300px;
   }
-}
-.hamburger1 {
-  height: 45px;
-  padding: -10px;
-  display: -ms-grid;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  justify-items: center;
-  z-index: 120;
-  position: absolute;
-  left: 85%;
-}
-.hamburger1 div {
-  background-color: white;
-  position: relative;
-  width: 40px;
-  height: 5px;
-  margin-top: 7px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-#toggle1 {
-  display: none;
-}
-#toggle1:checked + .hamburger1 .top {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin-top: 22.5px;
-}
-#toggle1:checked + .hamburger1 .meat {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  margin-top: -5px;
-}
-#toggle1:checked + .hamburger1 .bottom {
-  -webkit-transform: scale(0);
-  transform: scale(0);
-}
-#toggle1:checked ~ .menu1 {
-  height: 340px;
-  width: 100%;
-}
-.menu1 {
-  width: 100%;
-  background-color: rgba(192, 192, 192, 0.15);
-  margin: 0;
-  display: -ms-grid;
-  display: grid;
-  grid-template-rows: 1fr repeat(4, 0.5fr);
-  grid-row-gap: 25px;
-  padding: 0;
-  list-style: none;
-  clear: both;
-  width: auto;
-  text-align: center;
-  height: 0px;
-  overflow: hidden;
-  transition: height 0.4s ease;
-  z-index: 120;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-.menu1 a:first-child {
-  margin-top: 60px;
-}
-.menu1 a:last-child {
-  margin-bottom: 0px;
-}
-.link1 {
-  width: 100%;
-  margin: 0;
-  padding: 10px 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-.link1:hover {
-  background-color: rgba(255, 255, 255, 0.349);
-  color: #3d3d3d;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 /*# sourceMappingURL=index.603968dc.css.map */
