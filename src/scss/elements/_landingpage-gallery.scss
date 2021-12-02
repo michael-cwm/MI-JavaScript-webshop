@@ -2,12 +2,12 @@
 @use "../variables";
 @use "../mixins";
 
-
-.wrapper {
-    @include mixins.desktop-only {
-        background-color: variables.$color-lightgrey;
+.wrapper  { 
+    padding: 240px 0px;
+        @include mixins.desktop-only {
+            background-color: variables.$color-lightgrey;
+        }
     }
-}
 
 .section-header h2 {
     text-align: center;

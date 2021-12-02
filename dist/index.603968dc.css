@@ -3,6 +3,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+.wrapper {
+  padding: 240px 0px;
+}
+>>>>>>> feature/landingpage-productgallery
 @media screen and (min-width: 1100px) {
   .wrapper {
     background-color: #edf2f4;
