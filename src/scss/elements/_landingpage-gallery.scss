@@ -11,9 +11,13 @@
 
 .section-header h2 {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     padding: 30px 10px 20px;
     margin: 0;
+
+    @include mixins.desktop-only {
+        font-size: 2rem;
+    }
 }
 
 .products {
