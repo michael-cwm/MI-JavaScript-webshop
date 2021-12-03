@@ -58,8 +58,8 @@
 
   @include mixins.desktop-only {
     font-size: 1.7rem;
-    margin: 0 auto;
     width: 100%;
+    padding: 300px 0px 0px;
   }
 
   .btn {
