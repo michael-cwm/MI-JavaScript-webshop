@@ -271,6 +271,10 @@ body {
   font-family: "Playfair Display", serif;
   text-align: center;
   color: #fff;
+<<<<<<< HEAD
+=======
+  padding: 200px 10px;
+>>>>>>> feature/hero
   width: 100%;
 }
 @media screen and (min-width: 768px) {
