@@ -16,6 +16,12 @@ header{
         justify-content: flex-end;
         width: 100%;
         margin-right: 10px;
+        .bi.bi-cart,
+        .bi.bi-search{
+          color: white;
+          margin-right: 15px;
+          font-size: 20pt;
+        }
     }
     .logoContainer{
         display: flex;
@@ -46,18 +52,18 @@ header{
 }
 .menu-btn__burger {
   width: 50px;
-  height: 6px;
+  height: 3px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; 
 }
 .menu-btn__burger::before,
 .menu-btn__burger::after {
   content: '';
   position: absolute;
   width: 50px;
-  height: 6px;
+  height: 3px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -92,9 +98,12 @@ ul{
     header{
         display: flex;
         .inputContainer{
-            width: 50%;
+            width: 100%;
             display: flex;
             justify-content: center;
+        }
+        .menu-btn{
+          width: 30%;
         }
         .bi.bi-search{
             margin-left: -30px;
@@ -114,7 +123,11 @@ ul{
         
     }
 
-//slut på media-query
+    .menu-btn .bi.bi-search{
+    display: none;
+}
+
+//slut på tablet-query
 }
 
 
@@ -134,13 +147,13 @@ ul{
       &:hover{
         cursor:pointer;
       }
-      li{
-        list-style:none;
-        &:hover{
-        text-decoration:underline;
-        text-decoration-color: variables.$color-lightred;
-        }
-      }
+      // li{
+      //   list-style: none;
+      //   &:hover{
+      //   text-decoration:underline;
+      //   text-decoration-color: variables.$color-lightred;
+      //   }
+      // }
     }
   }
 
@@ -148,5 +161,68 @@ ul{
     display: none;
   }
 
-//slut på media-query
+  //animation för underline till navbar
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: variables.$color-lightred;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .dropdown-content {
+    font-family: fonts.$primary-font;
+    font-size: 11pt;
+    display: none;
+    position: absolute;
+    background-color: variables.$color-lightgrey;
+    color: black;
+    min-width: 132px;
+    min-height: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    list-style: none;
+
+    li:hover {
+      background-color: rgba(153, 153, 153, 0.164);
+    }
+  }
+
+  li {
+    transition: transform ease-in-out 0.2s;
+
+    &:hover {
+      // transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    &.hover-underline-animation {
+      position: relative;
+      display: inline-block;
+
+      &:hover .dropdown-content {
+        display: block;
+        
+      }
+    }
+  }
+
+//slut på desktop-query
 }

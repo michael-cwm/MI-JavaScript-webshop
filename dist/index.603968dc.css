@@ -17,6 +17,12 @@ header .menu-btn {
   width: 100%;
   margin-right: 10px;
 }
+header .menu-btn .bi.bi-cart,
+header .menu-btn .bi.bi-search {
+  color: white;
+  margin-right: 15px;
+  font-size: 20pt;
+}
 header .logoContainer {
   display: flex;
   align-items: center;
@@ -41,7 +47,7 @@ header .logoContainer {
 }
 .menu-btn__burger {
   width: 50px;
-  height: 6px;
+  height: 3px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
@@ -52,7 +58,7 @@ header .logoContainer {
   content: "";
   position: absolute;
   width: 50px;
-  height: 6px;
+  height: 3px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
@@ -83,9 +89,12 @@ ul {
     display: flex;
   }
   header .inputContainer {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
+  }
+  header .menu-btn {
+    width: 30%;
   }
   header .bi.bi-search {
     margin-left: -30px;
@@ -100,6 +109,10 @@ ul {
     border-radius: 10px;
     height: 25px;
     width: 300px;
+  }
+
+  .menu-btn .bi.bi-search {
+    display: none;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -120,16 +133,65 @@ ul {
   nav ul:hover {
     cursor: pointer;
   }
-  nav ul li {
-    list-style: none;
-  }
-  nav ul li:hover {
-    text-decoration: underline;
-    text-decoration-color: #ef233c;
-  }
 
   .menu-btn__burger {
     display: none;
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ef233c;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .dropdown-content {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11pt;
+    display: none;
+    position: absolute;
+    background-color: #edf2f4;
+    color: black;
+    min-width: 132px;
+    min-height: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    list-style: none;
+  }
+  .dropdown-content li:hover {
+    background-color: rgba(153, 153, 153, 0.164);
+  }
+
+  li {
+    transition: transform ease-in-out 0.2s;
+  }
+  li:hover {
+    cursor: pointer;
+  }
+  li.hover-underline-animation {
+    position: relative;
+    display: inline-block;
+  }
+  li.hover-underline-animation:hover .dropdown-content {
+    display: block;
   }
 }
 /*# sourceMappingURL=index.603968dc.css.map */
