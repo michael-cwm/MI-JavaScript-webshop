@@ -336,6 +336,112 @@ body {
     text-shadow: -2px 2px black;
   }
 }
+.wrapper {
+  padding: 20px 0px 20px;
+  background-color: #edf2f4;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 50px 0px 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .wrapper {
+    padding: 180px 0px 100px;
+  }
+}
+#product-display-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px 0px 0px;
+  background: #fff;
+}
+@media screen and (min-width: 768px) {
+  #product-display-container {
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #product-display-container {
+    flex-direction: row;
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 50px;
+  }
+}
+#product-display-container .product-info-section {
+  padding: 10px 20px;
+}
+@media screen and (min-width: 768px) {
+  #product-display-container .product-info-section {
+    padding: 10px 20px 20px 0px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #product-display-container .product-info-section {
+    padding: 10px 20px 20px 0px;
+  }
+}
+#product-display-container span {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  #product-display-container .users {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #product-display-container .users {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #product-display-container .star-rating {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #product-display-container .star-rating {
+    font-size: 0.9rem;
+  }
+}
+#product-display-container .price {
+  text-align: left;
+  font-weight: 700;
+}
+#product-display-container button {
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2b2d42;
+  color: white;
+  margin: 10px 0px 0px;
+}
+@media screen and (min-width: 768px) {
+  #product-display-container button {
+    font-size: 0.8rem;
+    padding: 9px 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #product-display-container button {
+    padding: 12px 20px;
+  }
+}
+.product-img-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 * {
   box-sizing: border-box;
 }
