@@ -22,6 +22,7 @@ header .menu-btn .bi.bi-search {
   color: white;
   margin-right: 15px;
   font-size: 20pt;
+  cursor: pointer;
 }
 header .logoContainer {
   display: flex;
@@ -35,6 +36,9 @@ header .logoContainer {
 .inputContainer {
   display: none;
 }
+.contact {
+  display: none;
+}
 .menu-btn {
   position: relative;
   display: flex;
@@ -42,11 +46,10 @@ header .logoContainer {
   align-items: center;
   width: 80px;
   height: 80px;
-  cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger {
-  width: 50px;
+  width: 30px;
   height: 3px;
   background: #fff;
   border-radius: 5px;
@@ -57,7 +60,7 @@ header .logoContainer {
 .menu-btn__burger::after {
   content: "";
   position: absolute;
-  width: 50px;
+  width: 30px;
   height: 3px;
   background: #fff;
   border-radius: 5px;
@@ -65,21 +68,21 @@ header .logoContainer {
   transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before {
-  transform: translateY(-16px);
+  transform: translateY(-8px);
 }
 .menu-btn__burger::after {
-  transform: translateY(16px);
+  transform: translateY(8px);
 }
 .menu-btn.open .menu-btn__burger {
-  transform: translateX(-50px);
+  transform: translateX(50px);
   background: transparent;
   box-shadow: none;
 }
 .menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
+  transform: rotate(45deg) translate(-35px, 35px);
 }
 .menu-btn.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+  transform: rotate(-45deg) translate(-35px, -35px);
 }
 ul {
   display: none;
@@ -99,7 +102,7 @@ ul {
   header .bi.bi-search {
     margin-left: -30px;
     font-weight: bold;
-    font-size: 12pt;
+    font-size: 14pt;
   }
   header form {
     display: flex;
@@ -109,6 +112,7 @@ ul {
     border-radius: 10px;
     height: 25px;
     width: 300px;
+    border: none;
   }
 
   .menu-btn .bi.bi-search {
@@ -192,6 +196,15 @@ ul {
   }
   li.hover-underline-animation:hover .dropdown-content {
     display: block;
+  }
+
+  .contact {
+    display: inline-block;
+    color: white;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=index.603968dc.css.map */
