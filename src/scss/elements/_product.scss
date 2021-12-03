@@ -1,0 +1,129 @@
+@use "../fonts";
+@use "../variables";
+@use "../mixins";
+
+.wrapper {
+    padding: 20px 0px 20px;
+    background-color: variables.$color-lightgrey;
+
+    @include mixins.tablet-only {
+        padding: 50px 0px 20px;
+
+    }
+
+    @include mixins.desktop-only {
+        padding: 180px 0px 100px;
+
+    }
+}
+
+#product-display-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 0px;
+    background: #fff;
+
+    @include mixins.tablet-only {
+        flex-direction: row;
+        width: 90%;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 50px;
+    }
+
+    @include mixins.desktop-only {
+        flex-direction: row;
+        width: 70%;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 50px;
+        padding: 50px;
+    
+    }
+
+    .product-info-section {
+        padding: 10px 20px;
+
+        @include mixins.tablet-only {
+            padding: 10px 20px 20px 0px;
+        }
+
+        @include mixins.desktop-only {
+            padding: 0px 20px 20px 0px;
+           
+        }
+    }
+
+    span {
+        display: block;
+    }
+
+    .users {
+        @include mixins.tablet-only {
+            font-size: 0.9rem;
+        }
+
+        @include mixins.desktop-only {
+            font-size: 0.9rem;
+        }
+    }
+
+    .star-rating {
+
+        @include mixins.tablet-only {
+            font-size: 0.9rem;
+        }
+
+        @include mixins.desktop-only {
+            font-size: 0.9rem;
+        }
+
+    }
+
+    .price {
+        text-align: left;
+        font-weight: 700;
+    }
+
+
+    button {
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 10px 0px;
+        border: none;
+        border-radius: 10px;
+        background-color: variables.$color-lightred;
+        color: white;
+        margin: 10px 0px 0px;
+
+        @include mixins.tablet-only {
+            font-size: 0.8rem;
+            padding: 15px 20px;
+
+        }
+
+        @include mixins.desktop-only {
+            width: 30%;
+
+        }
+    }
+}
+
+.product-details-footer {
+
+    @include mixins.desktop-only {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+  
+}
+
+.product-img-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
