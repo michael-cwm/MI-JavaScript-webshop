@@ -42,7 +42,7 @@ body {
   font-family: "Playfair Display", serif;
   text-align: center;
   color: #fff;
-  padding: 200px 0px 30px;
+  padding: 200px 10px;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
