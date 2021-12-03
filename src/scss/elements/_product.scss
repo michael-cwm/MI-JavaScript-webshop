@@ -37,6 +37,8 @@
         justify-content: center;
         margin: 0 auto;
         gap: 50px;
+        padding: 50px;
+    
     }
 
     .product-info-section {
@@ -47,7 +49,8 @@
         }
 
         @include mixins.desktop-only {
-            padding: 10px 20px 20px 0px;
+            padding: 0px 20px 20px 0px;
+           
         }
     }
 
@@ -88,26 +91,35 @@
         font-weight: 700;
         cursor: pointer;
         text-transform: uppercase;
-        padding: 10px 25px;
+        width: 100%;
+        padding: 10px 0px;
         border: none;
         border-radius: 10px;
-        background-color: variables.$color-dkblue;
+        background-color: variables.$color-lightred;
         color: white;
         margin: 10px 0px 0px;
 
         @include mixins.tablet-only {
             font-size: 0.8rem;
-            padding: 9px 20px;
+            padding: 15px 20px;
 
         }
 
         @include mixins.desktop-only {
-            padding: 12px 20px;
+            width: 30%;
 
         }
     }
+}
 
+.product-details-footer {
 
+    @include mixins.desktop-only {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+  
 }
 
 .product-img-section img {
