@@ -56,13 +56,11 @@
             width: 45%;
             margin: 0px 10px 10px;
             background-color: #fff;
-            border: 2px solid variables.$color-dkblue;
         }
 
         @include mixins.desktop-only {
             width: 20%;
             background-color: #fff;
-            border: 2px solid variables.$color-dkblue;
             margin: 0px 10px 20px;
             box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
         }
