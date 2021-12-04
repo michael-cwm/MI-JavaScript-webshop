@@ -55,7 +55,7 @@ body {
 }
 @media screen and (min-width: 1100px) {
   .wrapper {
-    padding: 180px 0px 100px;
+    padding: 180px 0px 50px;
     background-color: #edf2f4;
   }
 }
@@ -64,6 +64,7 @@ body {
   font-size: 1.7rem;
   padding: 30px 10px 20px;
   margin: 0;
+  font-family: "Playfair Display", serif;
 }
 @media screen and (min-width: 1100px) {
   .section-header h2 {
@@ -91,11 +92,12 @@ body {
     flex-direction: row;
     margin: 0 auto;
     justify-content: center;
-    padding: 40px 0px;
+    padding: 20px 0px 10px;
     flex-wrap: wrap;
   }
 }
 .products .product {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -106,33 +108,36 @@ body {
     width: 45%;
     margin: 0px 10px 10px;
     background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
   }
 }
 @media screen and (min-width: 1100px) {
   .products .product {
     width: 20%;
     background-color: #fff;
-    margin: 0px 10px 20px;
+    margin: 0px 12px 30px;
+    padding: 0px 0px 100px;
     box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
   }
 }
 .products .product span {
   display: block;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 @media screen and (min-width: 768px) {
   .product-card {
-    padding: 0px 10px;
+    padding: 0px 10px 100px;
   }
 }
 @media screen and (min-width: 1100px) {
   .product-card {
-    padding: 0px 15px;
+    padding: 5px 15px;
   }
 }
 .product-name {
   font-weight: 700;
   font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
 }
 @media screen and (min-width: 1100px) {
   .product-name {
@@ -141,9 +146,10 @@ body {
 }
 .product-details {
   font-size: 1rem;
+  font-weight: 500;
   text-align: justify;
-  word-break: break-all;
-  line-height: 1.7rem;
+  word-break: keep-all;
+  line-height: 1.6rem;
 }
 @media screen and (min-width: 768px) {
   .product-details {
@@ -155,7 +161,17 @@ body {
   .product-details {
     font-size: 0.8rem;
     line-height: 1.2rem;
+    line-break: normal;
   }
+}
+.users {
+  background-image: url("person.6cd279b8.svg");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 20px;
+  padding-left: 25px;
 }
 @media screen and (min-width: 768px) {
   .users {
@@ -167,24 +183,40 @@ body {
     font-size: 0.9rem;
   }
 }
+.star-rating {
+  background-image: url("stars.c3daf45e.svg");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40%;
+  height: 15%;
+  padding: 8px;
+  margin: 0;
+}
 @media screen and (min-width: 768px) {
   .star-rating {
     font-size: 0.9rem;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1100px) {
   .star-rating {
     font-size: 0.9rem;
+    padding: 0;
   }
 }
 .price {
-  text-align: right;
   font-weight: 700;
 }
 .img-container img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  object-position: right center;
+}
+.img-container img:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .img-container img {
@@ -193,7 +225,7 @@ body {
 }
 @media screen and (min-width: 1100px) {
   .img-container img {
-    height: 200px;
+    height: 250px;
   }
 }
 .product-buttons {
@@ -208,7 +240,7 @@ body {
   text-transform: uppercase;
   padding: 10px 25px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 @media screen and (min-width: 768px) {
   .product-buttons button {
@@ -218,16 +250,56 @@ body {
 }
 @media screen and (min-width: 1100px) {
   .product-buttons button {
-    padding: 12px 20px;
+    padding: 9px 17px;
   }
 }
 .product-buttons button:first-child {
   background-color: #2b2d42;
   color: white;
+  transition: 0.2s;
+}
+.product-buttons button:first-child:hover {
+  background-color: #434665;
+  color: #fff;
 }
 .product-buttons button:last-child {
   background-color: #ef233c;
   color: white;
+  transition: 0.2s;
+}
+.product-buttons button:last-child:hover {
+  background-color: #ce0303;
+}
+.product-footer {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .product-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 10px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .product-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 10px;
+  }
+}
+.product-footer .price-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.product-footer .product-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .hero {
   background-image: url("hero-lg.fa4b6c50.jpg");
