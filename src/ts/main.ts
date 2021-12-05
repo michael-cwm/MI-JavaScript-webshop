@@ -4,14 +4,17 @@ window.onload = function() {
     loadHTML() 
 }
 
-// Load HTML on landing page
-function loadHTML() {
+let wrapper: HTMLDivElement = document.querySelector(".wrapper");
 let container: HTMLDivElement = document.querySelector(".products");
 container.classList.add("products");
+let hero: HTMLDivElement = document.querySelector("#hero");
+
+
+// Load HTML on landing page
+function loadHTML() {
 
 // Loop through the product catalog
 for (let i = 0; i < productcatalog.length; i++) {
-    console.log(productcatalog);
 
     // Product card
     let product: HTMLDivElement = document.createElement("div");
@@ -78,11 +81,16 @@ for (let i = 0; i < productcatalog.length; i++) {
     productButtons.classList.add("product-buttons");
     priceContainer.after(productButtons);
     let buttonBuy: HTMLButtonElement = document.createElement("button");
-    buttonBuy.innerHTML = "Mer info";
+    buttonBuy.classList.add("button-buy");
+    buttonBuy.innerHTML = "Köp";
+
     let buttonInfo: HTMLButtonElement = document.createElement("button");
-    buttonInfo.innerHTML = "Köp";
-    productButtons.appendChild(buttonBuy);
+    buttonInfo.classList.add("button-info");
+    buttonInfo.innerHTML = "Mer info";
+
     productButtons.appendChild(buttonInfo);
+    productButtons.appendChild(buttonBuy);
+
 
 }
 }
