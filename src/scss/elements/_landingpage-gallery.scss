@@ -4,22 +4,29 @@
 
 .wrapper {
     padding: 5px 0px 10px;
+    background-color: variables.$color-lightgrey;
+
+    @include mixins.tablet-only {
+        padding: 0;
+    }
 
     @include mixins.desktop-only {
-        padding: 180px 0px 50px;
-        background-color: variables.$color-lightgrey;
+        padding: 0;
+       
     }
 }
 
 .section-header h2 {
+    background-color: variables.$color-lightgrey;
     text-align: center;
     font-size: 1.7rem;
-    padding: 30px 10px 20px;
+    padding: 30px 10px 0px;
     margin: 0;
     font-family: fonts.$secondary-font;
 
     @include mixins.desktop-only {
         font-size: 2rem;
+        padding: 200px 10px 20px;
     }
 }
 
@@ -221,7 +228,7 @@
         }
     }
 
-    button:first-child {
+ .button-info {
         background-color: variables.$color-dkblue;
         color: white;
         transition: 0.2s;
@@ -235,7 +242,7 @@
        
     }
 
-    button:last-child {
+.button-buy {
         background-color: variables.$color-lightred;
         color: white;
         transition: 0.2s;

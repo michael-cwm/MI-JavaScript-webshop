@@ -52,23 +52,30 @@ body {
 }
 .wrapper {
   padding: 5px 0px 10px;
+  background-color: #edf2f4;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 0;
+  }
 }
 @media screen and (min-width: 1100px) {
   .wrapper {
-    padding: 180px 0px 50px;
-    background-color: #edf2f4;
+    padding: 0;
   }
 }
 .section-header h2 {
+  background-color: #edf2f4;
   text-align: center;
   font-size: 1.7rem;
-  padding: 30px 10px 20px;
+  padding: 30px 10px 0px;
   margin: 0;
   font-family: "Playfair Display", serif;
 }
 @media screen and (min-width: 1100px) {
   .section-header h2 {
     font-size: 2rem;
+    padding: 200px 10px 20px;
   }
 }
 .products {
@@ -253,21 +260,21 @@ body {
     padding: 9px 17px;
   }
 }
-.product-buttons button:first-child {
+.product-buttons .button-info {
   background-color: #2b2d42;
   color: white;
   transition: 0.2s;
 }
-.product-buttons button:first-child:hover {
+.product-buttons .button-info:hover {
   background-color: #434665;
   color: #fff;
 }
-.product-buttons button:last-child {
+.product-buttons .button-buy {
   background-color: #ef233c;
   color: white;
   transition: 0.2s;
 }
-.product-buttons button:last-child:hover {
+.product-buttons .button-buy:hover {
   background-color: #ce0303;
 }
 .product-footer {
@@ -301,7 +308,7 @@ body {
   justify-content: space-between;
   align-items: flex-end;
 }
-.hero {
+#hero {
   background-image: url("hero-lg.fa4b6c50.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -310,20 +317,20 @@ body {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .hero {
+  #hero {
     height: 70vh;
   }
 }
-.hero .hero-video {
+#hero .hero-video {
   display: none;
 }
 @media screen and (min-width: 1100px) {
-  .hero .hero-video {
+  #hero .hero-video {
     display: block;
   }
 }
 @media screen and (min-width: 1100px) {
-  .hero .hero-video video {
+  #hero .hero-video video {
     object-fit: cover;
     object-position: center;
     width: 100vw;
