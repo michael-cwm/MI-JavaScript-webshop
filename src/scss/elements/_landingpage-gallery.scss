@@ -20,7 +20,7 @@
     background-color: variables.$color-lightgrey;
     text-align: center;
     font-size: 1.7rem;
-    padding: 30px 10px 0px;
+    padding: 20px 10px 0px;
     margin: 0;
     font-family: fonts.$secondary-font;
 
@@ -34,7 +34,6 @@
 .products {
     display: flex;
     flex-direction: column;
-    padding: 0px 15px;
     width: 100%;
 
     @include mixins.tablet-only {
@@ -61,6 +60,8 @@
         flex-direction: column;
         width: 100%;
         margin: 10px 0px;
+        padding: 10px;
+        background-color: #fff;
 
         @include mixins.tablet-only {
             width: 45%;
@@ -206,10 +207,9 @@
         font-size: 0.9rem;
         font-weight: 600;
         cursor: pointer;
-        text-transform: uppercase;
         padding: 10px 25px;
         border: none;
-        border-radius: 8px;
+        border-radius: 6px;
         text-decoration: none;
 
         @include mixins.tablet-only {
