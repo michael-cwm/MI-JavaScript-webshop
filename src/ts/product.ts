@@ -5,9 +5,8 @@ import {
 
 
 window.onload = function () {
-  
-}
 
+}
 
 export function redirect(productId: string, 
     productPrice: number, 
@@ -16,8 +15,24 @@ export function redirect(productId: string,
     productUsers: string, 
     productDetails: string) {
     location.href = "product.html?id=" + productId;
-    console.log("Product ID " + productId, " Product name: " + productName + " Product img: " + productImg + " Product users: " + productUsers + " Product price: " + productPrice + " Product details: " + productDetails);
 
+    loadProductDetails(productId,
+        productPrice,
+        productName,
+        productImg,
+        productUsers,
+        productDetails)
+
+    console.log("Product ID " + productId, " Product name: " + productName + " Product img: " + productImg + " Product users: " + productUsers + " Product price: " + productPrice + " Product details: " + productDetails);   
+}
+
+
+function loadProductDetails(productId: string,
+    productPrice: number,
+    productName: string,
+    productImg: string,
+    productUsers: string,
+    productDetails: string) {
     let wrapper: HTMLDivElement = document.querySelector(".wrapper");
     let arrowContainer = document.createElement("div");
     arrowContainer.classList.add("back-arrow-container");
@@ -26,6 +41,7 @@ export function redirect(productId: string,
     arrow.setAttribute("class", "bi bi-arrow-left");
 
     wrapper.before(arrowContainer);
+
 
     arrow.addEventListener("click", () => {
         window.history.back();
@@ -78,3 +94,4 @@ export function redirect(productId: string,
     details.classList.add("product-details");
     users.after(details);
 }
+
