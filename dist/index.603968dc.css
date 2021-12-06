@@ -411,16 +411,15 @@ footer h3 {
 }
 @media screen and (min-width: 1100px) {
   .hero-text {
-    font-size: 1.7rem;
     width: 100%;
-    padding: 300px 0px 0px;
+    padding: 250px 0px 0px;
   }
 }
 .hero-text .btn {
-  border-radius: 10px;
-  border: 3px inset #2b2d42;
+  border-radius: 6px;
+  color: #2b2d42;
   background-color: #fff;
-  color: #000;
+  border: none;
   padding: 10px 20px;
   text-transform: uppercase;
   cursor: pointer;
@@ -445,6 +444,7 @@ footer h3 {
     border: none;
     font-size: 1rem;
     padding: 17px 20px;
+    margin: 30px 0px 0px;
   }
 }
 .hero-text h1 {
@@ -459,8 +459,8 @@ footer h3 {
 }
 @media screen and (min-width: 1100px) {
   .hero-text h1 {
-    font-size: 3rem;
-    padding: 60px 10px 20px;
+    font-size: 3.5rem;
+    padding: 0;
     margin: 0px 0px 20px;
     text-shadow: -2px 2px black;
   }
