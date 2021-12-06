@@ -11,7 +11,7 @@ header{
     height: 10vh;
     display: flex;
     align-items: center;
-    .menu-btn{
+    .headerWrapper{
         display: flex;
         justify-content: flex-end;
         width: 100%;
@@ -44,8 +44,7 @@ header{
   display: none;
 }
 
-// hamburgarmeny
-.menu-btn {
+.headerWrapper {
   position: relative;
   display: flex;
   justify-content: center;
@@ -54,6 +53,8 @@ header{
   height: 80px;
   transition: all .5s ease-in-out;
 }
+
+// hamburgarmeny
 .menu-btn__burger {
   width: 30px;
   height: 3px;
@@ -61,6 +62,7 @@ header{
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out; 
+  cursor: pointer;
 }
 .menu-btn__burger::before,
 .menu-btn__burger::after {
@@ -94,6 +96,38 @@ header{
   transform: rotate(-45deg) translate(-35px, -35px);
 }
 
+
+//dropdown-menyn till burgaren
+
+.burgerStyle{
+  width: 100%;
+  background-color: variables.$color-lightblue;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 15pt;
+  color: black;
+  li{
+    // text-align: center;
+    display: flex;
+    padding-left: 20px;
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
+    &:hover{
+      background-color: variables.$color-lightgrey;
+      border-left: 4px solid variables.$color-lightred;
+    }
+    span{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      flex-direction: row;
+      padding-right: 20px;
+    }
+  }
+}
+
 ul{
   display: none;
 }
@@ -107,7 +141,7 @@ ul{
             display: flex;
             justify-content: center;
         }
-        .menu-btn{
+        .headerWrapper{
           width: 30%;
         }
         .bi.bi-search{
@@ -121,15 +155,17 @@ ul{
             
         }
         input{
-            border-radius: 10px;
-            height: 25px;
+            border-radius: 20px;
+            height: 30px;
             width: 300px;
             border:none;
+            padding: 20px;
+            font-weight:600px;
         }
         
     }
 
-    .menu-btn .bi.bi-search{
+    .headerWrapper .bi.bi-search{
     display: none;
 }
 
@@ -138,6 +174,9 @@ ul{
 
 
 @include mixins.desktop-only{
+  .burgerStyle{
+    display: none;
+  }
   nav{
     width: 100%;
     height: 5vh;
@@ -149,17 +188,9 @@ ul{
       padding: 0px;
       margin: 0px;
       height: 100%;
-      color: white;
       &:hover{
         cursor:pointer;
       }
-      // li{
-      //   list-style: none;
-      //   &:hover{
-      //   text-decoration:underline;
-      //   text-decoration-color: variables.$color-lightred;
-      //   }
-      // }
     }
   }
 
@@ -237,6 +268,7 @@ ul{
     margin-bottom: 0px;
     font-family: fonts.$primary-font;
     cursor: pointer;
+    font-size: 12pt;
 
   }
 

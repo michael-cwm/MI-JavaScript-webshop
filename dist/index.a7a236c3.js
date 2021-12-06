@@ -11,10 +11,9 @@ window.onload = function() {
         }
     });
 };
-function myFunction() {
-    var x = document.getElementById("Demo");
-    if (x.className.indexOf("w3-show") == -1) x.className += " w3-show";
-    else x.className = x.className.replace(" w3-show", "");
+function burgerToggle() {
+    let element = document.getElementById("burgerDropdown");
+    element.classList.toggle("burgerStyle");
 }
 
 //# sourceMappingURL=index.a7a236c3.js.map

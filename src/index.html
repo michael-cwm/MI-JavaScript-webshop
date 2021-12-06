@@ -18,21 +18,33 @@
         </div>
         <div class="inputContainer">
             <form>
-                <input type="text">
+                <input type="text" placeholder="Sök...">
                 <i class="bi bi-search"></i>
             </form>
         </div>
-        <div class="menu-btn">
+        <div class="headerWrapper">
             <i class="bi bi-search"></i>
             <h5 class="contact">Kontakt</h5>
             <i class="bi bi-cart"></i>
-            <div class="menu-btn__burger"></div>
-         </div>
+            <div class="menu-btn" onclick="burgerToggle()">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
     </header>
+    <div class="dropdownWrapper">
+    <ul id="burgerDropdown">
+            <li>Upplevelser<span><i class="bi bi-arrow-right"></i></span></li>
+            <li>Presentkort<span><i class="bi bi-arrow-right"></i></span></li>
+            <li>Julklappar<span><i class="bi bi-arrow-right"></i></span></li>
+            <li>Platser<span><i class="bi bi-arrow-right"></i></span></li>
+            <li>Weekend<span><i class="bi bi-arrow-right"></i></span></li>
+    </ul>
+    </div>
     <nav>
         <ul>
-            <li class="hover-underline-animation">Våra upplevelser
+            <li class="hover-underline-animation">Upplevelser
                 <ul class="dropdown-content">
+                    <li>test</li>
                     <li>test</li>
                     <li>test</li>
                     <li>test</li>
@@ -40,9 +52,9 @@
                 </ul>
             </li>
             <li class="hover-underline-animation">Presentkort</li>
-            <li class="hover-underline-animation">Julklappstips</li>
+            <li class="hover-underline-animation">Julklappar</li>
             <li class="hover-underline-animation">Platser</li>
-            <li class="hover-underline-animation">Nånting annat</li>
+            <li class="hover-underline-animation">Weekend</li>
         </ul>
     </nav> 
 </body>

@@ -11,14 +11,14 @@ header {
   display: flex;
   align-items: center;
 }
-header .menu-btn {
+header .headerWrapper {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   margin-right: 10px;
 }
-header .menu-btn .bi.bi-cart,
-header .menu-btn .bi.bi-search {
+header .headerWrapper .bi.bi-cart,
+header .headerWrapper .bi.bi-search {
   color: white;
   margin-right: 15px;
   font-size: 20pt;
@@ -39,7 +39,7 @@ header .logoContainer {
 .contact {
   display: none;
 }
-.menu-btn {
+.headerWrapper {
   position: relative;
   display: flex;
   justify-content: center;
@@ -55,6 +55,7 @@ header .logoContainer {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 .menu-btn__burger::before,
 .menu-btn__burger::after {
@@ -84,6 +85,33 @@ header .logoContainer {
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(-35px, -35px);
 }
+.burgerStyle {
+  width: 100%;
+  background-color: #8d99ae;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 15pt;
+  color: black;
+}
+.burgerStyle li {
+  display: flex;
+  padding-left: 20px;
+  width: 100%;
+  list-style: none;
+  cursor: pointer;
+}
+.burgerStyle li:hover {
+  background-color: #edf2f4;
+  border-left: 4px solid #ef233c;
+}
+.burgerStyle li span {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  flex-direction: row;
+  padding-right: 20px;
+}
 ul {
   display: none;
 }
@@ -96,7 +124,7 @@ ul {
     display: flex;
     justify-content: center;
   }
-  header .menu-btn {
+  header .headerWrapper {
     width: 30%;
   }
   header .bi.bi-search {
@@ -109,17 +137,23 @@ ul {
     align-items: center;
   }
   header input {
-    border-radius: 10px;
-    height: 25px;
+    border-radius: 20px;
+    height: 30px;
     width: 300px;
     border: none;
+    padding: 20px;
+    font-weight: 600px;
   }
 
-  .menu-btn .bi.bi-search {
+  .headerWrapper .bi.bi-search {
     display: none;
   }
 }
 @media screen and (min-width: 1100px) {
+  .burgerStyle {
+    display: none;
+  }
+
   nav {
     width: 100%;
     height: 5vh;
@@ -132,7 +166,6 @@ ul {
     padding: 0px;
     margin: 0px;
     height: 100%;
-    color: white;
   }
   nav ul:hover {
     cursor: pointer;
@@ -205,6 +238,7 @@ ul {
     margin-bottom: 0px;
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
+    font-size: 12pt;
   }
 }
 /*# sourceMappingURL=index.603968dc.css.map */
