@@ -2,52 +2,108 @@
 @use "../variables";
 @use "../mixins";
 
+
+footer {
+  background-color: variables.$color-dkblue;
+  color: #fff;
+  padding: 30px 20px;
+
+
+  @include mixins.tablet-only {
+    text-align: center;
+  }
+
+  @include mixins.desktop-only {
+    text-align: center;
+    padding: 30px 0px 0px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+ 
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  input {
+    padding: 5px 10px;
+    margin: 5px 0px;
+    width: 100%;
+
+
+  @include mixins.tablet-only {
+    margin: 20px 5px;
+    width:unset;
+  }
+
+  @include mixins.desktop-only {
+    margin: 20px 5px;
+    width:unset;
+  }
+  }
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+}
+
 .footer-container {
-    display: flex;
-    flex-direction: column;
-    background-color: variables.$color-dkblue;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+
+
+  @include mixins.tablet-only {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0px;
+  }
+
+  @include mixins.desktop-only {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0px;
+  }
+
+  section {
+    color: white;
+    line-height: 1.4rem;
+    padding: 10px 0px;
+    font-size: 0.85rem;
 
     @include mixins.tablet-only {
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 20px 0px;
-      }
-    
-      @include mixins.desktop-only {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding: 60px 0px;
-      }
-
-    section {
-        color: white;
-        line-height: 1.4rem;
-        padding: 10px 20px;
-
-        @include mixins.tablet-only {
-           padding: 0;
-          }
-        
-          @include mixins.desktop-only {
-            padding: 0;
-          }
-
-        span {
-            display: block;
-        }
+      padding: 0;
+      text-align: left;
     }
 
-    section:last-child span {
-        display: inline;
-        padding: 0px 20px 0px 0px;
+    @include mixins.desktop-only {
+      padding: 0;
+      text-align: left;
     }
 
-    .bi {
-        font-size: 2rem;
-
-        &:hover {
-            color: variables.$color-lightred;
-        }
+    span {
+      display: block;
     }
+  }
+
+  section:last-child span {
+    display: inline;
+    padding: 0px 20px 0px 0px;
+  }
+
+  .bi {
+    font-size: 2rem;
+
+    &:hover {
+      color: variables.$color-lightred;
+    }
+  }
 }
