@@ -2,21 +2,6 @@
 @use "../variables";
 @use "../mixins";
 
-.wrapper {
-    padding: 20px 0px 20px;
-    background-color: variables.$color-lightgrey;
-
-    @include mixins.tablet-only {
-        padding: 50px 0px 20px;
-
-    }
-
-    @include mixins.desktop-only {
-        padding: 180px 0px 100px;
-
-    }
-}
-
 #product-display-container {
     display: flex;
     flex-direction: column;
@@ -126,4 +111,38 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.back-arrow-container {
+    background-color: variables.$color-lightgrey;
+    position: relative;
+
+    .bi-arrow-left {
+        cursor: pointer;
+        font-size: 2rem;
+        position: fixed;
+        color: #fff;
+        padding: 10px;
+
+    @include mixins.desktop-only {
+        position: absolute;
+        margin: 30px 75px;
+        padding: 0;
+        font-size: 3rem;
+        color: #000;
+    }
+
+    }
+  
+
+    // .back-arrow {
+    //     font-size: 0.9rem;
+    //     padding: 20px;
+    //     background-image: url("../assets/arrow-return-left.svg");
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
+    //     background-position: left;
+    //     margin: 30px 70px;
+        
+    // }
 }
