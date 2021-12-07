@@ -2,3 +2,125 @@
 @use "../variables";
 @use "../mixins";
 
+.wrapper {
+    @include mixins.tablet-only {
+        padding: 50px 20px;
+    }
+}
+
+#shoppingcart-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 0px;
+    background: #fff;
+
+    @include mixins.tablet-only {
+        flex-direction: row;
+        width: 90%;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 50px;
+    }
+
+    @include mixins.desktop-only {
+        flex-direction: column;
+        width: 70%;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 50px;
+        padding: 50px;
+
+    }
+
+    .cart-header-container {
+        display: flex;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    .cart-items {
+        padding: 10px 20px;
+        position: relative;
+        display: flex;
+
+        @include mixins.tablet-only {
+            padding: 10px 20px 20px 0px;
+        }
+
+        @include mixins.desktop-only {
+            padding: 0px 20px 20px 0px;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+    }
+
+    .cart-item {
+        width: 100%;
+    }
+
+    .cart-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+
+        @include mixins.desktop-only {
+
+            flex-direction: row;
+
+
+        }
+    }
+
+    .bi {
+        cursor: pointer;
+    }
+
+    span {
+        display: block;
+        margin: 5px 0px 10px;
+    }
+
+    .price {
+        text-align: left;
+        font-weight: 700;
+    }
+
+}
+
+.cart-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.back-arrow-container {
+    background-color: variables.$color-lightgrey;
+    position: relative;
+
+    .bi-arrow-left {
+        cursor: pointer;
+        font-size: 2rem;
+        position: fixed;
+        color: #000;
+        padding: 10px;
+
+        @include mixins.tablet-only {
+            font-size: 2.5rem;
+            margin: 30px 0px;
+
+        }
+
+        @include mixins.desktop-only {
+            position: absolute;
+            margin: 30px 75px;
+            padding: 0;
+            font-size: 3rem;
+        }
+
+    }
+
+}
