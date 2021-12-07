@@ -9,6 +9,8 @@
   background-size: cover;
   height: 50vh;
   width: 100%;
+  position: relative;
+
 
   @include mixins.tablet-only {
     height: 70vh;
@@ -42,29 +44,31 @@
 
 .hero-text {
   position: absolute;
-  z-index: 2;
   top: 0;
   left: 0;
   font-family: fonts.$secondary-font;
   text-align: center;
   color: #fff;
-  padding: 200px 10px;
   width: 100%;
+  padding-top: 200px;
 
   @include mixins.tablet-only {
-    padding: 350px 0px 30px;
+    padding-top: 350px;
     font-size: 1.5rem;
   }
 
   @include mixins.desktop-only {
     width: 100%;
-    padding: 250px 0px 0px;
+    padding-top: 180px;
+ 
   }
 
 
 
   .btn {
+    font-size: 0.8rem;
     border-radius: 6px;
+    font-family: fonts.$primary-font;
     color: variables.$color-dkblue;
     background-color: #fff;
     border: none;
@@ -72,6 +76,7 @@
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 700;
+    letter-spacing: 1px;
     box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
     transition: 0.4s;
 
@@ -100,9 +105,11 @@
     padding: 10px 30px;
     font-weight: 700;
     margin: 0px 0px 10px;
+    font-size: 2rem;
 
     @include mixins.tablet-only {
-      padding: 50px 100px 20px;
+      padding: 50px 150px 20px;
+      font-size: 2.5rem;
     }
 
     @include mixins.desktop-only {
