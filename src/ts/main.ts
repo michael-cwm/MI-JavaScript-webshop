@@ -104,3 +104,9 @@ function loadHTML() {
 
     }
 }
+
+import { bundledHeaderFunctions } from "./header";
+
+window.onload = function() {
+  bundledHeaderFunctions();
+}
