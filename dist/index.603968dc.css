@@ -588,7 +588,7 @@ ul {
 }
 .button-info {
   background-color: #2b2d42;
-  color: white;
+  color: white !important;
   transition: 0.2s;
 }
 .button-info:hover {
@@ -597,7 +597,7 @@ ul {
 }
 .button-buy {
   background-color: #ef233c;
-  color: white;
+  color: white !important;
   transition: 0.2s;
 }
 .button-buy:hover {

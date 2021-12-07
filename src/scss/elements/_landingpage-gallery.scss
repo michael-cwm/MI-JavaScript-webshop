@@ -227,7 +227,7 @@
 
 .button-info {
     background-color: variables.$color-dkblue;
-    color: white;
+    color: white !important;;
     transition: 0.2s;
 
     &:hover {
@@ -238,7 +238,7 @@
 
 .button-buy {
     background-color: variables.$color-lightred;
-    color: white;
+    color: white !important;;
     transition: 0.2s;
 
     &:hover {
