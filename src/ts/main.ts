@@ -4,7 +4,7 @@ import {
 
 import { bundledHeaderFunctions } from "./header";
 
-
+export let shoppingCartArray = [];
 
 
 window.onload = function () {
@@ -104,6 +104,10 @@ function loadHTML() {
 
         buttonInfo.addEventListener("click", () => {
             location.href = "product.html?id=" +  productcatalog[i].id;
+        })
+
+        buttonBuy.addEventListener("click", () => {
+            shoppingCartArray.push(productcatalog[i].id);
         })
 
     }
