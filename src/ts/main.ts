@@ -2,10 +2,6 @@ import {
     productcatalog
 } from "./models/productcatalog";
 
-import {
-    redirect
-} from "./product";
-
 
 
 window.onload = function () {
@@ -103,14 +99,8 @@ function loadHTML() {
         productButtons.appendChild(buttonBuy);
 
         buttonInfo.addEventListener("click", () => {
-            redirect(productcatalog[i].id.toString(), 
-            productcatalog[i].price, 
-            productcatalog[i].name, 
-            productcatalog[i].img, 
-            productcatalog[i].users, 
-            productcatalog[i].details);
+            location.href = "product.html?id=" +  productcatalog[i].id;
         })
 
     }
 }
-

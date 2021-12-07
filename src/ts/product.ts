@@ -3,20 +3,38 @@ import {
 } from "./models/productcatalog";
 
 
-
 window.onload = function () {
-  
+    // Get the ID from the URL string
+    let url = window.location.search;
+    let urlParams = new URLSearchParams(url);
+
+
+    for (let value of urlParams.values()) {
+        let id = value;
+     
+            // Look through the product catalog for the ID
+        for (let i = 0; i < productcatalog.length; i++) {
+            let productIds = productcatalog[i].id.toString();
+           
+            if (productIds === id) {
+                loadProduct(productcatalog[i].name,
+                    productcatalog[i].img,
+                    productcatalog[i].users,
+                    productcatalog[i].details,
+                    productcatalog[i].price)
+            }
+        }
+    }
+   
 }
 
 
-export function redirect(productId: string, 
-    productPrice: number, 
-    productName: string, 
-    productImg: string, 
-    productUsers: string, 
-    productDetails: string) {
-    location.href = "product.html?id=" + productId;
-    console.log("Product ID " + productId, " Product name: " + productName + " Product img: " + productImg + " Product users: " + productUsers + " Product price: " + productPrice + " Product details: " + productDetails);
+function loadProduct(
+    productName: string,
+    productImg: string,
+    productUsers: string,
+    productDetails: string,
+    productPrice: number,) {
 
     let wrapper: HTMLDivElement = document.querySelector(".wrapper");
     let arrowContainer = document.createElement("div");
@@ -77,4 +95,12 @@ export function redirect(productId: string,
     details.innerHTML = productDetails;
     details.classList.add("product-details");
     users.after(details);
+
+    // Product footer
+    let footerContainer: HTMLDivElement = document.createElement("div");
+    footerContainer.classList.add("product-details-footer");
+    details.after(footerContainer);
+
+    let price: HTMLSpanElement = document.createElement("span");
+    
 }
