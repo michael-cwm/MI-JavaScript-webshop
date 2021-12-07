@@ -6,6 +6,10 @@ body{
     margin: 0px;
 }
 
+a{
+  text-decoration: none;
+}
+
 header{
     background-color: variables.$color-dkblue;
     height: 10vh;
@@ -22,6 +26,9 @@ header{
           margin-right: 15px;
           font-size: 20pt;
           cursor:pointer;
+          &:hover{
+            color: variables.$color-lightred;
+          }
         }
     }
     .logoContainer{
@@ -55,6 +62,14 @@ header{
 }
 
 // hamburgarmeny
+
+.menu-btn{
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .menu-btn__burger {
   width: 30px;
   height: 3px;
@@ -98,15 +113,16 @@ header{
 
 
 //dropdown-menyn till burgaren
-
 .burgerStyle{
   width: 100%;
-  background-color: variables.$color-lightblue;
+  background-color: white;
   display: flex;
   flex-direction: column;
   padding: 0px;
-  font-size: 15pt;
+  font-size: 13pt;
   color: black;
+  opacity: 1;
+
   li{
     // text-align: center;
     display: flex;
@@ -114,6 +130,12 @@ header{
     width: 100%;
     list-style: none;
     cursor: pointer;
+    a{
+      display: flex;
+      width: 100%;
+      text-decoration: none;
+      color: black;
+    }
     &:hover{
       background-color: variables.$color-lightgrey;
       border-left: 4px solid variables.$color-lightred;
@@ -122,11 +144,12 @@ header{
       display: flex;
       justify-content: flex-end;
       width: 100%;
-      flex-direction: row;
+      // flex-direction: row;
       padding-right: 20px;
     }
   }
 }
+
 
 ul{
   display: none;
@@ -228,17 +251,24 @@ ul{
     font-size: 11pt;
     display: none;
     position: absolute;
-    background-color: variables.$color-lightgrey;
+    background-color: white;
     color: black;
-    min-width: 132px;
-    min-height: 160px;
+    width: 200px;
+    height: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
     list-style: none;
+    padding: 0px;
+    li{
+      width: 200px;
+      padding-left: 5px;
+      padding-top: 5px;
+    }
 
     li:hover {
-      background-color: rgba(153, 153, 153, 0.164);
+      background-color: variables.$color-lightgrey;
+      border-left: 3px solid variables.$color-lightred;
     }
   }
 
@@ -261,6 +291,7 @@ ul{
     }
   }
 
+
   .contact{
     display: inline-block;
     color: white;
@@ -269,6 +300,16 @@ ul{
     font-family: fonts.$primary-font;
     cursor: pointer;
     font-size: 12pt;
+    a{
+      text-decoration: none;
+      color: white;
+      &:hover{
+        color: variables.$color-lightred;
+      }
+    }
+    &:hover{
+      color: variables.$color-lightred; 
+    }
 
   }
 

@@ -5,6 +5,9 @@ body {
 body {
   margin: 0px;
 }
+a {
+  text-decoration: none;
+}
 header {
   background-color: #2b2d42;
   height: 10vh;
@@ -23,6 +26,10 @@ header .headerWrapper .bi.bi-search {
   margin-right: 15px;
   font-size: 20pt;
   cursor: pointer;
+}
+header .headerWrapper .bi.bi-cart:hover,
+header .headerWrapper .bi.bi-search:hover {
+  color: #ef233c;
 }
 header .logoContainer {
   display: flex;
@@ -47,6 +54,12 @@ header .logoContainer {
   width: 80px;
   height: 80px;
   transition: all 0.5s ease-in-out;
+}
+.menu-btn {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 .menu-btn__burger {
   width: 30px;
@@ -87,12 +100,13 @@ header .logoContainer {
 }
 .burgerStyle {
   width: 100%;
-  background-color: #8d99ae;
+  background-color: white;
   display: flex;
   flex-direction: column;
   padding: 0px;
-  font-size: 15pt;
+  font-size: 13pt;
   color: black;
+  opacity: 1;
 }
 .burgerStyle li {
   display: flex;
@@ -100,6 +114,12 @@ header .logoContainer {
   width: 100%;
   list-style: none;
   cursor: pointer;
+}
+.burgerStyle li a {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: black;
 }
 .burgerStyle li:hover {
   background-color: #edf2f4;
@@ -109,7 +129,6 @@ header .logoContainer {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  flex-direction: row;
   padding-right: 20px;
 }
 ul {
@@ -204,17 +223,24 @@ ul {
     font-size: 11pt;
     display: none;
     position: absolute;
-    background-color: #edf2f4;
+    background-color: white;
     color: black;
-    min-width: 132px;
-    min-height: 160px;
+    width: 200px;
+    height: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
     list-style: none;
+    padding: 0px;
+  }
+  .dropdown-content li {
+    width: 200px;
+    padding-left: 5px;
+    padding-top: 5px;
   }
   .dropdown-content li:hover {
-    background-color: rgba(153, 153, 153, 0.164);
+    background-color: #edf2f4;
+    border-left: 3px solid #ef233c;
   }
 
   li {
@@ -239,6 +265,16 @@ ul {
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
     font-size: 12pt;
+  }
+  .contact a {
+    text-decoration: none;
+    color: white;
+  }
+  .contact a:hover {
+    color: #ef233c;
+  }
+  .contact:hover {
+    color: #ef233c;
   }
 }
 /*# sourceMappingURL=index.603968dc.css.map */

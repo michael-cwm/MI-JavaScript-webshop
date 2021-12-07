@@ -11,6 +11,9 @@ window.onload = function() {
         }
     });
 };
+let test = document.getElementById('halloj');
+console.log(test);
+test.addEventListener("click", burgerToggle);
 function burgerToggle() {
     let element = document.getElementById("burgerDropdown");
     element.classList.toggle("burgerStyle");
