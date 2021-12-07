@@ -18,6 +18,9 @@ footer {
     padding: 30px 0px 0px;
   }
 }
+footer p {
+  margin: 10px 0px;
+}
 footer button {
   font-size: 0.9rem;
   font-weight: 700;
@@ -49,56 +52,57 @@ footer h3 {
   padding: 0;
   margin: 0;
   font-size: 1.5rem;
+  font-weight: 700;
 }
-.footer-container {
+footer .footer-container {
   display: flex;
   flex-direction: column;
   padding: 20px 0px;
 }
 @media screen and (min-width: 768px) {
-  .footer-container {
+  footer .footer-container {
     flex-direction: row;
     justify-content: space-around;
     padding: 20px 0px;
   }
 }
 @media screen and (min-width: 1100px) {
-  .footer-container {
+  footer .footer-container {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 30px 0px;
   }
 }
-.footer-container section {
+footer .footer-container section {
   color: white;
   line-height: 1.4rem;
   padding: 10px 0px;
   font-size: 0.85rem;
 }
 @media screen and (min-width: 768px) {
-  .footer-container section {
+  footer .footer-container section {
     padding: 0;
     text-align: left;
   }
 }
 @media screen and (min-width: 1100px) {
-  .footer-container section {
+  footer .footer-container section {
     padding: 0;
     text-align: left;
   }
 }
-.footer-container section span {
+footer .footer-container section span {
   display: block;
 }
-.footer-container section:last-child span {
+footer .footer-container section:last-child span {
   display: inline;
   padding: 0px 20px 0px 0px;
 }
-.footer-container .bi {
+footer .footer-container .bi {
   font-size: 2rem;
 }
-.footer-container .bi:hover {
+footer .footer-container .bi:hover {
   color: #ef233c;
 }
 body {
