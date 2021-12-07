@@ -2,10 +2,14 @@ import {
     productcatalog
 } from "./models/productcatalog";
 
+import { bundledHeaderFunctions } from "./header";
+
+
 
 
 window.onload = function () {
-    loadHTML()
+    loadHTML();
+    bundledHeaderFunctions();
     
 }
 
@@ -104,3 +108,5 @@ function loadHTML() {
 
     }
 }
+
+
