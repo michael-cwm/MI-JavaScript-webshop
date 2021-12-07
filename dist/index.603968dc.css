@@ -414,6 +414,11 @@ body {
     text-shadow: -2px 2px black;
   }
 }
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 50px 20px;
+  }
+}
 #product-display-container {
   display: flex;
   flex-direction: column;
@@ -441,6 +446,7 @@ body {
 }
 #product-display-container .product-info-section {
   padding: 10px 20px;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   #product-display-container .product-info-section {
@@ -454,6 +460,7 @@ body {
 }
 #product-display-container span {
   display: block;
+  margin: 5px 0px 10px;
 }
 @media screen and (min-width: 768px) {
   #product-display-container .users {
@@ -491,16 +498,30 @@ body {
   background-color: #ef233c;
   color: white;
   margin: 10px 0px 0px;
+  transition: 0.2s;
+}
+#product-display-container button:hover {
+  background-color: #ce0303;
 }
 @media screen and (min-width: 768px) {
   #product-display-container button {
     font-size: 0.8rem;
     padding: 15px 20px;
+    width: 100%;
   }
 }
-@media screen and (min-width: 1100px) {
-  #product-display-container button {
-    width: 30%;
+.product-details-footer {
+  padding: 0px 0px 20px;
+}
+@media screen and (min-width: 768px) {
+  .product-details-footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -508,6 +529,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 .product-img-section img {
@@ -523,8 +547,14 @@ body {
   cursor: pointer;
   font-size: 2rem;
   position: fixed;
-  color: #fff;
+  color: #000;
   padding: 10px;
+}
+@media screen and (min-width: 768px) {
+  .back-arrow-container .bi-arrow-left {
+    font-size: 2.5rem;
+    margin: 30px 0px;
+  }
 }
 @media screen and (min-width: 1100px) {
   .back-arrow-container .bi-arrow-left {
@@ -532,7 +562,6 @@ body {
     margin: 30px 75px;
     padding: 0;
     font-size: 3rem;
-    color: #000;
   }
 }
 * {

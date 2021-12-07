@@ -102,5 +102,13 @@ function loadProduct(
     details.after(footerContainer);
 
     let price: HTMLSpanElement = document.createElement("span");
+    price.classList.add("price");
+    price.innerHTML = productPrice.toLocaleString() + " kr";
+    footerContainer.appendChild(price);
+
+    let button: HTMLButtonElement = document.createElement("button");
+    button.innerHTML = "Köp nu";
+    button.classList.add("button-buy");
+    footerContainer.appendChild(button);
     
 }
