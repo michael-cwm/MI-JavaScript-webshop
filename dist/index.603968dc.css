@@ -636,17 +636,19 @@ ul {
   align-items: flex-end;
 }
 #hero {
-  background-image: url("hero-lg.fa4b6c50.jpg");
+  background-image: url("hero-mobile.4a19fc19.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   #hero {
+    background-image: url("hero-tablet.accb2fed.jpg");
     height: 70vh;
+    background-position: bottom;
   }
 }
 #hero .hero-video {
@@ -660,7 +662,7 @@ ul {
 @media screen and (min-width: 1100px) {
   #hero .hero-video video {
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -672,7 +674,6 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  font-family: "Playfair Display", serif;
   text-align: center;
   color: #fff;
   width: 100%;
@@ -680,69 +681,69 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .hero-text {
-    padding-top: 350px;
-    font-size: 1.5rem;
+    padding-top: 250px;
   }
 }
 @media screen and (min-width: 1100px) {
   .hero-text {
     width: 100%;
-    padding-top: 180px;
+    padding-top: 240px;
   }
 }
-.hero-text .btn {
-  font-size: 0.8rem;
+.hero-text .hero-btn {
+  font-size: 1rem;
   border-radius: 6px;
   font-family: "Montserrat", sans-serif;
-  color: #2b2d42;
-  background-color: #fff;
+  color: #fff;
+  background-color: #2b2d42;
   border: none;
-  padding: 10px 20px;
-  text-transform: uppercase;
+  padding: 12px 20px;
   cursor: pointer;
   font-weight: 700;
   letter-spacing: 1px;
   box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
   transition: 0.4s;
 }
-.hero-text .btn:hover {
+.hero-text .hero-btn:hover {
   background-color: #fff;
   color: #000;
   transform: translateY(-2px);
 }
 @media screen and (min-width: 768px) {
-  .hero-text .btn {
-    font-size: 1rem;
+  .hero-text .hero-btn {
+    margin: 20px 0px 0px;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1100px) {
-  .hero-text .btn {
+  .hero-text .hero-btn {
     background-color: #2b2d42;
     color: #fff;
     border: none;
-    font-size: 1rem;
-    padding: 17px 20px;
-    margin: 30px 0px 0px;
+    font-size: 1.4rem;
+    padding: 12px 17px;
+    margin: 20px 0px 0px;
   }
 }
 .hero-text h1 {
   padding: 10px 30px;
   font-weight: 700;
   margin: 0px 0px 10px;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 @media screen and (min-width: 768px) {
   .hero-text h1 {
-    padding: 50px 150px 20px;
-    font-size: 2.5rem;
+    padding: 0px 200px 0px;
+    font-size: 5rem;
+    text-shadow: -2px 3px black;
   }
 }
 @media screen and (min-width: 1100px) {
   .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 4.3rem;
     padding: 0;
     margin: 0px 0px 20px;
-    text-shadow: -2px 2px black;
+    text-shadow: -2px 3px black;
   }
 }
 @media screen and (min-width: 768px) {
