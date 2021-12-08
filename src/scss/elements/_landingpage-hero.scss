@@ -51,7 +51,7 @@
   text-align: center;
   color: #fff;
   width: 100%;
-  padding-top: 200px;
+  padding-top: 145px;
 
   @include mixins.tablet-only {
     padding-top: 250px;
@@ -66,7 +66,7 @@
 
 
   .hero-btn {
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 6px;
     font-family: fonts.$primary-font;
     color: #fff;
