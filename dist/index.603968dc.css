@@ -661,7 +661,7 @@ ul {
 @media screen and (min-width: 1100px) {
   #hero .hero-video video {
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
     width: 100vw;
     height: 100vh;
     position: relative;

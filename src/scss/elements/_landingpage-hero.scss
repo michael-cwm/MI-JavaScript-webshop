@@ -30,7 +30,7 @@
     video {
       @include mixins.desktop-only {
         object-fit: cover;
-        object-position: center;
+        object-position: bottom;
         width: 100vw;
         height: 100vh;
         position: relative;
