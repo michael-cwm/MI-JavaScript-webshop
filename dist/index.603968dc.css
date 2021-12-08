@@ -935,6 +935,7 @@ ul {
 }
 .modalContainer .modalContent .modalHeader {
   text-align: center;
+  font-size: 1.3rem;
 }
 .modalContainer .modalContent .bi-x {
   color: white;
@@ -946,6 +947,14 @@ ul {
   text-decoration: none;
   cursor: pointer;
   color: #ef233c;
+}
+.gif {
+  background-image: url("giphy.2eb4234f.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 400px;
+  margin: 0px 40px;
 }
 * {
   box-sizing: border-box;

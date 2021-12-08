@@ -18,6 +18,12 @@ let container: HTMLDivElement = document.createElement("div");
 container.classList.add("products");
 wrapper.appendChild(container);
 
+let modal: HTMLDivElement = document.createElement("div");
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  } 
 
 // Load HTML on landing page
 function loadHTML() {
@@ -104,7 +110,7 @@ function loadHTML() {
         productButtons.appendChild(buttonBuy);
 
         // Modal
-        let modal: HTMLDivElement = document.createElement("div");
+        
         modal.classList.add("modalContainer");
         modal.id = "modal-container"
 
@@ -135,11 +141,13 @@ function loadHTML() {
         cartButton.setAttribute("href", "checkout.html");
         modalHeader.after(cartButton);
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
-              modal.style.display = "none";
-            }
-          } 
+        let gifContainer: HTMLDivElement = document.createElement("div");
+        let img: HTMLImageElement = document.createElement("img");
+        gifContainer.classList.add("gif");
+        gifContainer.appendChild(img)
+        cartButton.after(gifContainer);
+
+       
 
         buttonInfo.addEventListener("click", () => {
             location.href = "product.html?id=" +  productcatalog[i].id;

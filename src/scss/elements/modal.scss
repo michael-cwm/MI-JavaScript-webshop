@@ -44,6 +44,7 @@
 
         .modalHeader {
             text-align: center;
+            font-size: 1.3rem;
         }
 
         .bi-x {
@@ -56,7 +57,17 @@
         .bi-x:focus {
             text-decoration: none;
             cursor: pointer;
-            color: variables.$color-lightred;;
+            color: variables.$color-lightred;
+            ;
         }
     }
+}
+
+.gif {
+    background-image: url("../assets/giphy.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 400px;
+    margin: 0px 40px;
 }
