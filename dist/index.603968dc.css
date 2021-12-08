@@ -36,7 +36,7 @@ header .logoContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20vw;
+  width: 30%;
   height: 100px;
   color: #edf2f4;
   font-size: 20pt;
@@ -63,7 +63,7 @@ header .logoContainer {
   cursor: pointer;
 }
 .menu-btn__burger {
-  width: 30px;
+  width: 25px;
   height: 3px;
   background: #fff;
   border-radius: 5px;
@@ -75,7 +75,7 @@ header .logoContainer {
 .menu-btn__burger::after {
   content: "";
   position: absolute;
-  width: 30px;
+  width: 25px;
   height: 3px;
   background: #fff;
   border-radius: 5px;
@@ -140,7 +140,7 @@ ul {
     display: flex;
   }
   header .inputContainer {
-    width: 20%;
+    width: 300px;
     display: flex;
     justify-content: center;
   }
@@ -168,6 +168,11 @@ ul {
     background-color: #2b2d42;
     color: white;
     font-size: 10pt;
+  }
+  header input input:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
   }
 
   .headerWrapper .bi.bi-search {
