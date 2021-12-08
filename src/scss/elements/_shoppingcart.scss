@@ -6,6 +6,14 @@
     @include mixins.tablet-only {
         padding: 50px 20px;
     }
+
+    .shopping-cart-header {
+        width: 70%;
+        margin: 0 auto;
+        padding: 0px 0px 20px;
+
+    }
+
 }
 
 #shoppingcart-container {
@@ -13,13 +21,14 @@
     flex-direction: column;
     padding: 0px 10px 0px 0px;
     background: #fff;
+    border-bottom: 1px solid rgb(194, 194, 194);
 
     @include mixins.tablet-only {
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: space-between;
         width: 90%;
-        justify-content: center;
         margin: 0 auto;
-        gap: 50px;
+        padding: 20px 0px 0px 20px;
     }
 
     @include mixins.desktop-only {
@@ -27,8 +36,7 @@
         width: 70%;
         justify-content: center;
         margin: 0 auto;
-        gap: 50px;
-        padding: 50px;
+        padding: 20px 0px 0px 20px;
 
     }
 
@@ -45,33 +53,48 @@
         position: relative;
         display: flex;
 
+
         @include mixins.tablet-only {
             padding: 10px 20px 20px 0px;
+
         }
 
         @include mixins.desktop-only {
-            padding: 0px 20px 20px 0px;
+            padding: 10px 0px 10px;
             flex-direction: row;
             justify-content: center;
+            gap: 20px;
 
         }
     }
 
     .cart-item {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0px 10px 0px;
+
+        @include mixins.tablet-only {
+            padding: 0px 20px 0px;
+        }
     }
 
     .cart-icons {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
         width: 100%;
 
-        @include mixins.desktop-only {
-
+        @include mixins.tablet-only {
             flex-direction: row;
+            align-items: center;
+        }
 
-
+        @include mixins.desktop-only {
+            flex-direction: row;
+            justify-content: space-around;
         }
     }
 
@@ -85,16 +108,62 @@
     }
 
     .price {
+        font-size: 0.9rem;
         text-align: left;
         font-weight: 700;
     }
 
+    .details {
+        display: none;
+
+
+        @include mixins.tablet-only {
+            display: block;
+        }
+
+        @include mixins.desktop-only {
+            display: block;
+        }
+    }
+
+    .product-amount {
+        font-size: 0.7rem;
+        text-align: left;
+        margin: 10px 0px;
+
+        @include mixins.tablet-only {
+
+            margin: 0px 15px;
+        }
+
+        @include mixins.desktop-only {
+            margin: 0px;
+        }
+
+    }
+
+
+    .product-name {
+        font-size: 1rem;
+        font-weight: 500;
+
+        @include mixins.tablet-only {
+            font-size: 1.5rem;
+        }
+
+        @include mixins.desktop-only {
+            font-size: 1.5rem;
+        }
+    }
+
 }
 
+
 .cart-images img {
-    width: 100%;
-    height: auto;
+    height: 190px;
     object-fit: cover;
+    object-position: right;
+    max-width: 160px;
 }
 
 .back-arrow-container {
@@ -116,7 +185,7 @@
 
         @include mixins.desktop-only {
             position: absolute;
-            margin: 30px 75px;
+            margin: 40px 75px;
             padding: 0;
             font-size: 3rem;
         }
