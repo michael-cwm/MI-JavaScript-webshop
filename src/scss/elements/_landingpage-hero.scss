@@ -3,17 +3,19 @@
 @use "../mixins";
 
 #hero {
-  background-image: url("../assets/hero-lg.jpg");
+  background-image: url("../assets/hero-mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   position: relative;
 
 
   @include mixins.tablet-only {
+    background-image: url("../assets/hero-tablet.jpg");
     height: 70vh;
+    background-position: bottom;
   }
 
 
@@ -46,34 +48,31 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-family: fonts.$secondary-font;
   text-align: center;
   color: #fff;
   width: 100%;
   padding-top: 200px;
 
   @include mixins.tablet-only {
-    padding-top: 350px;
-    font-size: 1.5rem;
+    padding-top: 250px;
   }
 
   @include mixins.desktop-only {
     width: 100%;
-    padding-top: 180px;
+    padding-top: 240px;
  
   }
 
 
 
-  .btn {
-    font-size: 0.8rem;
+  .hero-btn {
+    font-size: 1rem;
     border-radius: 6px;
     font-family: fonts.$primary-font;
-    color: variables.$color-dkblue;
-    background-color: #fff;
+    color: #fff;
+    background-color: variables.$color-dkblue;
     border: none;
-    padding: 10px 20px;
-    text-transform: uppercase;
+    padding: 12px 20px;
     cursor: pointer;
     font-weight: 700;
     letter-spacing: 1px;
@@ -88,16 +87,17 @@
     }
 
     @include mixins.tablet-only {
-      font-size: 1rem;
+      margin: 20px 0px 0px;
+      font-size: 1.5rem;
     }
 
     @include mixins.desktop-only {
       background-color: variables.$color-dkblue;
       color: #fff;
       border: none;
-      font-size: 1rem;
-      padding: 17px 20px;
-      margin: 30px 0px 0px;
+      font-size: 1.4rem;
+      padding: 12px 17px;
+      margin: 20px 0px 0px;
     }
   }
 
@@ -105,18 +105,20 @@
     padding: 10px 30px;
     font-weight: 700;
     margin: 0px 0px 10px;
-    font-size: 2rem;
+    font-size: 3rem;
+
 
     @include mixins.tablet-only {
-      padding: 50px 150px 20px;
-      font-size: 2.5rem;
+      padding: 0px 200px 0px;
+      font-size: 5rem;
+      text-shadow: -2px 3px black;
     }
 
     @include mixins.desktop-only {
-      font-size: 3.5rem;
+      font-size: 4.3rem;
       padding: 0;
       margin: 0px 0px 20px;
-      text-shadow: -2px 2px black;
+      text-shadow: -2px 3px black;
     }
   }
 
