@@ -18,6 +18,9 @@ footer {
     padding: 30px 0px 0px;
   }
 }
+footer p {
+  margin: 10px 0px;
+}
 footer button {
   font-size: 0.9rem;
   font-weight: 700;
@@ -49,57 +52,332 @@ footer h3 {
   padding: 0;
   margin: 0;
   font-size: 1.5rem;
+  font-weight: 700;
 }
-.footer-container {
+footer .footer-container {
   display: flex;
   flex-direction: column;
   padding: 20px 0px;
 }
 @media screen and (min-width: 768px) {
-  .footer-container {
+  footer .footer-container {
     flex-direction: row;
     justify-content: space-around;
     padding: 20px 0px;
   }
 }
 @media screen and (min-width: 1100px) {
-  .footer-container {
+  footer .footer-container {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 30px 0px;
   }
 }
-.footer-container section {
+footer .footer-container section {
   color: white;
   line-height: 1.4rem;
   padding: 10px 0px;
   font-size: 0.85rem;
 }
 @media screen and (min-width: 768px) {
-  .footer-container section {
+  footer .footer-container section {
     padding: 0;
     text-align: left;
   }
 }
 @media screen and (min-width: 1100px) {
-  .footer-container section {
+  footer .footer-container section {
     padding: 0;
     text-align: left;
   }
 }
-.footer-container section span {
+footer .footer-container section span {
   display: block;
 }
-.footer-container section:last-child span {
+footer .footer-container section:last-child span {
   display: inline;
   padding: 0px 20px 0px 0px;
 }
-.footer-container .bi {
+footer .footer-container .bi {
   font-size: 2rem;
 }
-.footer-container .bi:hover {
+footer .footer-container .bi:hover {
   color: #ef233c;
+}
+body {
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+header {
+  background-color: #2b2d42;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+header .headerWrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 10px;
+}
+header .headerWrapper .bi.bi-cart,
+header .headerWrapper .bi.bi-search {
+  color: white;
+  margin-right: 15px;
+  font-size: 20pt;
+  cursor: pointer;
+}
+header .headerWrapper .bi.bi-cart:hover,
+header .headerWrapper .bi.bi-search:hover {
+  color: #ef233c;
+}
+header .logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  height: 100px;
+  color: #ef233c;
+  font-size: 20pt;
+}
+.inputContainer {
+  display: none;
+}
+.contact {
+  display: none;
+}
+.headerWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.menu-btn__burger {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+.menu-btn__burger::after {
+  transform: translateY(8px);
+}
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(-35px, 35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}
+.burgerStyle {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 13pt;
+  color: black;
+}
+.burgerStyle li {
+  display: flex;
+  padding-left: 20px;
+  width: 100%;
+  list-style: none;
+  cursor: pointer;
+}
+.burgerStyle li a {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+.burgerStyle li:hover {
+  background-color: #edf2f4;
+  border-left: 4px solid #ef233c;
+}
+.burgerStyle li span {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 20px;
+}
+ul {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+  }
+  header .inputContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  header .headerWrapper {
+    width: 30%;
+  }
+  header .bi.bi-search {
+    margin-left: -30px;
+    font-weight: bold;
+    font-size: 14pt;
+  }
+  header form {
+    display: flex;
+    align-items: center;
+  }
+  header input {
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+    border: none;
+    padding: 20px;
+    font-weight: 600px;
+  }
+
+  .headerWrapper .bi.bi-search {
+    display: none;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .burgerStyle {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    height: 5vh;
+    background-color: #8d99ae;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+  }
+  nav ul:hover {
+    cursor: pointer;
+  }
+
+  .menu-btn__burger {
+    display: none;
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ef233c;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .dropdown-content {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11pt;
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: 200px;
+    height: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    list-style: none;
+    padding: 0px;
+  }
+  .dropdown-content li {
+    width: 200px;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+  .dropdown-content li:hover {
+    background-color: #edf2f4;
+    border-left: 3px solid #ef233c;
+  }
+
+  li {
+    transition: transform ease-in-out 0.2s;
+  }
+  li:hover {
+    cursor: pointer;
+  }
+  li.hover-underline-animation {
+    position: relative;
+    display: inline-block;
+  }
+  li.hover-underline-animation:hover .dropdown-content {
+    display: block;
+  }
+
+  .contact {
+    display: inline-block;
+    color: white;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    font-size: 12pt;
+  }
+  .contact a {
+    text-decoration: none;
+    color: white;
+  }
+  .contact a:hover {
+    color: #ef233c;
+  }
+  .contact:hover {
+    color: #ef233c;
+  }
 }
 .wrapper {
   padding: 5px 0px 10px;
@@ -201,7 +479,7 @@ footer h3 {
 }
 @media screen and (min-width: 1100px) {
   .product-name {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 .product-details {
@@ -274,10 +552,6 @@ footer h3 {
   object-fit: cover;
   object-position: right center;
 }
-.img-container img:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
 @media screen and (min-width: 768px) {
   .img-container img {
     height: 300px;
@@ -297,7 +571,7 @@ footer h3 {
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  padding: 10px 25px;
+  padding: 8px 21px;
   border: none;
   border-radius: 6px;
   text-decoration: none;
@@ -305,6 +579,7 @@ footer h3 {
 @media screen and (min-width: 768px) {
   .product-buttons a {
     font-size: 0.8rem;
+    padding: 9px 19px;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -314,7 +589,7 @@ footer h3 {
 }
 .button-info {
   background-color: #2b2d42;
-  color: white;
+  color: white !important;
   transition: 0.2s;
 }
 .button-info:hover {
@@ -323,7 +598,7 @@ footer h3 {
 }
 .button-buy {
   background-color: #ef233c;
-  color: white;
+  color: white !important;
   transition: 0.2s;
 }
 .button-buy:hover {
@@ -361,16 +636,19 @@ footer h3 {
   align-items: flex-end;
 }
 #hero {
-  background-image: url("hero-lg.fa4b6c50.jpg");
+  background-image: url("hero-mobile.4a19fc19.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   #hero {
+    background-image: url("hero-tablet.accb2fed.jpg");
     height: 70vh;
+    background-position: bottom;
   }
 }
 #hero .hero-video {
@@ -384,7 +662,7 @@ footer h3 {
 @media screen and (min-width: 1100px) {
   #hero .hero-video video {
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -394,75 +672,78 @@ footer h3 {
 }
 .hero-text {
   position: absolute;
-  z-index: 2;
   top: 0;
   left: 0;
-  font-family: "Playfair Display", serif;
   text-align: center;
   color: #fff;
-  padding: 200px 10px;
   width: 100%;
+  padding-top: 145px;
 }
 @media screen and (min-width: 768px) {
   .hero-text {
-    padding: 350px 0px 30px;
-    font-size: 1.5rem;
+    padding-top: 250px;
   }
 }
 @media screen and (min-width: 1100px) {
   .hero-text {
     width: 100%;
-    padding: 250px 0px 0px;
+    padding-top: 240px;
   }
 }
-.hero-text .btn {
+.hero-text .hero-btn {
+  font-size: 1.2rem;
   border-radius: 6px;
-  color: #2b2d42;
-  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  background-color: #2b2d42;
   border: none;
-  padding: 10px 20px;
-  text-transform: uppercase;
+  padding: 12px 20px;
   cursor: pointer;
   font-weight: 700;
+  letter-spacing: 1px;
   box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
   transition: 0.4s;
 }
-.hero-text .btn:hover {
+.hero-text .hero-btn:hover {
   background-color: #fff;
   color: #000;
   transform: translateY(-2px);
 }
 @media screen and (min-width: 768px) {
-  .hero-text .btn {
-    font-size: 1rem;
+  .hero-text .hero-btn {
+    margin: 20px 0px 0px;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1100px) {
-  .hero-text .btn {
+  .hero-text .hero-btn {
     background-color: #2b2d42;
     color: #fff;
     border: none;
-    font-size: 1rem;
-    padding: 17px 20px;
-    margin: 30px 0px 0px;
+    font-size: 1.4rem;
+    padding: 12px 17px;
+    margin: 20px 0px 0px;
   }
 }
 .hero-text h1 {
   padding: 10px 30px;
   font-weight: 700;
   margin: 0px 0px 10px;
+  font-size: 3rem;
 }
 @media screen and (min-width: 768px) {
   .hero-text h1 {
-    padding: 50px 100px 20px;
+    padding: 0px 200px 0px;
+    font-size: 5rem;
+    text-shadow: -2px 3px black;
   }
 }
 @media screen and (min-width: 1100px) {
   .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 4.3rem;
     padding: 0;
     margin: 0px 0px 20px;
-    text-shadow: -2px 2px black;
+    text-shadow: -2px 3px black;
   }
 }
 @media screen and (min-width: 768px) {
@@ -722,6 +1003,66 @@ footer h3 {
     padding: 0;
     font-size: 3rem;
   }
+}
+.modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modalContainer .modalContent {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  background-color: #2b2d42;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  margin: 10% auto;
+  padding: 20px;
+  width: 40%;
+}
+.modalContainer .modalContent a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 21px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  width: 40%;
+  margin: 15px auto;
+}
+.modalContainer .modalContent .modalHeader {
+  text-align: center;
+  font-size: 1.3rem;
+}
+.modalContainer .modalContent .bi-x {
+  color: white;
+  text-align: right;
+  font-size: 2.4rem;
+}
+.modalContainer .modalContent .bi-x:hover,
+.modalContainer .modalContent .bi-x:focus {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ef233c;
+}
+.gif {
+  background-image: url("giphy.2eb4234f.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 400px;
+  margin: 0px 40px;
 }
 * {
   box-sizing: border-box;

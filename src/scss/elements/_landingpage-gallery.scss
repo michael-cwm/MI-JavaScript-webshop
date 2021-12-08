@@ -107,7 +107,7 @@
     font-family: fonts.$secondary-font;
 
     @include mixins.desktop-only {
-        font-size: 1.1rem;
+        font-size: 1rem;
 
     }
 }
@@ -183,10 +183,7 @@
     object-fit: cover;
     object-position: right center;
 
-    &:hover {
-        opacity: 0.8;
-        cursor: pointer;
-    }
+
 
     @include mixins.tablet-only {
         height: 300px;
@@ -207,14 +204,14 @@
         font-size: 0.9rem;
         font-weight: 600;
         cursor: pointer;
-        padding: 10px 25px;
+        padding: 8px 21px;
         border: none;
         border-radius: 6px;
         text-decoration: none;
 
         @include mixins.tablet-only {
             font-size: 0.8rem;
-         
+            padding: 9px 19px;
         }
     
         @include mixins.desktop-only {
@@ -227,7 +224,7 @@
 
 .button-info {
     background-color: variables.$color-dkblue;
-    color: white;
+    color: white !important;;
     transition: 0.2s;
 
     &:hover {
@@ -238,7 +235,7 @@
 
 .button-buy {
     background-color: variables.$color-lightred;
-    color: white;
+    color: white !important;;
     transition: 0.2s;
 
     &:hover {

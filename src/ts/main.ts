@@ -2,10 +2,14 @@ import {
     productcatalog
 } from "./models/productcatalog";
 
+import { bundledHeaderFunctions } from "./header";
+
+export let shoppingCartArray = [];
 
 
 window.onload = function () {
-    loadHTML()
+    loadHTML();
+    bundledHeaderFunctions();
     
 }
 
@@ -14,6 +18,12 @@ let container: HTMLDivElement = document.createElement("div");
 container.classList.add("products");
 wrapper.appendChild(container);
 
+let modal: HTMLDivElement = document.createElement("div");
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  } 
 
 // Load HTML on landing page
 function loadHTML() {
@@ -88,6 +98,7 @@ function loadHTML() {
         let buttonBuy: HTMLAnchorElement = document.createElement("a");
         buttonBuy.classList.add("button-buy");
         buttonBuy.innerHTML = "Köp";
+        buttonBuy.id = "btn-menu";
         buttonBuy.setAttribute("data-id", productcatalog[i].id.toString());
 
         let buttonInfo: HTMLAnchorElement = document.createElement("a");
@@ -98,9 +109,55 @@ function loadHTML() {
         productButtons.appendChild(buttonInfo);
         productButtons.appendChild(buttonBuy);
 
+        // Modal
+        
+        modal.classList.add("modalContainer");
+        modal.id = "modal-container"
+
+        let modalContent: HTMLDivElement = document.createElement("div");
+        modalContent.classList.add("modalContent");
+        modalContent.id = "modal-content"
+
+        productButtons.after(modal)
+        modal.appendChild(modalContent);
+
+
+        let close: HTMLSpanElement = document.createElement("span");
+        close.classList.add("bi", "bi-x");
+        modalContent.appendChild(close);
+
+
+        let modalHeader: HTMLParagraphElement = document.createElement("p");
+        modalHeader.innerHTML = "Upplevelsen lades till i kundkorgen!";
+        modalHeader.classList.add("modalHeader");
+        modalContent.appendChild(modalHeader);
+        close.addEventListener("click", () => {
+            modal.style.display = "none";
+          }) 
+
+        let cartButton: HTMLAnchorElement = document.createElement("a");
+        cartButton.innerHTML = "Gå till kassan";
+        cartButton.classList.add("button-buy");
+        cartButton.setAttribute("href", "checkout.html");
+        modalHeader.after(cartButton);
+
+        let gifContainer: HTMLDivElement = document.createElement("div");
+        let img: HTMLImageElement = document.createElement("img");
+        gifContainer.classList.add("gif");
+        gifContainer.appendChild(img)
+        cartButton.after(gifContainer);
+
+       
+
         buttonInfo.addEventListener("click", () => {
             location.href = "product.html?id=" +  productcatalog[i].id;
         })
 
+        buttonBuy.addEventListener("click", () => {
+            shoppingCartArray.push(productcatalog[i].id);
+            modal.style.display = "block";
+        })
+
     }
 }
+
