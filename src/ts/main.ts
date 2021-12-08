@@ -92,6 +92,7 @@ function loadHTML() {
         let buttonBuy: HTMLAnchorElement = document.createElement("a");
         buttonBuy.classList.add("button-buy");
         buttonBuy.innerHTML = "Köp";
+        buttonBuy.id = "btn-menu";
         buttonBuy.setAttribute("data-id", productcatalog[i].id.toString());
 
         let buttonInfo: HTMLAnchorElement = document.createElement("a");
@@ -102,12 +103,51 @@ function loadHTML() {
         productButtons.appendChild(buttonInfo);
         productButtons.appendChild(buttonBuy);
 
+        // Modal
+        let modal: HTMLDivElement = document.createElement("div");
+        modal.classList.add("modalContainer");
+        modal.id = "modal-container"
+
+        let modalContent: HTMLDivElement = document.createElement("div");
+        modalContent.classList.add("modalContent");
+        modalContent.id = "modal-content"
+
+        productButtons.after(modal)
+        modal.appendChild(modalContent);
+
+
+        let close: HTMLSpanElement = document.createElement("span");
+        close.classList.add("bi", "bi-x");
+        modalContent.appendChild(close);
+
+
+        let modalHeader: HTMLParagraphElement = document.createElement("p");
+        modalHeader.innerHTML = "Upplevelsen lades till i kundkorgen!";
+        modalHeader.classList.add("modalHeader");
+        modalContent.appendChild(modalHeader);
+        close.addEventListener("click", () => {
+            modal.style.display = "none";
+          }) 
+
+        let cartButton: HTMLAnchorElement = document.createElement("a");
+        cartButton.innerHTML = "Gå till kassan";
+        cartButton.classList.add("button-buy");
+        cartButton.setAttribute("href", "checkout.html");
+        modalHeader.after(cartButton);
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          } 
+
         buttonInfo.addEventListener("click", () => {
             location.href = "product.html?id=" +  productcatalog[i].id;
         })
 
         buttonBuy.addEventListener("click", () => {
             shoppingCartArray.push(productcatalog[i].id);
+            modal.style.display = "block";
         })
 
     }
