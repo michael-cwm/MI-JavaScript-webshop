@@ -216,8 +216,13 @@ header .logoContainer img {
   font-size: 11pt;
   color: white;
   margin-bottom: 0px;
+<<<<<<< HEAD
   padding-top: 15px;
   padding-bottom: 15px;
+=======
+  padding-top: 10px;
+  padding-bottom: 10px;
+>>>>>>> feature/header
 }
 .burgerStyle li {
   display: flex;
