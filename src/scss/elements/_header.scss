@@ -11,16 +11,15 @@ a{
 }
 
 header{
-    position: sticky;
     background-color: variables.$color-dkblue;
-    height: 8vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     .headerWrapper{
         display: flex;
         justify-content: flex-end;
         width: 100%;
-        margin-right: 10px;
+        margin-right: 20px;
         .bi.bi-cart,
         .bi.bi-search{
           color: white;
@@ -39,7 +38,7 @@ header{
         width: 30%;
         height: 100px;
         color: variables.$color-lightgrey;  
-        font-size: 20pt;
+        font-size: 15pt;
     }
     
 }
@@ -190,7 +189,7 @@ ul{
             background-color: variables.$color-dkblue;
             color: white;
             font-size: 10pt;
-            input:focus{
+            &:focus{
               outline: none;
               border-color: #9ecaed;
               box-shadow: 0 0 10px #9ecaed;
@@ -217,19 +216,30 @@ ul{
   .burgerStyle{
     display: none;
   }
+  header{
+    width: 100%;
+    .headerWrapper{
+      margin-right: 85px;
+    }
+  }
   nav{
-    position: sticky;
-    margin: 4px;
-    width: 60%;
-    height: 5vh;
-    background-color: white;
-    font-size: 11pt;
+    display: flex;
+    justify-content: center;
+    // margin: 4px;
+    width: 100%;
+    height: 8vh;
+    background-color: variables.$color-dkblue;
+    font-size: 9pt;
     // border-bottom: 0.5px solid black;
+    .navlist-wrapper{
+      width: 45%;
+      margin-bottom: 7px;
+    }
 
     ul{
       display: flex;
       justify-content: space-evenly;
-      align-items: center;
+      align-items:flex-end;
       padding: 0px;
       margin: 0px;
       height: 100%;
@@ -244,6 +254,10 @@ ul{
     .bi.bi-brightness-high{
       margin-right: 8px;
     }
+    .bi.bi-caret-down{
+      margin-bottom: -5px;
+      margin-left: 3px;
+    }
   }
 
   .menu-btn__burger{
@@ -254,7 +268,7 @@ ul{
   .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: black;
+    color: white;
   }
   
   .hover-underline-animation:after {
@@ -326,6 +340,7 @@ ul{
   }
 
 
+
   .contact{
     display: inline-block;
     color: white;
@@ -347,6 +362,7 @@ ul{
     }
 
   }
+
 
 
 //slut på desktop-query

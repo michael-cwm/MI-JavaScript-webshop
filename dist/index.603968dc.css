@@ -9,9 +9,8 @@ a {
   text-decoration: none;
 }
 header {
-  position: sticky;
   background-color: #2b2d42;
-  height: 8vh;
+  height: 10vh;
   display: flex;
   align-items: center;
 }
@@ -19,7 +18,7 @@ header .headerWrapper {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 header .headerWrapper .bi.bi-cart,
 header .headerWrapper .bi.bi-search {
@@ -39,7 +38,7 @@ header .logoContainer {
   width: 30%;
   height: 100px;
   color: #edf2f4;
-  font-size: 20pt;
+  font-size: 15pt;
 }
 .inputContainer {
   display: none;
@@ -169,7 +168,7 @@ ul {
     color: white;
     font-size: 10pt;
   }
-  header input input:focus {
+  header input:focus {
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
@@ -188,18 +187,29 @@ ul {
     display: none;
   }
 
+  header {
+    width: 100%;
+  }
+  header .headerWrapper {
+    margin-right: 85px;
+  }
+
   nav {
-    position: sticky;
-    margin: 4px;
-    width: 60%;
-    height: 5vh;
-    background-color: white;
-    font-size: 11pt;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 8vh;
+    background-color: #2b2d42;
+    font-size: 9pt;
+  }
+  nav .navlist-wrapper {
+    width: 45%;
+    margin-bottom: 7px;
   }
   nav ul {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-end;
     padding: 0px;
     margin: 0px;
     height: 100%;
@@ -214,6 +224,10 @@ nav .bi.bi-geo-alt,
 nav .bi.bi-brightness-high {
     margin-right: 8px;
   }
+  nav .bi.bi-caret-down {
+    margin-bottom: -5px;
+    margin-left: 3px;
+  }
 
   .menu-btn__burger {
     display: none;
@@ -222,7 +236,7 @@ nav .bi.bi-brightness-high {
   .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: black;
+    color: white;
   }
 
   .hover-underline-animation:after {
