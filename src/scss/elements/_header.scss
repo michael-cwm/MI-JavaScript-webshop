@@ -19,12 +19,12 @@ header{
         display: flex;
         justify-content: flex-end;
         width: 100%;
-        margin-right: 10px;
+        margin-right: 20px;
         .bi.bi-cart,
         .bi.bi-search{
           color: white;
           margin-right: 15px;
-          font-size: 20pt;
+          font-size: 13pt;
           cursor:pointer;
           &:hover{
             color: variables.$color-lightred;
@@ -35,10 +35,10 @@ header{
         display: flex;
         align-items: center;
         justify-content: center; 
-        width: 30vw;
+        width: 30%;
         height: 100px;
-        color: variables.$color-lightred;
-        font-size: 20pt;
+        color: variables.$color-lightgrey;  
+        font-size: 15pt;
     }
     
 }
@@ -71,7 +71,7 @@ header{
 }
 
 .menu-btn__burger {
-  width: 30px;
+  width: 25px;
   height: 3px;
   background: #fff;
   border-radius: 5px;
@@ -83,7 +83,7 @@ header{
 .menu-btn__burger::after {
   content: '';
   position: absolute;
-  width: 30px;
+  width: 25px;
   height: 3px;
   background: #fff;
   border-radius: 5px;
@@ -159,17 +159,18 @@ ul{
     header{
         display: flex;
         .inputContainer{
-            width: 100%;
+            width: 300px;
             display: flex;
             justify-content: center;
         }
         .headerWrapper{
-          width: 30%;
+          width: 80%;
         }
         .bi.bi-search{
             margin-left: -30px;
             font-weight: bold;
             font-size: 14pt;
+            color: #8995a3;
         }
         form{
             display: flex;
@@ -177,12 +178,21 @@ ul{
             
         }
         input{
-            border-radius: 20px;
+            border-radius: 10px;
+            outline: 1px solid #8995a3;
             height: 30px;
             width: 300px;
             border:none;
-            padding: 20px;
+            padding: 15px;
             font-weight:600px;
+            background-color: variables.$color-dkblue;
+            color: white;
+            font-size: 10pt;
+            &:focus{
+              outline: none;
+              border-color: #9ecaed;
+              box-shadow: 0 0 10px #9ecaed;
+            }
         }
         
     }
@@ -190,6 +200,12 @@ ul{
     .headerWrapper .bi.bi-search{
     display: none;
 }
+
+::placeholder{
+  // color: #8995a3;
+  color: #8995a3;
+}
+
 
 //slut på tablet-query
 }
@@ -199,20 +215,47 @@ ul{
   .burgerStyle{
     display: none;
   }
-  nav{
+  header{
     width: 100%;
-    height: 5vh;
-    background-color: variables.$color-lightblue;
+    .headerWrapper{
+      margin-right: 85px;
+    }
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    // margin: 4px;
+    width: 100%;
+    height: 8vh;
+    background-color: variables.$color-dkblue;
+    font-size: 9pt;
+    // border-bottom: 0.5px solid black;
+    .navlist-wrapper{
+      width: 45%;
+      margin-bottom: 7px;
+    }
+
     ul{
       display: flex;
       justify-content: space-evenly;
-      align-items: center;
+      align-items:flex-end;
       padding: 0px;
       margin: 0px;
       height: 100%;
       &:hover{
         cursor:pointer;
       }
+    }
+    .bi.bi-box,
+    .bi.bi-credit-card-2-back,
+    .bi.bi-gift,
+    .bi.bi-geo-alt,
+    .bi.bi-brightness-high{
+      margin-right: 8px;
+    }
+    .bi.bi-caret-down{
+      margin-bottom: -5px;
+      margin-left: 3px;
     }
   }
 
@@ -230,30 +273,33 @@ ul{
   .hover-underline-animation:after {
     content: '';
     position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
+    width: 0%;
+    // transform: scaleX(0);
+    height: 1.5px;
     bottom: 0;
     left: 0;
     background-color: variables.$color-lightred;
     transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    transition: all 0.25s ease-out;
+
   }
   
   .hover-underline-animation:hover:after {
-    transform: scaleX(1);
+    // transform: scaleX(1);
+    width: 100%;
     transform-origin: bottom left;
   }
 
+  //dropdown till "upplevelser" i desktop-läget
   .dropdown-content {
     font-family: fonts.$primary-font;
-    font-size: 11pt;
+    font-size: 10pt;
     display: none;
     position: absolute;
     background-color: white;
     color: black;
     width: 200px;
-    height: 140px;
+    height: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
@@ -262,7 +308,9 @@ ul{
     li{
       width: 200px;
       padding-left: 5px;
-      padding-top: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
     }
 
     li:hover {
@@ -291,6 +339,7 @@ ul{
   }
 
 
+
   .contact{
     display: inline-block;
     color: white;
@@ -298,7 +347,8 @@ ul{
     margin-bottom: 0px;
     font-family: fonts.$primary-font;
     cursor: pointer;
-    font-size: 12pt;
+    font-size: 10pt;
+    font-weight:500;
     a{
       text-decoration: none;
       color: white;
@@ -307,10 +357,11 @@ ul{
       }
     }
     &:hover{
-      color: variables.$color-lightred; 
+      color: variables.$color-lightred;
     }
 
   }
+
 
 
 //slut på desktop-query
