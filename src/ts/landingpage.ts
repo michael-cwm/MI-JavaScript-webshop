@@ -16,7 +16,7 @@ export let shoppingCartItems: Product[] = JSON.parse(localStorage.getItem("Shopp
 export function loadLandingPage() {
 
     // Container for landing page
-    let wrapper: HTMLDivElement = document.querySelector(".wrapper");
+    let wrapper: HTMLDivElement = document.querySelector(".wrapper-landingpage");
     let container: HTMLDivElement = document.createElement("div");
     container.classList.add("products");
     wrapper.appendChild(container);

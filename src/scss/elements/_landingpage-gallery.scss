@@ -2,39 +2,43 @@
 @use "../variables";
 @use "../mixins";
 
-.wrapper {
+.wrapper-landingpage {
     padding: 5px 0px 10px;
-    background-color: variables.$color-lightgrey;
+    background-color: rgb(255, 250, 250);
 
     @include mixins.tablet-only {
         padding: 0;
     }
 
     @include mixins.desktop-only {
-        padding: 10px 0px 20px;
+        padding: 40px 0px 20px;
 
     }
 }
 
+
 .section-header h2 {
-    background-color: variables.$color-lightgrey;
+    background-color: rgb(255, 250, 250);
+    color: #000;
     text-align: center;
     font-size: 1.7rem;
-    padding: 20px 10px 0px;
-    margin: 0;
-    font-family: fonts.$secondary-font;
+    margin: 0 auto;
+    font-weight: 600;
+    font-family: fonts.$primary-font;
+    
 
     @include mixins.desktop-only {
-        font-size: 2.6rem;
-        font-weight: 600;
-        padding: 240px 10px 0px;
+        font-size: 4rem;
+        font-weight: 700;
+        padding:250px 0px 0px;
+        letter-spacing: 1px;
     }
 }
 
 .products {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
 
     @include mixins.tablet-only {
         flex-direction: row;
@@ -61,7 +65,8 @@
         width: 100%;
         margin: 10px 0px;
         padding: 10px;
-        background-color: #fff;
+        border-radius: 15px;
+        background-color: variables.$color-lightgrey;
 
         @include mixins.tablet-only {
             width: 45%;
@@ -102,12 +107,12 @@
 
 
 .product-name {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.5rem;
-    font-family: fonts.$secondary-font;
+    font-family: fonts.$primary-font;
 
     @include mixins.desktop-only {
-        font-size: 1rem;
+        font-size: 1.6rem;
 
     }
 }
@@ -180,6 +185,7 @@
 .img-container img {
     width: 100%;
     height: auto;
+    border-radius: 15px 9px;
     object-fit: cover;
     object-position: right center;
 
@@ -223,23 +229,23 @@
 
 
 .button-info {
-    background-color: variables.$color-dkblue;
-    color: white !important;;
+    background-color: #111111;
+    color: white !important;
     transition: 0.2s;
 
     &:hover {
-        background-color: #434665;
-        color: #fff;
+        background-color: rgb(28, 26, 26);
+        color: #fff !important;
     }
 }
 
 .button-buy {
-    background-color: variables.$color-lightred;
-    color: white !important;;
+    background-color: #3fc1c9;
+    color: #000 !important;;
     transition: 0.2s;
 
     &:hover {
-        background-color: rgb(206, 3, 3);
+        background-color: #53e1e9;
     }
 }
 
