@@ -216,6 +216,8 @@ header .logoContainer img {
   font-size: 11pt;
   color: white;
   margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .burgerStyle li {
   display: flex;
