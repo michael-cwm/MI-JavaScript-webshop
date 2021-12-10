@@ -4,7 +4,7 @@
 
 
 footer {
-  background-color: variables.$color-dkblue;
+  background-color: #111111;
   color: #fff;
   padding: 30px 20px;
 
@@ -18,8 +18,53 @@ footer {
     padding: 30px 0px 0px;
   }
 
+
+
+    input {
+      border-radius: 10px;
+      outline: 1px solid #8995a3;
+      height: 30px;
+      width: 100%;
+      border: none;
+      padding: 20px 40px 20px 10px;
+      font-weight: 600px;
+      background-color: #111111;
+      color: white;
+      font-size: 10pt;
+
+      &:focus {
+        outline: none;
+        border-color: #9ecaed;
+        box-shadow: 0 0 10px #9ecaed;
+      }
+
+      @include mixins.tablet-only {
+        width: 400px;
+      }
+    
+      @include mixins.desktop-only {
+        width: 400px;
+      }
+     
+
+
+
+    }
+  }
+
   p {
     margin: 10px 0px;
+  }
+
+  .button-newsletter {
+    background-color: #3fc1c9;
+    transition: 0.2s;
+
+    &:hover {
+   background-color: variables.$color-lightgrey;
+        color: #000;
+    }
+   
   }
 
   button {
@@ -53,7 +98,7 @@ footer {
 
   h3 {
     padding: 0;
-    margin: 0;
+    margin: 0px 0px 15px;
     font-size: 1.5rem;
     font-weight: 700;
   }
@@ -108,8 +153,7 @@ footer {
     font-size: 2rem;
 
     &:hover {
-      color: variables.$color-lightred;
+      color: #3fc1c9;
     }
   }
-}
 }
