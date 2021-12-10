@@ -13,7 +13,7 @@ body{
     justify-content: center;
     width: 100%;
     background-color: white;
-    height: 130vh;
+    height: 140vh;
     .payment-container{
         display: flex;
         justify-content: center;
@@ -64,6 +64,14 @@ body{
             }
         }
     }
+}
+
+.form-control{
+    margin-bottom: 10px;
+}
+
+.btn.btn-secondary.needs-validation{
+    margin-top: 20px;
 }
 
 @include mixins.tablet-only{

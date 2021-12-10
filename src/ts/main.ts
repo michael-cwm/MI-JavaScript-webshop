@@ -6,6 +6,8 @@ import { bundledHeaderFunctions } from "./header";
 
 import { loadLandingPage } from "./landingpage";
 
+import "./checkout";
+
 export let shoppingCartArray = [];
 
 
