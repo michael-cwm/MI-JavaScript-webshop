@@ -1048,6 +1048,9 @@ nav .bi.bi-brightness-high {
     padding: 0px 20px 20px 0px;
   }
 }
+#product-display-container .product-name {
+  font-size: 2rem;
+}
 #product-display-container span {
   display: block;
   margin: 5px 0px 10px;
@@ -1075,6 +1078,13 @@ nav .bi.bi-brightness-high {
 #product-display-container .price {
   text-align: left;
   font-weight: 700;
+  font-size: 1.3rem;
+}
+#product-display-container .product-details {
+  font-size: 1rem;
+}
+#product-display-container .button-buy {
+  width: 20%;
 }
 #product-display-container button {
   font-size: 1rem;
@@ -1126,7 +1136,7 @@ nav .bi.bi-brightness-high {
 }
 .product-img-section img {
   width: 100%;
-  height: auto;
+  max-height: 600px;
   object-fit: cover;
 }
 .back-arrow-container {

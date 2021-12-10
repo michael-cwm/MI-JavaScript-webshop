@@ -108,7 +108,7 @@ function loadProduct(
 
     let price: HTMLSpanElement = document.createElement("span");
     price.classList.add("price");
-    price.innerHTML = Product.price + " kr";
+    price.innerHTML = Product.price.toLocaleString() + " kr";
     footerContainer.appendChild(price);
 
     let button: HTMLButtonElement = document.createElement("button");

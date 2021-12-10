@@ -46,6 +46,10 @@
         }
     }
 
+    .product-name {
+        font-size: 2rem;
+    }
+
     span {
         display: block;
         margin: 5px 0px 10px;
@@ -76,8 +80,16 @@
     .price {
         text-align: left;
         font-weight: 700;
+        font-size: 1.3rem;
     }
 
+    .product-details {
+        font-size: 1rem;
+    }
+
+    .button-buy {
+        width: 20%;
+    }
 
     button {
         font-size: 1rem;
@@ -135,7 +147,7 @@
 
 .product-img-section img {
     width: 100%;
-    height: auto;
+    max-height: 600px;
     object-fit: cover;
 }
 
