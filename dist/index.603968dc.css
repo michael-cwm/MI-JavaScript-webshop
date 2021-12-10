@@ -1170,14 +1170,39 @@ nav .bi.bi-brightness-high {
   display: flex;
   flex-direction: column;
   opacity: 1;
-  background-color: #2b2d42;
+  background-color: black;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 4px;
   color: white;
   border: none;
-  margin: 10% auto;
+  margin: 5% auto;
   padding: 20px;
   width: 40%;
+  -webkit-animation-name: animatemodal;
+  -webkit-animation-duration: 0.8s;
+  animation-name: animatemodal;
+  animation-duration: 0.8s;
+  /* Add Animation */
+}
+@-webkit-keyframes animatemodal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatemodal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 .modalContainer .modalContent a {
   font-size: 0.9rem;
