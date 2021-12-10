@@ -1,4 +1,29 @@
-export const productcatalog = [
+export class Product {
+    name: string;
+    price: number;
+    users: string;
+    img: string;
+    details: string;
+    id: number;
+  
+    constructor(
+        name: string,
+        price: number,
+        users: string,
+        img: string,
+        details: string,
+        id: number,
+    ) {
+      this.name = name;
+      this.price = price;
+      this.users = users;
+      this.img = img;
+      this.details = details;
+      this.id = id;
+    }
+  }
+
+export const productcatalog: Product[] = [
     {
         name: "Sov i skogen",
         price: 5999,

@@ -2,39 +2,43 @@ import {
     productcatalog
 } from "./models/productcatalog";
 
+import {
+    addToShoppingCart
+} from "./landingpage";
+
+
+import {
+    shoppingCartItems
+} from "./main";
+
+import {
+    Product
+} from "./models/productcatalog";
+
 
 window.onload = function () {
-    // Get the ID from the URL string
+    // Get the ID from the URL
     let url = window.location.search;
     let urlParams = new URLSearchParams(url);
 
-
     for (let value of urlParams.values()) {
         let id = value;
-     
-            // Look through the product catalog for the ID
+
+        // Look through the product catalog for the ID
         for (let i = 0; i < productcatalog.length; i++) {
             let productIds = productcatalog[i].id.toString();
-           
+
             if (productIds === id) {
-                loadProduct(productcatalog[i].name,
-                    productcatalog[i].img,
-                    productcatalog[i].users,
-                    productcatalog[i].details,
-                    productcatalog[i].price)
+                loadProduct(productcatalog[i])
             }
         }
     }
-   
+
 }
 
 
 function loadProduct(
-    productName: string,
-    productImg: string,
-    productUsers: string,
-    productDetails: string,
-    productPrice: number,) {
+    Product) {
 
     let wrapper: HTMLDivElement = document.querySelector(".wrapper");
     let arrowContainer = document.createElement("div");
@@ -59,7 +63,7 @@ function loadProduct(
     productImgSection.classList.add("product-img-section");
 
     let productImage = document.createElement("img");
-    productImage.setAttribute("src", productImg);
+    productImage.setAttribute("src", Product.img);
     productImgSection.appendChild(productImage);
 
     productContainer.appendChild(productImgSection);
@@ -72,7 +76,7 @@ function loadProduct(
     // Product name
     let name: HTMLSpanElement = document.createElement("span");
     name.classList.add("product-name");
-    name.innerHTML = productName;
+    name.innerHTML = Product.name;
 
 
     // Stars
@@ -86,13 +90,13 @@ function loadProduct(
     // Users
     let users: HTMLSpanElement = document.createElement("span");
     users.classList.add("users");
-    users.innerHTML = productUsers;
+    users.innerHTML = Product.users;
 
     productRating.after(users);
 
     // Product details
     let details: HTMLParagraphElement = document.createElement("p");
-    details.innerHTML = productDetails;
+    details.innerHTML = Product.details;
     details.classList.add("product-details");
     users.after(details);
 
@@ -103,12 +107,20 @@ function loadProduct(
 
     let price: HTMLSpanElement = document.createElement("span");
     price.classList.add("price");
-    price.innerHTML = productPrice.toLocaleString() + " kr";
+    price.innerHTML = Product.price + " kr";
     footerContainer.appendChild(price);
 
     let button: HTMLButtonElement = document.createElement("button");
     button.innerHTML = "Köp nu";
     button.classList.add("button-buy");
+    button.setAttribute("data-id", Product.id);
+
+    button.addEventListener("click", (e) => {
+        addToShoppingCart(Product);
+        console.log(shoppingCartItems);
+    })
+
+
     footerContainer.appendChild(button);
-    
+
 }

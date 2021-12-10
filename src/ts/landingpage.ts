@@ -1,13 +1,15 @@
 import {
-    shoppingCartArray
+    shoppingCartItems
 } from "./main";
 
 import {
     productcatalog
 } from "./models/productcatalog";
 
+import { Product } from "./models/productcatalog";
 
 export function loadLandingPage() {
+
     // Container for landing page
     let wrapper: HTMLDivElement = document.querySelector(".wrapper");
     let container: HTMLDivElement = document.createElement("div");
@@ -143,10 +145,15 @@ export function loadLandingPage() {
             location.href = "product.html?id=" + productcatalog[i].id;
         })
 
-        buttonBuy.addEventListener("click", () => {
-            shoppingCartArray.push(productcatalog[i].id);
-            modal.style.display = "block";
-        })
-
+        buttonBuy.addEventListener("click", (e) => {
+            addToShoppingCart(productcatalog[i])
+            modal.style.display = "block";  
+        }) 
     }
+}
+
+export function addToShoppingCart(item: Product) {
+    shoppingCartItems.push(item);
+    localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
+    console.log(shoppingCartItems)
 }
