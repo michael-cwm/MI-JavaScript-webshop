@@ -9,7 +9,8 @@ import {
 
 import {
     shoppingCartItems
-} from "./main";
+} from "./landingpage";
+
 
 import {
     Product

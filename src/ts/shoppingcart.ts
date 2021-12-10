@@ -4,12 +4,10 @@ import {
 
 import {
     shoppingCartItems
-} from "./main";
+} from "./landingpage";
 
 
 window.onload = function () {
-    console.log(shoppingCartItems)
-
     shoppingCartItems.forEach(element => {
         loadShoppingCart(element)
         console.log(element)
@@ -26,13 +24,26 @@ wrapper.before(arrowContainer);
 arrow.addEventListener("click", () => {
     window.history.back();
 });
+let shoppingcartContainer: HTMLDivElement = document.createElement("div");
+shoppingcartContainer.id = "shoppingcart-container";
+wrapper.appendChild(shoppingcartContainer);
+
+let checkoutButtonContainer: HTMLDivElement = document.createElement("div");
+let checkoutButton: HTMLAnchorElement = document.createElement("a");
+checkoutButton.innerHTML = "Gå till kassan";
+checkoutButtonContainer.classList.add("checkout-button");
+checkoutButton.classList.add("button-info");
+checkoutButton.setAttribute("href", "checkout.html");
+checkoutButtonContainer.appendChild(checkoutButton);
+shoppingcartContainer.after(checkoutButtonContainer);
+
+checkoutButton.addEventListener("click", () => {
+    location.href = "checkout.html";
+})
 
 function loadShoppingCart(element) {
-        let shoppingcartContainer: HTMLDivElement = document.createElement("div");
-        shoppingcartContainer.id = "shoppingcart-container";
-        wrapper.appendChild(shoppingcartContainer);
-        
-        // Cart Div
+
+        // Cart Items
         let items: HTMLDivElement = document.createElement("div");
         items.classList.add("cart-items");
         shoppingcartContainer.appendChild(items);

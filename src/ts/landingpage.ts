@@ -1,13 +1,18 @@
+
 import {
-    shoppingCartItems
-} from "./main";
+    Cart
+} from "./models/cart";
 
 import {
     productcatalog
 } from "./models/productcatalog";
 
-import { Product } from "./models/productcatalog";
+import {
+    Product
+} from "./models/productcatalog";
 
+export let shoppingCartItems: Product[] = JSON.parse(localStorage.getItem("Shopping cart")) || [];
+    
 export function loadLandingPage() {
 
     // Container for landing page
@@ -146,14 +151,16 @@ export function loadLandingPage() {
         })
 
         buttonBuy.addEventListener("click", (e) => {
-            addToShoppingCart(productcatalog[i])
-            modal.style.display = "block";  
-        }) 
+            addToShoppingCart(productcatalog[i]);
+            modal.style.display = "block";
+        })
     }
 }
 
 export function addToShoppingCart(item: Product) {
     shoppingCartItems.push(item);
     localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
-    console.log(shoppingCartItems)
+    
+    // Skapa ett CartItem-objekt
+
 }
