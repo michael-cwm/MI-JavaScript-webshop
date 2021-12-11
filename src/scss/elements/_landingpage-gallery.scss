@@ -126,14 +126,14 @@ main {
 
             @include mixins.desktop-only {
                 border: none;
-                font-size: 1.4rem;
+                font-size: 1.7rem;
                 font-weight: 400;
                 padding: 12px 17px;
                 margin: 20px 0px 0px;
             }
         }
     }
-
+}
 
 .wrapper-landingpage {
     padding: 5px 0px 10px;
@@ -399,5 +399,4 @@ main {
         }
 
     }
-}
 }
