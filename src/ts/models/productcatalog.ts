@@ -25,20 +25,20 @@ export class Product {
 
 export const productcatalog: Product[] = [
     {
-        name: "Sov i skogen",
-        price: 5999,
+        name: "Campa på Area 51",
+        price: 20999,
         users: "1-2",
-        img: "https://images.unsplash.com/photo-1551927411-95e412943b58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80",
-        details: "Lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum. Lorem lorem.",
+        img: "https://images.unsplash.com/photo-1638862925201-4e373cb6a630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+        details: "Ta med någon på en naturnära övernattning i Nevada. En unik upplevelse med en given plats på varje bucketlist.",
         id: 101
     },
 
     {
-        name: "Öl med en vy",
-        price: 1999,
-        users: "1-2",
+        name: "Ölnirvana",
+        price: 10999,
+        users: "1-4",
         img: "https://images.unsplash.com/photo-1560761069-ce1ebcc652a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-        details: "Lorem ipsum lorem ipsum lorem ipsum lorem. Lorem Lorem.",
+        details: "Ölkyl i duschen. Tappkran på rummet. Utsikt över bergen. Skål.",
         id: 102
     },
 
@@ -47,52 +47,35 @@ export const productcatalog: Product[] = [
         price: 3999000,
         users: "1",
         img: "https://images.unsplash.com/photo-1541873676-a18131494184?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=718&q=80",
-        details: "Lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum.",
+        details: "När världen blivit för tråkig.",
         id: 103
     },
 
     {
-        name: "Hyr Richard Bransons ö",
-        price: 790000,
-        users: "1-20",
-        img: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=775&q=80",
-        details: "Lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum. Lorem.",
-        id: 104
+        name: "Squid game",
+        price: 99000,
+        users: "1",
+        img: "https://images.unsplash.com/photo-1636542980176-cd7822b5a5cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+        details: "Lorem ipsum lorem ipsum lorem ipsum. Lorem ipsumipsum. Lorem ipsum lorem ipsum lorem ipsum",
+        id: 106
     },
-
+    
     {
-        name: "Naturvandring i Jason Voorhees fotspår",
-        price: 5599,
-        users: "1-5",
-        img: "https://images.unsplash.com/photo-1588168053036-b51f9152f2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-        details: "Lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum",
+        name: "Sleepover på slottet",
+        price: 50599,
+        users: "1-10",
+        img: "https://images.unsplash.com/photo-1622647608751-db4d3a66aa72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+        details: "Sov som en prinsessa.",
         id: 105
     },
 
     {
-        name: "Wingsuit (för dig med dödslängtan)",
-        price: 7599,
-        users: "1-2",
-        img: "https://images.unsplash.com/photo-1533652475678-12f52b4fdd53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
-        details: "Lorem ipsum lorem ipsum lorem ipsum. Lorem ipsumipsum. Lorem ipsum lorem ipsum lorem ipsum",
-        id: 106
+        name: "Hyr Jay-Z’s ö",
+        price: 790000,
+        users: "1-20",
+        img: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=775&q=80",
+        details: "Varför boka ett hotellrum när du kan ha en hel ö för dig själv? ",
+        id: 104
     },
-
-    {
-        name: "Simma med fiskarna",
-        price: 19999,
-        users: "1-2",
-        img: "https://images.unsplash.com/photo-1566812201627-d2ebc5b056f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-        details: "Lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum",
-        id: 107
-    },
-
-    {
-        name: "Golden-mys",
-        price: 599,
-        users: "1",
-        img: "https://images.unsplash.com/photo-1548439739-0cf616cef1cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-        details: "Lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum lorem ipsum",
-        id: 108
-    }
+  
 ];
