@@ -108,16 +108,11 @@ export function loadLandingPage() {
         productName.after(productRating);
         productRating.after(productUsers);
 
-        // Product details
-        let productDetails: HTMLParagraphElement = document.createElement("p");
-        productDetails.innerHTML = productcatalog[i].details;
-        productDetails.classList.add("product-details");
-        productUsers.after(productDetails);
 
         // Product footer
         let productFooter: HTMLDivElement = document.createElement("div");
         productFooter.classList.add("product-footer");
-        productDetails.after(productFooter);
+        productUsers.after(productFooter);
 
         // Price
         let priceContainer: HTMLDivElement = document.createElement("div");

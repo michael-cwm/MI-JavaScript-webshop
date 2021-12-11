@@ -49,11 +49,11 @@ p {
   margin: 10px 0px;
 }
 .button-newsletter {
-  background-color: #3fc1c9;
+  background-color: #fff;
   transition: 0.2s;
 }
 .button-newsletter:hover {
-  background-color: #53e1e9;
+  background-color: #3fc1c9;
   color: #000;
 }
 button {
@@ -473,30 +473,35 @@ main {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
+@media screen and (min-width: 768px) {
+  .section-header {
+    font-size: 2.8rem;
+  }
+}
 @media screen and (min-width: 1100px) {
   .section-header {
     font-size: 3rem;
     font-weight: 700;
-    padding: 40px 0px 20px;
-    letter-spacing: 1px;
+    padding: 20px 0px 0px;
   }
 }
 .about-container {
   display: flex;
   width: 100%;
-  flex-direction: column;
-  padding: 0px 10px;
+  flex-direction: column-reverse;
+  padding: 10px;
 }
 @media screen and (min-width: 768px) {
   .about-container {
-    flex-direction: row;
+    flex-direction: column-reverse;
+    padding: 0px 0px 30px;
   }
 }
 @media screen and (min-width: 1100px) {
   .about-container {
     flex-direction: row;
-    gap: 40px;
-    padding: 20px 50px;
+    gap: 30px;
+    padding: 50px;
   }
 }
 .about-container .about-img-container img {
@@ -506,8 +511,78 @@ main {
   object-fit: cover;
   object-position: center;
 }
+@media screen and (min-width: 768px) {
+  .about-container .about-img-container img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .about-container .about-img-container img {
+    flex: 2;
+  }
+}
+.about-container .about-text {
+  width: 100%;
+  padding: 20px 0px 40px;
+}
+@media screen and (min-width: 768px) {
+  .about-container .about-text {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .about-container .about-text {
+    padding: 0px;
+  }
+}
+.about-container .about-text a {
+  display: flex;
+}
+.about-container .about-text h1 {
+  font-size: 4rem;
+  margin: 0px;
+}
 .about-container .about-text p {
+  font-size: 1.3rem;
+  margin: 30px 0px 40px;
+  line-height: 2rem;
+}
+.about-container .new-adventures-btn {
   font-size: 1.2rem;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
+  transition: 0.4s;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-container .new-adventures-btn:hover {
+  background-color: #000000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+@media screen and (min-width: 768px) {
+  .about-container .new-adventures-btn {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .about-container .new-adventures-btn {
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 12px 17px;
+    margin: 40px 0px 0px;
+  }
 }
 .video-container {
   display: none;
@@ -516,7 +591,6 @@ main {
 @media screen and (min-width: 1100px) {
   .video-container {
     display: block;
-    padding-top: 40px;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -582,7 +656,7 @@ main {
 }
 .wrapper-landingpage {
   padding: 5px 0px 10px;
-  background-color: snow;
+  background-color: #fcfcfc;
 }
 @media screen and (min-width: 768px) {
   .wrapper-landingpage {
@@ -597,7 +671,7 @@ main {
 .wrapper-landingpage .products {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .wrapper-landingpage .products {
@@ -611,11 +685,13 @@ main {
 }
 @media screen and (min-width: 1100px) {
   .wrapper-landingpage .products {
+    width: 90%;
     flex-direction: row;
     margin: 0 auto;
     justify-content: center;
     padding: 20px 0px 10px;
     flex-wrap: wrap;
+    gap: 25px;
   }
 }
 .wrapper-landingpage .products .product {
@@ -626,7 +702,7 @@ main {
   margin: 10px 0px;
   padding: 10px;
   border-radius: 15px;
-  background-color: #edf2f4;
+  background-color: snow;
 }
 @media screen and (min-width: 768px) {
   .wrapper-landingpage .products .product {
@@ -638,7 +714,7 @@ main {
 }
 @media screen and (min-width: 1100px) {
   .wrapper-landingpage .products .product {
-    width: 20%;
+    width: 27%;
     background-color: #fff;
     margin: 0px 12px 30px;
     padding: 0px 0px 100px;
@@ -663,7 +739,7 @@ main {
 }
 @media screen and (min-width: 1100px) {
   .wrapper-landingpage .products .product .img-container img {
-    height: 250px;
+    height: 350px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -824,7 +900,7 @@ main {
   align-items: flex-end;
 }
 #hero {
-  background-image: url("hero-mobile.4a19fc19.jpg");
+  background-image: url("hero.09303ce5.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -834,14 +910,12 @@ main {
 }
 @media screen and (min-width: 768px) {
   #hero {
-    background-image: url("hero-tablet.accb2fed.jpg");
     height: 70vh;
     background-position: bottom;
   }
 }
 @media screen and (min-width: 1100px) {
   #hero {
-    background-image: url("hero-desktop.7ac47e70.jpg");
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;

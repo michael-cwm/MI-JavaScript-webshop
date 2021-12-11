@@ -3,7 +3,7 @@
 @use "../mixins";
 
 #hero {
-  background-image: url("../assets/hero-mobile.jpg");
+  background-image: url("../assets/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,13 +13,11 @@
 
 
   @include mixins.tablet-only {
-    background-image: url("../assets/hero-tablet.jpg");
     height: 70vh;
     background-position: bottom;
   }
 
   @include mixins.desktop-only {
-    background-image: url("../assets/hero-desktop.jpg");
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
