@@ -48,20 +48,20 @@
             }
 
         }
-   
 
-    .button-buy {
-        background-color: #3fc1c9;
-        color: #000 !important;
-        transition: 0.2s;
 
-        &:hover {
-            background-color: #53e1e9;
+        .button-buy {
+            background-color: #3fc1c9;
+            color: #000 !important;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: #53e1e9;
+            }
         }
     }
-}
 
-   
+
 }
 
 
@@ -217,7 +217,7 @@
         font-weight: 500;
 
         @include mixins.tablet-only {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         @include mixins.desktop-only {
@@ -227,11 +227,24 @@
 }
 
 
-.cart-images img {
-    height: 190px;
+.cart-images  {
+    width: 100%;
+}
+
+img {
+    height: 120px;
     object-fit: cover;
     object-position: right;
-    max-width: 160px;
+
+    @include mixins.tablet-only {
+        height: 190px;
+        max-width: 160px;
+    }
+
+    @include mixins.desktop-only {
+        height: 190px;
+        max-width: 160px;
+    }
 }
 
 .back-arrow-container {

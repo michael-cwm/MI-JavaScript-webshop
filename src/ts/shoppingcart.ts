@@ -119,6 +119,5 @@ function loadShoppingCart(element) {
 function deleteItem(itemToDelete) {
     console.log("Item to delete: " + JSON.stringify(itemToDelete));
     let objectIndex: number = shoppingCartItems.indexOf(itemToDelete); // Find index on object to remove
-    shoppingCartItems.splice(objectIndex, 1); // Use splice to remove object
-   
+    shoppingCartItems.splice(itemToDelete, 1); // Use splice to remove object
 }
