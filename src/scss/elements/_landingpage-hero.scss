@@ -3,7 +3,7 @@
 @use "../mixins";
 
 #hero {
-  background-image: url("../assets/hero-mobile.jpg");
+  background-image: url("../assets/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,35 +13,21 @@
 
 
   @include mixins.tablet-only {
-    background-image: url("../assets/hero-tablet.jpg");
     height: 70vh;
     background-position: bottom;
   }
 
-
-  .hero-video {
-    display: none;
-
-
-    @include mixins.desktop-only {
-      display: block;
-    }
-
-    video {
-      @include mixins.desktop-only {
-        object-fit: cover;
-        object-position: bottom;
-        width: 100vw;
-        height: 100vh;
-        position: relative;
-        top: 0;
-        left: 0;
-
-      }
-
-
-    }
+  @include mixins.desktop-only {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
   }
+
+
+
 }
 
 .hero-text {
@@ -53,14 +39,16 @@
   width: 100%;
   padding-top: 145px;
 
+
+
   @include mixins.tablet-only {
     padding-top: 250px;
   }
 
   @include mixins.desktop-only {
     width: 100%;
-    padding-top: 240px;
- 
+    padding-top: 220px;
+
   }
 
 
@@ -70,7 +58,7 @@
     border-radius: 6px;
     font-family: fonts.$primary-font;
     color: #fff;
-    background-color: variables.$color-dkblue;
+    background-color: #000;
     border: none;
     padding: 12px 20px;
     cursor: pointer;
@@ -81,8 +69,9 @@
 
 
     &:hover {
-      background-color: #fff;
-      color: #000;
+      background-color: #000000;
+      ;
+      color: #fff;
       transform: translateY(-2px);
     }
 
@@ -92,10 +81,9 @@
     }
 
     @include mixins.desktop-only {
-      background-color: variables.$color-dkblue;
-      color: #fff;
       border: none;
       font-size: 1.4rem;
+      font-weight: 400;
       padding: 12px 17px;
       margin: 20px 0px 0px;
     }

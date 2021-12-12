@@ -14,7 +14,41 @@
 
     }
 
+    .checkout-button {
+        text-align: center;
+        padding: 40px 0px;
+
+        @include mixins.tablet-only {
+            padding: 50px 0px 0px;
+        }
+        
+        @include mixins.desktop-only {
+            padding: 50px 0px 0px;
+        }
+    
+    a {
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 8px 21px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+
+            @include mixins.tablet-only {
+                font-size: 1.3rem;
+                padding: 9px 19px;
+            }
+
+            @include mixins.desktop-only {
+                font-size: 1.3rem;
+            }
+
+        }
+    }
 }
+
+
 
 #shoppingcart-container {
     display: flex;
@@ -171,6 +205,7 @@
     position: relative;
 
     .bi-arrow-left {
+        z-index: 2;
         cursor: pointer;
         font-size: 2rem;
         position: fixed;

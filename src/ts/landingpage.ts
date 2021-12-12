@@ -1,15 +1,22 @@
+
 import {
-    shoppingCartArray
-} from "./main";
+    Cart
+} from "./models/cart";
 
 import {
     productcatalog
 } from "./models/productcatalog";
 
+import {
+    Product
+} from "./models/productcatalog";
 
+export let shoppingCartItems: Product[] = JSON.parse(localStorage.getItem("Shopping cart")) || [];
+    
 export function loadLandingPage() {
+
     // Container for landing page
-    let wrapper: HTMLDivElement = document.querySelector(".wrapper");
+    let wrapper: HTMLDivElement = document.querySelector(".wrapper-landingpage");
     let container: HTMLDivElement = document.createElement("div");
     container.classList.add("products");
     wrapper.appendChild(container);
@@ -51,12 +58,6 @@ export function loadLandingPage() {
     cartButton.classList.add("button-buy");
     cartButton.setAttribute("href", "checkout.html");
     modalHeader.after(cartButton);
-
-    let gifContainer: HTMLDivElement = document.createElement("div");
-    let img: HTMLImageElement = document.createElement("img");
-    gifContainer.classList.add("gif");
-    gifContainer.appendChild(img)
-    cartButton.after(gifContainer);
 
 
     // Loop through the product catalog
@@ -101,16 +102,11 @@ export function loadLandingPage() {
         productName.after(productRating);
         productRating.after(productUsers);
 
-        // Product details
-        let productDetails: HTMLParagraphElement = document.createElement("p");
-        productDetails.innerHTML = productcatalog[i].details;
-        productDetails.classList.add("product-details");
-        productUsers.after(productDetails);
 
         // Product footer
         let productFooter: HTMLDivElement = document.createElement("div");
         productFooter.classList.add("product-footer");
-        productDetails.after(productFooter);
+        productUsers.after(productFooter);
 
         // Price
         let priceContainer: HTMLDivElement = document.createElement("div");
@@ -143,10 +139,17 @@ export function loadLandingPage() {
             location.href = "product.html?id=" + productcatalog[i].id;
         })
 
-        buttonBuy.addEventListener("click", () => {
-            shoppingCartArray.push(productcatalog[i].id);
+        buttonBuy.addEventListener("click", (e) => {
+            addToShoppingCart(productcatalog[i]);
             modal.style.display = "block";
         })
-
     }
+}
+
+export function addToShoppingCart(item: Product) {
+    shoppingCartItems.push(item);
+    localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
+    
+    // Skapa ett CartItem-objekt
+
 }
