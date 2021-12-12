@@ -3,6 +3,8 @@
 @use "../mixins";
 
 .wrapper {
+    background-color: rgb(255, 250, 250);
+
     @include mixins.tablet-only {
         padding: 50px 20px;
     }
@@ -14,6 +16,7 @@
 
     }
 
+
     .checkout-button {
         text-align: center;
         padding: 40px 0px;
@@ -21,12 +24,12 @@
         @include mixins.tablet-only {
             padding: 50px 0px 0px;
         }
-        
+
         @include mixins.desktop-only {
             padding: 50px 0px 0px;
         }
-    
-    a {
+
+        a {
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
@@ -41,13 +44,25 @@
             }
 
             @include mixins.desktop-only {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
 
+        }
+   
+
+    .button-buy {
+        background-color: #3fc1c9;
+        color: #000 !important;
+        transition: 0.2s;
+
+        &:hover {
+            background-color: #53e1e9;
         }
     }
 }
 
+   
+}
 
 
 #shoppingcart-container {
@@ -128,13 +143,32 @@
 
         @include mixins.desktop-only {
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
+        }
+
+        .bi {
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .bi-x {
+            text-align: right;
+            font-size: 2rem;
+            margin: 0;
+            padding: 0px;
+
+            @include mixins.tablet-only {
+                padding: 0px 0px 0px 40px;
+            }
+
+            @include mixins.desktop-only {
+                padding: 0px 0px 0px 40px;
+            }
+
         }
     }
 
-    .bi {
-        cursor: pointer;
-    }
+
 
     span {
         display: block;
@@ -171,7 +205,8 @@
         }
 
         @include mixins.desktop-only {
-            margin: 0px;
+            font-size: 1rem;
+            margin: 0px 25px;
         }
 
     }
@@ -189,7 +224,6 @@
             font-size: 1.5rem;
         }
     }
-
 }
 
 

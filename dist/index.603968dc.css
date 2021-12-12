@@ -999,6 +999,9 @@ main {
     text-shadow: -2px 3px black;
   }
 }
+.wrapper {
+  background-color: snow;
+}
 @media screen and (min-width: 768px) {
   .wrapper {
     padding: 50px 20px;
@@ -1040,8 +1043,16 @@ main {
 }
 @media screen and (min-width: 1100px) {
   .wrapper .checkout-button a {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
+}
+.wrapper .checkout-button .button-buy {
+  background-color: #3fc1c9;
+  color: #000 !important;
+  transition: 0.2s;
+}
+.wrapper .checkout-button .button-buy:hover {
+  background-color: #53e1e9;
 }
 #shoppingcart-container {
   display: flex;
@@ -1120,11 +1131,28 @@ main {
 @media screen and (min-width: 1100px) {
   #shoppingcart-container .cart-icons {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
   }
 }
-#shoppingcart-container .bi {
+#shoppingcart-container .cart-icons .bi {
   cursor: pointer;
+  font-size: 1.1rem;
+}
+#shoppingcart-container .cart-icons .bi-x {
+  text-align: right;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0px;
+}
+@media screen and (min-width: 768px) {
+  #shoppingcart-container .cart-icons .bi-x {
+    padding: 0px 0px 0px 40px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #shoppingcart-container .cart-icons .bi-x {
+    padding: 0px 0px 0px 40px;
+  }
 }
 #shoppingcart-container span {
   display: block;
@@ -1160,7 +1188,8 @@ main {
 }
 @media screen and (min-width: 1100px) {
   #shoppingcart-container .product-amount {
-    margin: 0px;
+    font-size: 1rem;
+    margin: 0px 25px;
   }
 }
 #shoppingcart-container .product-name {
