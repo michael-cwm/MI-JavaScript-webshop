@@ -41,7 +41,7 @@ window.onload = function () {
 function loadProduct(
     Product) {
 
-    let wrapper: HTMLDivElement = document.querySelector(".wrapper");
+    let wrapper: HTMLDivElement = document.querySelector(".wrapper-productpage");
     let arrowContainer = document.createElement("div");
     arrowContainer.classList.add("back-arrow-container");
     let arrow = document.createElement("i");
