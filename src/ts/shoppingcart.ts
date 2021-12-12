@@ -1,4 +1,5 @@
 import {
+    Product,
     productcatalog
 } from "./models/productcatalog";
 
@@ -8,16 +9,12 @@ import {
 
 
 window.onload = function () {
-getShoppingCart()
-   
+    getShoppingCart()
 }
 
-function getShoppingCart() {
-    shoppingCartItems.forEach(element => {
-        loadShoppingCart(element)
-    })
-}
+let sum: number = 0;
 
+// HTML for wrapper, arrow-icon at the top and shopping cart footer
 let wrapper: HTMLDivElement = document.querySelector(".wrapper");
 let arrowContainer = document.createElement("div");
 arrowContainer.classList.add("back-arrow-container");
@@ -32,6 +29,13 @@ let shoppingcartContainer: HTMLDivElement = document.createElement("div");
 shoppingcartContainer.id = "shoppingcart-container";
 wrapper.appendChild(shoppingcartContainer);
 
+let shoppingCartFooter: HTMLDivElement = document.createElement("div");
+shoppingCartFooter.classList.add("shoppingcart-footer");
+let total: HTMLParagraphElement = document.createElement("p");
+total.classList.add("total");
+shoppingCartFooter.appendChild(total)
+shoppingcartContainer.after(shoppingCartFooter);
+
 let checkoutButtonContainer: HTMLDivElement = document.createElement("div");
 let checkoutButton: HTMLAnchorElement = document.createElement("a");
 checkoutButton.innerHTML = "Gå till kassan";
@@ -39,24 +43,33 @@ checkoutButtonContainer.classList.add("checkout-button");
 checkoutButton.classList.add("button-buy");
 checkoutButton.setAttribute("href", "checkout.html");
 checkoutButtonContainer.appendChild(checkoutButton);
-shoppingcartContainer.after(checkoutButtonContainer);
+shoppingCartFooter.appendChild(checkoutButtonContainer)
+
 
 checkoutButton.addEventListener("click", () => {
     location.href = "checkout.html";
 })
 
-function loadShoppingCart(element) {
+// Check what's in the shopping cart
+function getShoppingCart() {
+    shoppingCartItems.forEach(element => {
+        loadShoppingCart(element);
+        totalPrice(element.price);
+    })
+}
 
+// Load the shopping cart
+function loadShoppingCart(element: Product) {
     // Cart Items
     let items: HTMLDivElement = document.createElement("div");
     items.classList.add("cart-items");
     shoppingcartContainer.appendChild(items);
 
-
     // Cart Image Section
     let cartImageSection: HTMLDivElement = document.createElement("div");
     cartImageSection.classList.add("cart-images");
 
+    // Cart Image
     let cartImage: HTMLImageElement = document.createElement("img");
     cartImage.setAttribute("src", element.img);
     cartImageSection.appendChild(cartImage);
@@ -91,18 +104,18 @@ function loadShoppingCart(element) {
     cartIcons.classList.add("cart-icons");
     item.after(cartIcons);
 
-    let plusicon = document.createElement("i");
-    plusicon.setAttribute("class", "bi bi-plus-lg");
-    cartIcons.appendChild(plusicon);
+    let minusicon = document.createElement("i");
+    minusicon.setAttribute("class", "bi bi-dash-lg");
+    cartIcons.appendChild(minusicon);
 
     let productAmount: HTMLSpanElement = document.createElement("span");
     cartIcons.appendChild(productAmount);
     productAmount.classList.add("product-amount");
-    productAmount.innerHTML = "Antal";
+    productAmount.innerHTML = "1";
 
-    let minusicon = document.createElement("i");
-    minusicon.setAttribute("class", "bi bi-dash-lg");
-    cartIcons.appendChild(minusicon);
+    let plusicon = document.createElement("i");
+    plusicon.setAttribute("class", "bi bi-plus-lg");
+    cartIcons.appendChild(plusicon);
 
     let closeIcon: HTMLSpanElement = document.createElement("span");
     closeIcon.classList.add("bi", "bi-x");
@@ -115,9 +128,22 @@ function loadShoppingCart(element) {
 
 }
 
-// Delete object entirely using splice
-function deleteItem(itemToDelete) {
+// Delete item from cart
+function deleteItem(itemToDelete: Product) {
     console.log("Item to delete: " + JSON.stringify(itemToDelete));
     let objectIndex: number = shoppingCartItems.indexOf(itemToDelete); // Find index on object to remove
-    shoppingCartItems.splice(itemToDelete, 1); // Use splice to remove object
+    console.log(objectIndex);
+    shoppingCartItems.splice(objectIndex, 1); // Use splice to remove object
+}
+
+// Calculate sum
+function totalPrice(element: number) {
+    let price: number = element;
+    sum += price;
+    updatePrice(sum);
+}
+
+// Update sum
+function updatePrice(sum) {
+total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
 }

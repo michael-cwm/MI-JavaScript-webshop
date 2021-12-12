@@ -16,17 +16,31 @@
 
     }
 
-
-    .checkout-button {
+    .total {
+        padding: 20px 0px 0px;
+        font-size: 1.2rem;
         text-align: center;
-        padding: 40px 0px;
+        font-weight: 600;
 
         @include mixins.tablet-only {
-            padding: 50px 0px 0px;
+            font-size: 1.3rem;
         }
 
         @include mixins.desktop-only {
-            padding: 50px 0px 0px;
+            font-size: 1.5rem;
+        }
+    }
+
+    .checkout-button {
+        text-align: center;
+        padding: 20px 0px 60px;
+
+        @include mixins.tablet-only {
+            padding: 20px 0px 0px;
+        }
+
+        @include mixins.desktop-only {
+            padding: 30px 0px 0px;
         }
 
         a {
@@ -39,12 +53,13 @@
             text-decoration: none;
 
             @include mixins.tablet-only {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
                 padding: 9px 19px;
             }
 
             @include mixins.desktop-only {
                 font-size: 1.1rem;
+                padding: 11px 19px;
             }
 
         }
@@ -131,7 +146,7 @@
 
     .cart-icons {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -155,7 +170,7 @@
             text-align: right;
             font-size: 2rem;
             margin: 0;
-            padding: 0px;
+            padding: 0px 0px 0px 20px;
 
             @include mixins.tablet-only {
                 padding: 0px 0px 0px 40px;
@@ -195,12 +210,11 @@
     }
 
     .product-amount {
-        font-size: 0.7rem;
+        font-size: 1rem;
         text-align: left;
-        margin: 10px 0px;
+        margin: 0px 14px;
 
         @include mixins.tablet-only {
-
             margin: 0px 15px;
         }
 
@@ -227,19 +241,19 @@
 }
 
 
-.cart-images  {
+.cart-images {
     width: 100%;
 
     img {
         height: 120px;
         object-fit: cover;
         object-position: right;
-    
+
         @include mixins.tablet-only {
             height: 190px;
             max-width: 160px;
         }
-    
+
         @include mixins.desktop-only {
             height: 190px;
             max-width: 160px;
@@ -275,4 +289,29 @@
 
     }
 
+}
+
+.shoppingcart-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 0px;
+    background: rgb(247, 247, 247);
+  
+    @include mixins.tablet-only {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0px 50px 20px;
+    }
+
+    @include mixins.desktop-only {
+        flex-direction: column;
+        width: 70%;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 20px 0px 60px 0px;
+
+   
+    }
 }
