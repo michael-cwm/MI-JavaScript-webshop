@@ -2,12 +2,9 @@
 @use "../variables";
 @use "../mixins";
 
-
 main {
-    background-color: rgb(255, 250, 250);
+    background-color: rgb(250, 250, 250);
 }
-
-
 
 .section-header {
     color: #000;
@@ -32,7 +29,7 @@ main {
     display: flex;
     width: 100%;
     flex-direction: column-reverse;
-    padding: 10px;
+    
 
     @include mixins.tablet-only {
         flex-direction: column-reverse;
@@ -47,7 +44,7 @@ main {
 
     }
 
-    .about-img-container img {
+    img {
         border-radius: 0px;
         width: 100%;
         height: auto;
@@ -59,7 +56,7 @@ main {
         }
 
         @include mixins.desktop-only {
-            flex: 2;
+            max-width: 1600px;
         }
 
 
@@ -67,11 +64,11 @@ main {
 
     .about-text {
         width: 100%;
-        padding: 20px 0px 40px;
+        padding: 20px 10px 40px;
 
 
         @include mixins.tablet-only {
-            padding: 20px;
+            padding: 20px 20px 50px;
         }
 
 
@@ -218,7 +215,7 @@ main {
 
 .wrapper-landingpage {
     padding: 5px 0px 10px;
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(250, 250, 250);
 
     @include mixins.tablet-only {
         padding: 0;
@@ -234,6 +231,7 @@ main {
         display: flex;
         flex-direction: column;
         width: 100%;
+        gap: 10px;
 
         @include mixins.tablet-only {
             flex-direction: row;
@@ -261,23 +259,24 @@ main {
             flex-direction: column;
             width: 100%;
             margin: 10px 0px;
-            padding: 10px;
             border-radius: 15px;
-            background-color: rgb(255, 250, 250);
+            background-color: #fff;
 
             @include mixins.tablet-only {
                 width: 45%;
-                margin: 0px 10px 10px;
+                margin: 10px;
+                border-radius: 15px;
+                padding: 0;
                 background-color: #fff;
-                box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px;
             }
 
             @include mixins.desktop-only {
                 width: 27%;
+                border-radius: 150px 150px 15px 15px;
                 background-color: #fff;
                 margin: 0px 12px 30px;
                 padding: 0px 0px 100px;
-                box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
             }
 
             span {
@@ -288,18 +287,20 @@ main {
             .img-container img {
                 width: 100%;
                 height: auto;
-                border-radius: 15px 9px;
+                border-radius: 15px 15px 0px 0px;
                 object-fit: cover;
-                object-position: right center;
+                object-position: center;
 
 
 
                 @include mixins.tablet-only {
-                    height: 300px;
+                    height: 370px;
+                    border-radius: 15px 15px 0px 0px;
                 }
 
                 @include mixins.desktop-only {
                     height: 350px;
+                    border-radius: 53% 47% 60% 40% / 35% 31% 69% 65%;
                 }
             }
 
@@ -307,6 +308,7 @@ main {
     }
 
     .product-card {
+        padding: 10px 15px;
 
         @include mixins.tablet-only {
             padding: 0px 10px 100px;

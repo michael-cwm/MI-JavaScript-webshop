@@ -229,21 +229,21 @@
 
 .cart-images  {
     width: 100%;
-}
 
-img {
-    height: 120px;
-    object-fit: cover;
-    object-position: right;
-
-    @include mixins.tablet-only {
-        height: 190px;
-        max-width: 160px;
-    }
-
-    @include mixins.desktop-only {
-        height: 190px;
-        max-width: 160px;
+    img {
+        height: 120px;
+        object-fit: cover;
+        object-position: right;
+    
+        @include mixins.tablet-only {
+            height: 190px;
+            max-width: 160px;
+        }
+    
+        @include mixins.desktop-only {
+            height: 190px;
+            max-width: 160px;
+        }
     }
 }
 
