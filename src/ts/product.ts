@@ -86,12 +86,6 @@ function loadProduct(
     cartButton.setAttribute("href", "checkout.html");
     modalHeader.after(cartButton);
 
-    let gifContainer: HTMLDivElement = document.createElement("div");
-    let img: HTMLImageElement = document.createElement("img");
-    gifContainer.classList.add("gif");
-    gifContainer.appendChild(img)
-    cartButton.after(gifContainer);
-
 
     arrow.addEventListener("click", () => {
         window.history.back();

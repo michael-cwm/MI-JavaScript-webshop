@@ -30,6 +30,7 @@
     -webkit-animation-duration: 0.8s;
     animation-name: animatemodal;
     animation-duration: 0.8s;
+
     /* Add Animation */
     @-webkit-keyframes animatemodal {
       from {
@@ -47,11 +48,13 @@
         top: -300px;
         opacity: 0;
       }
+
       to {
         top: 0;
         opacity: 1;
       }
     }
+
     a {
       font-size: 0.9rem;
       font-weight: 600;
@@ -70,6 +73,17 @@
       font-size: 1.3rem;
     }
 
+    .button-buy {
+      background-color: #3fc1c9;
+      color: #000 !important;
+      padding: 12px 0px;
+      transition: 0.2s;
+
+      &:hover {
+          background-color: #53e1e9;
+      }
+  }
+
     .bi-x {
       color: white;
       text-align: right;
@@ -85,11 +99,3 @@
   }
 }
 
-.gif {
-  background-image: url("../assets/giphy.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 400px;
-  margin: 0px 40px;
-}

@@ -1478,6 +1478,15 @@ main {
   text-align: center;
   font-size: 1.3rem;
 }
+.modalContainer .modalContent .button-buy {
+  background-color: #3fc1c9;
+  color: #000 !important;
+  padding: 12px 0px;
+  transition: 0.2s;
+}
+.modalContainer .modalContent .button-buy:hover {
+  background-color: #53e1e9;
+}
 .modalContainer .modalContent .bi-x {
   color: white;
   text-align: right;
@@ -1488,14 +1497,6 @@ main {
   text-decoration: none;
   cursor: pointer;
   color: #ef233c;
-}
-.gif {
-  background-image: url("giphy.2eb4234f.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 400px;
-  margin: 0px 40px;
 }
 * {
   box-sizing: border-box;

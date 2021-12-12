@@ -59,12 +59,6 @@ export function loadLandingPage() {
     cartButton.setAttribute("href", "checkout.html");
     modalHeader.after(cartButton);
 
-    let gifContainer: HTMLDivElement = document.createElement("div");
-    let img: HTMLImageElement = document.createElement("img");
-    gifContainer.classList.add("gif");
-    gifContainer.appendChild(img)
-    cartButton.after(gifContainer);
-
 
     // Loop through the product catalog
     for (let i = 0; i < productcatalog.length; i++) {
