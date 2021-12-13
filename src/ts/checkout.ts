@@ -21,4 +21,16 @@ export default (function () {
         false
       );
     });
+
+    document.getElementById("arrowBack").addEventListener("click", () => {
+      window.history.back();
+    })
+
+    let modal = document.getElementById("exampleModal");
+
+    document.getElementById("exampleModal").addEventListener("click", () => {
+      modal.style.display = "block";
+    })
+
+
   })();

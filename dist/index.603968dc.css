@@ -12,7 +12,15 @@ body {
   justify-content: center;
   width: 100%;
   background-color: white;
-  height: 140vh;
+  height: 180vh;
+}
+.checkout-container .bi.bi-arrow-left {
+  font-size: 22pt;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+.checkout-container .bi.bi-arrow-left:hover {
+  cursor: pointer;
 }
 .checkout-container .payment-container {
   display: flex;
@@ -62,8 +70,16 @@ body {
 .form-control {
   margin-bottom: 10px;
 }
+.form-check-input {
+  margin-top: 35px;
+}
+.form-check-label {
+  margin-top: 30px;
+}
 .btn.btn-secondary.needs-validation {
-  margin-top: 20px;
+  margin-top: 30px;
+  background-color: #3fc1c9;
+  border: none;
 }
 @media screen and (min-width: 768px) {
   .checkout-container {
