@@ -16,8 +16,22 @@ footer {
 @media screen and (min-width: 1100px) {
   footer {
     text-align: center;
-    padding: 30px 0px 0px;
+    padding: 30px 0px 40px;
   }
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+footer a:hover {
+  color: #3fc1c9;
+  text-decoration: none;
+}
+footer .footer-logo {
+  display: flex;
+  justify-content: center;
 }
 footer .footer-logo img {
   height: 150px;
@@ -52,7 +66,7 @@ footer input:focus {
   }
 }
 footer p {
-  margin: 10px 0px;
+  margin: 10px 0px 7px;
 }
 footer .button-newsletter {
   background-color: #fff;
@@ -72,18 +86,18 @@ footer button {
   border-radius: 8px;
   text-decoration: none;
   letter-spacing: 1px;
-  margin: 10px 0px;
+  margin: 10px 0px 20px;
 }
 @media screen and (min-width: 768px) {
   footer button {
     width: unset;
-    margin: 0px 10px;
+    margin: 10px 10px 20px;
   }
 }
 @media screen and (min-width: 1100px) {
   footer button {
     width: unset;
-    margin: 0px 10px;
+    margin: 5px 10px 30px;
   }
 }
 footer h3 {
@@ -95,13 +109,14 @@ footer h3 {
 footer .footer-container {
   display: flex;
   flex-direction: column;
-  padding: 20px 0px;
+  padding: 0px 0px 7px;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   footer .footer-container {
     flex-direction: row;
     justify-content: space-around;
-    padding: 20px 0px;
+    padding: 20px 0px 2px;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -109,13 +124,13 @@ footer .footer-container {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 0px;
+    padding: 10px 0px 8px;
   }
 }
 footer .footer-container section {
   color: white;
   line-height: 1.4rem;
-  padding: 10px 0px;
+  padding: 8px 0px 0px;
   font-size: 0.85rem;
 }
 @media screen and (min-width: 768px) {
@@ -135,10 +150,10 @@ footer .footer-container section span {
 }
 footer .footer-container section:last-child span {
   display: inline;
-  padding: 0px 20px 0px 0px;
 }
 footer .footer-container .bi {
   font-size: 2rem;
+  padding: 0px 10px;
 }
 footer .footer-container .bi:hover {
   color: #3fc1c9;
