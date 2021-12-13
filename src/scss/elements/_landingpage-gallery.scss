@@ -273,7 +273,7 @@ main {
 
             @include mixins.desktop-only {
                 width: 27%;
-                border-radius: 150px 150px 15px 15px;
+                border-radius: 15px;
                 background-color: #fff;
                 margin: 0px 12px 30px;
                 padding: 0px 0px 100px;
@@ -300,7 +300,7 @@ main {
 
                 @include mixins.desktop-only {
                     height: 350px;
-                    border-radius: 53% 47% 60% 40% / 35% 31% 69% 65%;
+                    border-radius: 15px 15px 0px 0px;
                 }
             }
 

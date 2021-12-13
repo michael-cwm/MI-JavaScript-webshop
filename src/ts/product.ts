@@ -16,8 +16,12 @@ import {
     Product
 } from "./models/productcatalog";
 
+import { bundledHeaderFunctions } from "./header";
 
 window.onload = function () {
+
+    bundledHeaderFunctions();  
+
     // Get the ID from the URL
     let url = window.location.search;
     let urlParams = new URLSearchParams(url);
