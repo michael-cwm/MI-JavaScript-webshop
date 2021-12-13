@@ -185,8 +185,20 @@ header .logoContainer {
   margin-right: 30px;
 }
 header .logoContainer img {
-  height: 100%;
+  height: auto;
+  width: 100%;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header .logoContainer img {
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  header .logoContainer img {
+    margin-top: 20px;
+    height: 70px;
+  }
 }
 .inputContainer {
   display: none;
