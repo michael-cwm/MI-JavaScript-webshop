@@ -30,15 +30,15 @@ window.onload = function(){}
     }
 
     document.getElementById("homeButton").addEventListener("click", () => {
-      window.location.href = "index.html";
+      window.location.href = "http://localhost:1234/index.html";
     });
 
     document.getElementById("aboutButton").addEventListener("click", () => {
-      window.location.href = "#about";
+      window.location.href = "http://localhost:1234/index.html#about";
     });
 
     document.getElementById("contactButton").addEventListener("click", () => {
-      window.location.href = "#contact";
+      window.location.href = "http://localhost:1234/index.html#contact";
     });
 
 }
