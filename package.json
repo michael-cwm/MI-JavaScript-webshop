@@ -9,11 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "parcel": "^2.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.1"
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
   },
   "repository": {
     "type": "git",
