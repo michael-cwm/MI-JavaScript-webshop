@@ -183,6 +183,7 @@ header .logoContainer {
 }
 header .logoContainer img {
   height: 100%;
+  cursor: pointer;
 }
 .inputContainer {
   display: none;
