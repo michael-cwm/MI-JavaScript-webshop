@@ -176,8 +176,6 @@ header .logoContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
-  height: 70px;
   color: #edf2f4;
   font-size: 15pt;
   margin-top: 5px;
@@ -188,6 +186,7 @@ header .logoContainer img {
   height: auto;
   width: 100%;
   cursor: pointer;
+  padding: 10px;
 }
 @media screen and (min-width: 768px) {
   header .logoContainer img {
@@ -196,8 +195,10 @@ header .logoContainer img {
 }
 @media screen and (min-width: 1100px) {
   header .logoContainer img {
+    padding: 0px 50px;
     margin-top: 20px;
     height: 70px;
+    width: auto;
   }
 }
 .inputContainer {
@@ -277,6 +278,7 @@ header .logoContainer img {
   width: 100%;
   list-style: none;
   cursor: pointer;
+  font-size: 1.2rem;
 }
 .burgerStyle li a {
   display: flex;
@@ -301,9 +303,9 @@ ul {
     display: flex;
   }
   header .inputContainer {
-    width: 300px;
     display: flex;
     justify-content: center;
+    padding-left: 50px;
   }
   header .headerWrapper {
     width: 80%;
@@ -322,13 +324,14 @@ ul {
     border-radius: 10px;
     outline: 1px solid #8995a3;
     height: 30px;
-    width: 300px;
     border: none;
-    padding: 15px;
+    padding: 17px 70px;
     font-weight: 600px;
     background-color: #111111;
     color: white;
     font-size: 10pt;
+    padding: 10px 70px 10px 10px;
+    width: 350px;
   }
   header input:focus {
     outline: none;
@@ -345,6 +348,15 @@ ul {
   }
 }
 @media screen and (min-width: 1100px) {
+  .inputContainer {
+    padding-left: 200px;
+  }
+
+  input {
+    padding: 12px 70px 12px 10px;
+    width: 500px;
+  }
+
   .burgerStyle {
     display: none;
   }
