@@ -6,6 +6,7 @@ footer {
   background-color: #111111;
   color: #fff;
   padding: 30px 20px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   footer {
@@ -17,6 +18,11 @@ footer {
     text-align: center;
     padding: 30px 0px 0px;
   }
+}
+footer .footer-logo img {
+  height: 150px;
+  width: auto;
+  padding: 10px 0px 30px;
 }
 footer input {
   border-radius: 10px;
@@ -45,99 +51,96 @@ footer input:focus {
     width: 400px;
   }
 }
-p {
+footer p {
   margin: 10px 0px;
 }
-.button-newsletter {
+footer .button-newsletter {
   background-color: #fff;
   transition: 0.2s;
 }
-.button-newsletter:hover {
+footer .button-newsletter:hover {
   background-color: #3fc1c9;
   color: #000;
 }
-button {
+footer button {
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
+  width: 50%;
   padding: 10px 25px;
   border: none;
   border-radius: 8px;
   text-decoration: none;
   letter-spacing: 1px;
-}
-input {
-  padding: 5px 10px;
-  margin: 5px 0px;
-  width: 100%;
+  margin: 10px 0px;
 }
 @media screen and (min-width: 768px) {
-  input {
-    margin: 20px 5px;
+  footer button {
     width: unset;
+    margin: 0px 10px;
   }
 }
 @media screen and (min-width: 1100px) {
-  input {
-    margin: 20px 5px;
+  footer button {
     width: unset;
+    margin: 0px 10px;
   }
 }
-h3 {
+footer h3 {
   padding: 0;
   margin: 0px 0px 15px;
   font-size: 1.5rem;
   font-weight: 700;
 }
-.footer-container {
+footer .footer-container {
   display: flex;
   flex-direction: column;
   padding: 20px 0px;
 }
 @media screen and (min-width: 768px) {
-  .footer-container {
+  footer .footer-container {
     flex-direction: row;
     justify-content: space-around;
     padding: 20px 0px;
   }
 }
 @media screen and (min-width: 1100px) {
-  .footer-container {
+  footer .footer-container {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 30px 0px;
   }
 }
-.footer-container section {
+footer .footer-container section {
   color: white;
   line-height: 1.4rem;
   padding: 10px 0px;
   font-size: 0.85rem;
 }
 @media screen and (min-width: 768px) {
-  .footer-container section {
+  footer .footer-container section {
     padding: 0;
     text-align: left;
   }
 }
 @media screen and (min-width: 1100px) {
-  .footer-container section {
+  footer .footer-container section {
     padding: 0;
     text-align: left;
   }
 }
-.footer-container section span {
+footer .footer-container section span {
   display: block;
 }
-.footer-container section:last-child span {
+footer .footer-container section:last-child span {
   display: inline;
   padding: 0px 20px 0px 0px;
 }
-.footer-container .bi {
+footer .footer-container .bi {
   font-size: 2rem;
 }
-.footer-container .bi:hover {
+footer .footer-container .bi:hover {
   color: #3fc1c9;
 }
 body {
