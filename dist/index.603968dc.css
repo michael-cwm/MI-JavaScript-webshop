@@ -1478,11 +1478,26 @@ main {
   text-align: center;
   font-size: 1.3rem;
 }
+.modalContainer .modalContent .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.modalContainer .modalContent .button-shop {
+  background-color: #fff;
+  color: #000 !important;
+  padding: 12px 0px;
+  transition: 0.2s;
+}
+.modalContainer .modalContent .button-shop:hover {
+  background-color: #53e1e9;
+}
 .modalContainer .modalContent .button-buy {
   background-color: #3fc1c9;
   color: #000 !important;
   padding: 12px 0px;
   transition: 0.2s;
+  width: 150px;
 }
 .modalContainer .modalContent .button-buy:hover {
   background-color: #53e1e9;
@@ -1496,7 +1511,7 @@ main {
 .modalContainer .modalContent .bi-x:focus {
   text-decoration: none;
   cursor: pointer;
-  color: #ef233c;
+  color: #53e1e9;
 }
 * {
   box-sizing: border-box;
