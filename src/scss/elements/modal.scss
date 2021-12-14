@@ -31,6 +31,12 @@
       -webkit-animation-duration: 0.8s;
       animation-name: animatemodal;
       animation-duration: 0.8s;
+      p{
+        display: flex;
+        justify-content: center;
+        font-size: 17pt;
+        margin-top: 15px;
+      }
       /* Add Animation */
       @-webkit-keyframes animatemodal {
         from {
@@ -104,9 +110,3 @@
     margin: 0px 40px;
 }
 
-p{
-  display: flex;
-  justify-content: center;
-  font-size: 17pt;
-  margin-top: 20px;
-}
