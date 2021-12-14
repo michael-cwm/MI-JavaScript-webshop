@@ -11,9 +11,10 @@ a {
 }
 
 header {
+  position: fixed;
+  z-index: 3;
   // background-color: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(117,117,117,1) 100%, rgba(245,245,245,1) 100%);
   background-color: #111111;
-  height: 12vh;
   display: flex;
   align-items: center;
 
@@ -43,13 +44,13 @@ header {
     font-size: 0.9rem;
     background-color: #3fc1c9;
     border-radius: 50%;
-    padding: 0px 8px;
+    padding: 0px 9px;
     margin-right: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 25px;
-  
+
   }
 
   .cart {
@@ -57,7 +58,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
 
     &:hover {
       text-decoration: none;
@@ -91,7 +92,7 @@ header {
 
       @include mixins.desktop-only {
         padding: 0px 50px;
-        margin-top: 20px;
+        margin-top: 5px;
         height: 70px;
         width: auto;
 
@@ -115,7 +116,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 80px;
-  height: 80px;
+  height: 100px;
   transition: all .5s ease-in-out;
 }
 
@@ -163,6 +164,7 @@ header {
   transform: translateX(50px);
   background: transparent;
   box-shadow: none;
+  z-index: 4;
 }
 
 .menu-btn.open .menu-btn__burger::before {
@@ -183,8 +185,8 @@ header {
   padding: 0px;
   font-size: 11pt;
   color: white;
-  margin-bottom: 0px;
-  padding-top: 10px;
+  margin: 0px;
+  padding-top: 100px;
   padding-bottom: 10px;
 
 
@@ -296,6 +298,8 @@ ul {
 
   .inputContainer {
     padding-left: 200px;
+    margin-bottom: 20px;
+    z-index: 3;
   }
 
   input {
@@ -327,7 +331,10 @@ ul {
     // border-bottom: 0.5px solid black;
     .navlist-wrapper {
       width: 50%;
-      margin-bottom: 7px;
+      margin-top: 70px;
+      position: fixed;
+      z-index: 3;
+      background-color: #111;
     }
 
     ul {
@@ -400,13 +407,13 @@ ul {
     height: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
-    z-index: 1;
+    z-index: 3;
     list-style: none;
     padding: 0px;
 
     li {
       width: 200px;
-      padding-left: 5px;
+      padding-left: px;
       padding-top: 10px;
       padding-bottom: 10px;
 

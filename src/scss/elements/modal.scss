@@ -5,7 +5,7 @@
 .modalContainer {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   left: 0;
   top: 0;
   width: 100%;
@@ -23,9 +23,9 @@
     border-radius: 4px;
     color: white;
     border: none;
-    margin: 5% auto;
+    margin: 45% auto;
     padding: 20px;
-    width: 40%;
+    width: 90%;
     -webkit-animation-name: animatemodal;
     -webkit-animation-duration: 0.8s;
     animation-name: animatemodal;
@@ -56,6 +56,16 @@
       }
     }
 
+    @include mixins.tablet-only {
+    
+    }
+
+    @include mixins.desktop-only {
+      margin: 5% auto;
+      padding: 20px;
+      width: 40%;
+    }
+
     a {
       font-size: 0.9rem;
       font-weight: 600;
@@ -66,7 +76,6 @@
       text-decoration: none;
       text-align: center;
       width: 40%;
-      margin: 15px auto;
     }
 
     .modalHeader {
@@ -78,16 +87,31 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
+      gap: 20px;
+
+      @include mixins.desktop-only {
+        gap: 20px;
+      }
     }
 
     .button-shop {
       background-color: #fff;
       color: #000 !important;
-      padding: 12px 0px;
+      padding: 12px 7px;
       transition: 0.2s;
+      height: 50px;
+      width: 70%;
 
       &:hover {
         background-color: #53e1e9;
+      }
+
+
+      @include mixins.tablet-only {}
+
+      @include mixins.desktop-only {
+        height: 50px;
+        width: 180px;
       }
     }
 
@@ -96,10 +120,15 @@
       color: #000 !important;
       padding: 12px 0px;
       transition: 0.2s;
-      width: 150px;
+      width: 70%;
 
       &:hover {
         background-color: #53e1e9;
+      }
+
+      @include mixins.desktop-only {
+
+        width: 180px;
       }
     }
 
@@ -107,6 +136,7 @@
       color: white;
       text-align: right;
       font-size: 2.4rem;
+      cursor: pointer;
     }
 
     .bi-x:hover,

@@ -4,9 +4,8 @@
 
 .wrapper-productpage {
     background-color: rgb(252, 252, 252);
-
     @include mixins.tablet-only {
-        padding: 50px 20px;
+        padding: 40px 20px 50px;
     }
 }
 
@@ -36,6 +35,7 @@
     .product-info-section {
         padding: 10px 20px;
         position: relative;
+        z-index: 1;
 
         @include mixins.tablet-only {
             padding: 10px 20px 20px 0px;
@@ -116,13 +116,14 @@
 
     .product-details-footer {
         padding: 0px 0px 20px;
+        
 
         @include mixins.tablet-only {
             display: flex;
             width: 100%;
             flex-direction: column;
             justify-content: flex-end;
-            position: absolute;
+            position: relative;
             bottom: 0;
             left: 0;
         }
@@ -131,16 +132,18 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-
+            padding-top: 20px;
+            position: relative;
+            z-index: 1;
         }
 
     }
 
     .button-buy {
         width: 100%;
+        z-index: 0;
+        position: relative;
+        overflow: hidden;
 
         @include mixins.tablet-only {
             width: 70%;
@@ -194,6 +197,10 @@
     background-color: variables.$color-lightgrey;
     position: relative;
 
+    @include mixins.tablet-only {
+        padding-top: 70px;
+    }
+
     .bi-arrow-left {
         cursor: pointer;
         font-size: 2rem;
@@ -203,7 +210,7 @@
 
         @include mixins.tablet-only {
             font-size: 2.5rem;
-            margin: 30px 0px;
+            margin: 17px 0px;
 
         }
 
