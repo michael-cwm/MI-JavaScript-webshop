@@ -29,7 +29,7 @@ export const productcatalog: Product[] = [
         price: 20999,
         users: "1-2",
         img: "https://images.unsplash.com/photo-1638862925201-4e373cb6a630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-        details: "Ta med någon på en naturnära övernattning i Nevada. En unik upplevelse med en given plats på varje bucketlist.",
+        details: "En naturnära övernattning i Nevada-öknen.",
         id: 101
     },
 
@@ -56,8 +56,8 @@ export const productcatalog: Product[] = [
         price: 99000,
         users: "1",
         img: "https://images.unsplash.com/photo-1636542980176-cd7822b5a5cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
-        details: "Lorem ipsum lorem ipsum lorem ipsum. Lorem ipsumipsum. Lorem ipsum lorem ipsum lorem ipsum",
-        id: 106
+        details: "Den perfekta upplevelsen för alla äventyrslystna!",
+        id: 104
     },
     
     {
@@ -65,17 +65,17 @@ export const productcatalog: Product[] = [
         price: 50599,
         users: "1-10",
         img: "https://images.unsplash.com/photo-1622647608751-db4d3a66aa72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-        details: "Sov som en prinsessa.",
+        details: "Festa som en kung. Sov som en prinsessa.",
         id: 105
     },
 
     {
-        name: "Hyr Jay-Z’s ö",
+        name: "Hyr Jay-Z:s ö",
         price: 790000,
         users: "1-20",
         img: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=775&q=80",
-        details: "Varför boka ett hotellrum när du kan ha en hel ö för dig själv? ",
-        id: 104
+        details: "Jay-Z vet hur en ledig vecka ska tillbringas - och nu kan du semestra som honom. Låt paradisön bli ditt privata semesterparadis för den nätta summan 790 000 kronor per vecka.",
+        id: 106
     },
   
 ];
