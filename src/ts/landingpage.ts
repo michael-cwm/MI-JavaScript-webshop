@@ -56,11 +56,22 @@ export function loadLandingPage() {
         modal.style.display = "none";
     })
 
-    let cartButton: HTMLAnchorElement = document.createElement("a");
-    cartButton.innerHTML = "Gå till kassan";
-    cartButton.classList.add("button-buy");
-    cartButton.setAttribute("href", "checkout.html");
-    modalHeader.after(cartButton);
+    let buttonContainer: HTMLDivElement = document.createElement("div");
+    buttonContainer.classList.add("button-container")
+    let checkoutButton: HTMLAnchorElement = document.createElement("a");
+    checkoutButton.innerHTML = "Gå till kassan";
+    checkoutButton.classList.add("button-buy");
+    checkoutButton.setAttribute("href", "checkout.html");
+    let keepShoppingButton: HTMLAnchorElement = document.createElement("a");
+    keepShoppingButton.classList.add("button-shop");
+    keepShoppingButton.innerHTML = "Forsätta handla";
+    keepShoppingButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    })
+
+    buttonContainer.appendChild(keepShoppingButton);
+    buttonContainer.appendChild(checkoutButton);
+    modalHeader.after(buttonContainer);
 
 
     // Loop through the product catalog
