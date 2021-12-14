@@ -7,10 +7,12 @@ import {
     shoppingCartItems
 } from "./landingpage";
 
-import { bundledHeaderFunctions } from "./header";
+import {
+    bundledHeaderFunctions
+} from "./header";
 
 window.onload = function () {
-    bundledHeaderFunctions();  
+    bundledHeaderFunctions();
     getShoppingCart()
     displayItemAmount()
 }
@@ -148,14 +150,13 @@ function totalPrice(element: number) {
 
 // Update sum
 function updatePrice(sum) {
-total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
+    total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
 }
 
-function displayItemAmount()  {
-    let cartIcon = document.getElementById("shoppingCart");
-    let itemAmount: HTMLSpanElement = document.createElement("span");
-    itemAmount.classList.add("item-amount")
-    itemAmount.innerHTML = shoppingCartItems.length.toString();
+export function displayItemAmount() {
+    let itemAmount: HTMLSpanElement = document.getElementById("item-amount");
+    let cartIcon = document.getElementById("shoppingCart")
+;    itemAmount.innerHTML = shoppingCartItems.length.toString();
     cartIcon.after(itemAmount);
 
 }

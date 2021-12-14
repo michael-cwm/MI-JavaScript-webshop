@@ -1,4 +1,3 @@
-
 import {
     Cart
 } from "./models/cart";
@@ -11,8 +10,12 @@ import {
     Product
 } from "./models/productcatalog";
 
+import {
+    displayItemAmount
+} from "./shoppingcart";
+
 export let shoppingCartItems: Product[] = JSON.parse(localStorage.getItem("Shopping cart")) || [];
-    
+
 export function loadLandingPage() {
 
     // Container for landing page
@@ -142,6 +145,7 @@ export function loadLandingPage() {
         buttonBuy.addEventListener("click", (e) => {
             addToShoppingCart(productcatalog[i]);
             modal.style.display = "block";
+            displayItemAmount()
         })
     }
 }
@@ -149,7 +153,7 @@ export function loadLandingPage() {
 export function addToShoppingCart(item: Product) {
     shoppingCartItems.push(item);
     localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
-    
+
     // Skapa ett CartItem-objekt
 
 }
