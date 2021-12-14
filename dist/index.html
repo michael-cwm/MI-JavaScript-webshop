@@ -17,23 +17,25 @@
 <body>
 
     <header>
-      <div class="logoContainer">
-        <img src="/LoggaLiteStorreSlogan.110be9a1.png" id="homeButton">
-      </div>
-      <div class="inputContainer">
-        <form>
-          <input type="text" placeholder="Sök...">
-          <i class="bi bi-search"></i>
-        </form>
-      </div>
-      <div class="headerWrapper">
-        <i class="bi bi-search"></i>
-        <h5 class="contact" id="aboutButton">Om oss</h5>
-        <h5 class="contact" id="contactButton">Kontakt</h5>
-        <i class="bi bi-cart" id="shoppingCart"><a href="#shoppingcart.html"></a></i>
-        <div class="menu-btn" id="hamburgare">
-          <div class="menu-btn__burger"></div>
+        <div class="logoContainer">
+            <a href="/index.html">
+                <img src="/LoggaLiteStorreSlogan.110be9a1.png" id="homeButton">
+            </a>
         </div>
+        <div class="inputContainer">
+            <form>
+                <input type="text" placeholder="Sök kick...">
+                <i class="bi bi-search"></i>
+            </form>
+        </div>
+        <div class="headerWrapper">
+            <i class="bi bi-search"></i>
+            <h5 class="contact" id="aboutButton"><a href="#about">Om oss</a></h5>
+            <h5 class="contact" id="contactButton"><a href="#contact">Kontakt</a></h5>
+            <a href="/shoppingcart.html"><i class="bi bi-cart" id="shoppingCart"></i></a>
+            <div class="menu-btn" id="hamburgare">
+                <div class="menu-btn__burger"></div>
+            </div>
     </div></header>
     <div class="dropdownWrapper">
         <ul id="burgerDropdown">
@@ -81,9 +83,9 @@
             </div>
             <div class="about-text">
                 <h1>Äventyr utöver det vanliga</h1>
-                <p>I 20 år har vi skräddarsytt upplevelser till världens alla hörn. 
+                <p>I 20 år har vi skräddarsytt upplevelser till världens alla hörn.
                     Boka ditt drömäventyr tryggt och bekymmersfritt med oss. </p>
-                    <a href="#popular-products">
+                <a href="#popular-products">
                     <button class="new-adventures-btn" type="button">
                         Nya upplevelser
                     </button>
@@ -115,14 +117,13 @@
 
         </div>
     </main>
-    <footer>
+    <footer id="contact">
         <div class="footer-logo">
             <img src="/LoggaLiteStorreSlogan.110be9a1.png">
         </div>
-        <h3>Följ oss för nya äventyr</h3>
-        <p>Prenumerera på vårt nyhetsbrev för exklusiva erbjudanden och nyheter.</p>
+        <h3>Få vårt nyhetsbrev</h3>
+        <p>Prenumerera på vårt nyhetsbrev och få förtur till nya upplevelser och unika erbjudanden.</p>
         <input type="text" placeholder="Din e-postadress"><button type="button" class="button-newsletter">Prenumerera</button>
-
         <div class="footer-container" id="footer">
             <section>
                 <span>
@@ -136,7 +137,9 @@
                 </span>
             </section>
         </div>
+        <p><a href="mailto:kontakt@99kicks.com">kontakt@99kicks.com</a></p>
     </footer>
+
 </body>
 
 </html>

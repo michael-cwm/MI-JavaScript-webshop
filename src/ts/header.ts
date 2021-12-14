@@ -1,10 +1,4 @@
 window.onload = function(){}
-    
-    
-    
-    
-
-
 
     export function bundledHeaderFunctions(){
 
@@ -28,19 +22,6 @@ window.onload = function(){}
       let element:HTMLDivElement = document.getElementById("burgerDropdown") as HTMLDivElement;
       element.classList.toggle("burgerStyle");
     }
-
-    document.getElementById("homeButton").addEventListener("click", () => {
-      window.location.href = "index.html";
-    });
-
-    document.getElementById("aboutButton").addEventListener("click", () => {
-      window.location.href = "#about";
-    });
-
-    document.getElementById("contactButton").addEventListener("click", () => {
-      window.location.href = "#contact";
-    });
-
 }
 
 

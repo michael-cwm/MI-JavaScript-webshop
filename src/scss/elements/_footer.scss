@@ -16,10 +16,25 @@ footer {
 
   @include mixins.desktop-only {
     text-align: center;
-    padding: 30px 0px 0px;
+    padding: 30px 0px 40px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+
+    &:hover {
+      color:#3fc1c9;
+      text-decoration: none;
+    }
   }
 
   .footer-logo {
+    display: flex;
+    justify-content: center;
+
     img {
       height: 150px;
       width: auto;
@@ -60,7 +75,8 @@ footer {
 
 
 p {
-  margin: 10px 0px;
+  margin: 10px 0px 7px;
+
 }
 
 .button-newsletter {
@@ -84,16 +100,16 @@ button {
   border-radius: 8px;
   text-decoration: none;
   letter-spacing: 1px;
-  margin: 10px 0px;
+  margin: 10px 0px 20px;
 
   @include mixins.tablet-only {
     width: unset;
-    margin: 0px 10px;
+    margin: 10px 10px 20px;
   }
 
   @include mixins.desktop-only {
     width: unset;
-    margin: 0px 10px;
+    margin: 5px 10px 30px;
   }
 }
 
@@ -109,26 +125,27 @@ h3 {
 .footer-container {
   display: flex;
   flex-direction: column;
-  padding: 20px 0px;
+  padding: 0px 0px 7px;
+  justify-content: center;
 
 
   @include mixins.tablet-only {
     flex-direction: row;
     justify-content: space-around;
-    padding: 20px 0px;
+    padding: 20px 0px 2px;
   }
 
   @include mixins.desktop-only {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 0px;
+    padding: 10px 0px 8px;
   }
 
   section {
     color: white;
     line-height: 1.4rem;
-    padding: 10px 0px;
+    padding: 8px 0px 0px;
     font-size: 0.85rem;
 
     @include mixins.tablet-only {
@@ -148,11 +165,11 @@ h3 {
 
   section:last-child span {
     display: inline;
-    padding: 0px 20px 0px 0px;
   }
 
   .bi {
     font-size: 2rem;
+    padding: 0px 10px;
 
     &:hover {
       color: #3fc1c9;
