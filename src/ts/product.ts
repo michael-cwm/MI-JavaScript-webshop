@@ -12,16 +12,19 @@ import {
 } from "./landingpage";
 
 
+
+
 import {
     Product
 } from "./models/productcatalog";
 
 import { bundledHeaderFunctions } from "./header";
+import { displayItemAmount } from "./shoppingcart";
 
 window.onload = function () {
 
     bundledHeaderFunctions();  
-
+    displayItemAmount()
     // Get the ID from the URL
     let url = window.location.search;
     let urlParams = new URLSearchParams(url);
@@ -161,6 +164,7 @@ function loadProduct(
         addToShoppingCart(Product);
         modal.style.display = "block";
         console.log(shoppingCartItems);
+        displayItemAmount()
 
     })
 

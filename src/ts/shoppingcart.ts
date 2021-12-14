@@ -7,14 +7,17 @@ import {
     shoppingCartItems
 } from "./landingpage";
 
-import { bundledHeaderFunctions } from "./header";
+import {
+    bundledHeaderFunctions
+} from "./header";
 
 window.onload = function () {
-    bundledHeaderFunctions();  
+    bundledHeaderFunctions();
     getShoppingCart()
+    displayItemAmount()
 }
 
-let sum: number = 0;
+let sum: string = "";
 
 // HTML for wrapper, arrow-icon at the top and shopping cart footer
 let wrapper: HTMLDivElement = document.querySelector(".wrapper");
@@ -54,6 +57,8 @@ checkoutButton.addEventListener("click", () => {
 
 // Check what's in the shopping cart
 function getShoppingCart() {
+    updatePrice(sum);
+    shoppingcartContainer.innerHTML = "";
     shoppingCartItems.forEach(element => {
         loadShoppingCart(element);
         totalPrice(element.price);
@@ -62,6 +67,7 @@ function getShoppingCart() {
 
 // Load the shopping cart
 function loadShoppingCart(element: Product) {
+    total.innerHTML = "";
     // Cart Items
     let items: HTMLDivElement = document.createElement("div");
     items.classList.add("cart-items");
@@ -136,16 +142,25 @@ function deleteItem(itemToDelete: Product) {
     let objectIndex: number = shoppingCartItems.indexOf(itemToDelete); // Find index on object to remove
     console.log(objectIndex);
     shoppingCartItems.splice(objectIndex, 1); // Use splice to remove object
+    localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
+    displayItemAmount();
+    getShoppingCart();
 }
 
 // Calculate sum
 function totalPrice(element: number) {
     let price: number = element;
-    sum += price;
+    sum += price.toLocaleString();
     updatePrice(sum);
 }
 
 // Update sum
-function updatePrice(sum) {
-total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
+function updatePrice(sum: string) {
+    total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
+}
+
+export function displayItemAmount() {
+    let itemAmount: HTMLSpanElement = document.querySelector(".item-amount");  
+    itemAmount.innerHTML = shoppingCartItems.length.toString();
+    console.log(itemAmount)
 }

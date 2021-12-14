@@ -1,4 +1,3 @@
-
 import {
     Cart
 } from "./models/cart";
@@ -11,8 +10,12 @@ import {
     Product
 } from "./models/productcatalog";
 
+import {
+    displayItemAmount
+} from "./shoppingcart";
+
 export let shoppingCartItems: Product[] = JSON.parse(localStorage.getItem("Shopping cart")) || [];
-    
+
 export function loadLandingPage() {
 
     // Container for landing page
@@ -53,11 +56,22 @@ export function loadLandingPage() {
         modal.style.display = "none";
     })
 
-    let cartButton: HTMLAnchorElement = document.createElement("a");
-    cartButton.innerHTML = "Gå till kassan";
-    cartButton.classList.add("button-buy");
-    cartButton.setAttribute("href", "checkout.html");
-    modalHeader.after(cartButton);
+    let buttonContainer: HTMLDivElement = document.createElement("div");
+    buttonContainer.classList.add("button-container")
+    let checkoutButton: HTMLAnchorElement = document.createElement("a");
+    checkoutButton.innerHTML = "Gå till kassan";
+    checkoutButton.classList.add("button-buy");
+    checkoutButton.setAttribute("href", "checkout.html");
+    let keepShoppingButton: HTMLAnchorElement = document.createElement("a");
+    keepShoppingButton.classList.add("button-shop");
+    keepShoppingButton.innerHTML = "Forsätta handla";
+    keepShoppingButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    })
+
+    buttonContainer.appendChild(keepShoppingButton);
+    buttonContainer.appendChild(checkoutButton);
+    modalHeader.after(buttonContainer);
 
 
     // Loop through the product catalog
@@ -142,6 +156,7 @@ export function loadLandingPage() {
         buttonBuy.addEventListener("click", (e) => {
             addToShoppingCart(productcatalog[i]);
             modal.style.display = "block";
+            displayItemAmount();
         })
     }
 }
@@ -149,7 +164,7 @@ export function loadLandingPage() {
 export function addToShoppingCart(item: Product) {
     shoppingCartItems.push(item);
     localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
-    
+
     // Skapa ett CartItem-objekt
 
 }
