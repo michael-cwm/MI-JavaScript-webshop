@@ -17,7 +17,7 @@ window.onload = function () {
     displayItemAmount()
 }
 
-let sum: number = 0;
+let sum: string = "";
 
 // HTML for wrapper, arrow-icon at the top and shopping cart footer
 let wrapper: HTMLDivElement = document.querySelector(".wrapper");
@@ -57,6 +57,7 @@ checkoutButton.addEventListener("click", () => {
 
 // Check what's in the shopping cart
 function getShoppingCart() {
+    updatePrice(sum);
     shoppingcartContainer.innerHTML = "";
     shoppingCartItems.forEach(element => {
         loadShoppingCart(element);
@@ -66,6 +67,7 @@ function getShoppingCart() {
 
 // Load the shopping cart
 function loadShoppingCart(element: Product) {
+    total.innerHTML = "";
     // Cart Items
     let items: HTMLDivElement = document.createElement("div");
     items.classList.add("cart-items");
@@ -141,19 +143,19 @@ function deleteItem(itemToDelete: Product) {
     console.log(objectIndex);
     shoppingCartItems.splice(objectIndex, 1); // Use splice to remove object
     localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
-    console.log(shoppingCartItems);
+    displayItemAmount();
     getShoppingCart();
 }
 
 // Calculate sum
 function totalPrice(element: number) {
     let price: number = element;
-    sum += price;
+    sum += price.toLocaleString();
     updatePrice(sum);
 }
 
 // Update sum
-function updatePrice(sum) {
+function updatePrice(sum: string) {
     total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
 }
 
