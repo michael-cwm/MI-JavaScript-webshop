@@ -54,6 +54,7 @@ checkoutButton.addEventListener("click", () => {
 
 // Check what's in the shopping cart
 function getShoppingCart() {
+    shoppingcartContainer.innerHTML = "";
     shoppingCartItems.forEach(element => {
         loadShoppingCart(element);
         totalPrice(element.price);
@@ -136,6 +137,9 @@ function deleteItem(itemToDelete: Product) {
     let objectIndex: number = shoppingCartItems.indexOf(itemToDelete); // Find index on object to remove
     console.log(objectIndex);
     shoppingCartItems.splice(objectIndex, 1); // Use splice to remove object
+    localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
+    console.log(shoppingCartItems);
+    getShoppingCart();
 }
 
 // Calculate sum
