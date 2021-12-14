@@ -57,6 +57,7 @@ checkoutButton.addEventListener("click", () => {
 
 // Check what's in the shopping cart
 function getShoppingCart() {
+    sum = 0;
     updatePrice(sum);
     shoppingcartContainer.innerHTML = "";
     shoppingCartItems.forEach(element => {
@@ -131,6 +132,7 @@ function loadShoppingCart(element: Product) {
 
     closeIcon.addEventListener("click", (e) => { // Add event listeners to remove icons
         console.log("element: " + JSON.stringify(element));
+        updatePrice(sum);
         deleteItem(element); // If remove icon is clicked, call this function
     })
 
@@ -144,6 +146,7 @@ function deleteItem(itemToDelete: Product) {
     shoppingCartItems.splice(objectIndex, 1); // Use splice to remove object
     localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
     displayItemAmount();
+    
     getShoppingCart();
 }
 
