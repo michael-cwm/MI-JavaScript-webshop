@@ -43,16 +43,30 @@ header {
     font-size: 0.9rem;
     background-color: #3fc1c9;
     border-radius: 50%;
-    padding: 2px 7px;
+    padding: 0px 8px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 25px;
+  
   }
 
   .cart {
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     
-      &:hover {
-        text-decoration: none;
-      }
+
+    &:hover {
+      text-decoration: none;
     }
+
+    @include mixins.tablet-only {}
+
+    @include mixins.desktop-only {}
+  }
 
   .logoContainer {
     display: flex;
