@@ -12,6 +12,7 @@ import { bundledHeaderFunctions } from "./header";
 window.onload = function () {
     bundledHeaderFunctions();  
     getShoppingCart()
+    displayItemAmount()
 }
 
 let sum: number = 0;
@@ -148,4 +149,13 @@ function totalPrice(element: number) {
 // Update sum
 function updatePrice(sum) {
 total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
+}
+
+function displayItemAmount()  {
+    let cartIcon = document.getElementById("shoppingCart");
+    let itemAmount: HTMLSpanElement = document.createElement("span");
+    itemAmount.classList.add("item-amount")
+    itemAmount.innerHTML = shoppingCartItems.length.toString();
+    cartIcon.after(itemAmount);
+
 }

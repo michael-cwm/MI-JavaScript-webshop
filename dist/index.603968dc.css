@@ -187,6 +187,13 @@ header .headerWrapper .bi.bi-cart:hover,
 header .headerWrapper .bi.bi-search:hover {
   color: #3fc1c9;
 }
+header .item-amount {
+  color: #000;
+  background-color: #3fc1c9;
+  border-radius: 50%;
+  padding: 10px;
+  height: auto;
+}
 header .logoContainer {
   display: flex;
   align-items: center;
