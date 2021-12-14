@@ -154,9 +154,7 @@ function updatePrice(sum) {
 }
 
 export function displayItemAmount() {
-    let itemAmount: HTMLSpanElement = document.getElementById("item-amount");
-    let cartIcon = document.getElementById("shoppingCart")
-;    itemAmount.innerHTML = shoppingCartItems.length.toString();
-    cartIcon.after(itemAmount);
-
+    let itemAmount: HTMLSpanElement = document.querySelector(".item-amount");  
+    itemAmount.innerHTML = shoppingCartItems.length.toString();
+    console.log(itemAmount)
 }

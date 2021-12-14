@@ -145,7 +145,7 @@ export function loadLandingPage() {
         buttonBuy.addEventListener("click", (e) => {
             addToShoppingCart(productcatalog[i]);
             modal.style.display = "block";
-            displayItemAmount()
+            displayItemAmount();
         })
     }
 }
