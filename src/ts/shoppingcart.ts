@@ -17,7 +17,7 @@ window.onload = function () {
     displayItemAmount()
 }
 
-let sum: string = "";
+let sum: number = 0;
 
 // HTML for wrapper, arrow-icon at the top and shopping cart footer
 let wrapper: HTMLDivElement = document.querySelector(".wrapper");
@@ -150,17 +150,19 @@ function deleteItem(itemToDelete: Product) {
 // Calculate sum
 function totalPrice(element: number) {
     let price: number = element;
-    sum += price.toLocaleString();
+    sum += price;
+    console.log(sum);
     updatePrice(sum);
+    
 }
 
 // Update sum
-function updatePrice(sum: string) {
+function updatePrice(sum: number) {
     total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
 }
 
+// Display amount of items in shopping cart
 export function displayItemAmount() {
     let itemAmount: HTMLSpanElement = document.querySelector(".item-amount");  
     itemAmount.innerHTML = shoppingCartItems.length.toString();
-    console.log(itemAmount)
 }
