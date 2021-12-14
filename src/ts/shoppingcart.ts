@@ -7,11 +7,14 @@ import {
     shoppingCartItems
 } from "./landingpage";
 
-import { bundledHeaderFunctions } from "./header";
+import {
+    bundledHeaderFunctions
+} from "./header";
 
 window.onload = function () {
-    bundledHeaderFunctions();  
+    bundledHeaderFunctions();
     getShoppingCart()
+    displayItemAmount()
 }
 
 let sum: number = 0;
@@ -151,5 +154,11 @@ function totalPrice(element: number) {
 
 // Update sum
 function updatePrice(sum) {
-total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
+    total.innerHTML = "Summa: " + sum.toLocaleString() + " kr";
+}
+
+export function displayItemAmount() {
+    let itemAmount: HTMLSpanElement = document.querySelector(".item-amount");  
+    itemAmount.innerHTML = shoppingCartItems.length.toString();
+    console.log(itemAmount)
 }
