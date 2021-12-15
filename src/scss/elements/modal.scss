@@ -58,7 +58,7 @@
 
     @include mixins.tablet-only {
       margin: 15% auto;
-      width: 50%;
+      width: 60%;
     }
 
     @include mixins.desktop-only {
@@ -110,7 +110,6 @@
       @include mixins.tablet-only {}
 
       @include mixins.desktop-only {
-        height: 50px;
         width: 180px;
       }
     }
@@ -127,7 +126,6 @@
       }
 
       @include mixins.desktop-only {
-
         width: 180px;
       }
     }
