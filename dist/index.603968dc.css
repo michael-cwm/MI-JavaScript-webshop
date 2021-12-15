@@ -412,15 +412,16 @@ a {
   text-decoration: none;
 }
 header {
-  background-color: #111111;
+  background-color: black;
   display: flex;
   align-items: center;
+  height: 14vh;
 }
 header .headerWrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   width: 100%;
-  margin-right: 20px;
+  margin-right: 0px;
 }
 header .headerWrapper .bi.bi-cart,
 header .headerWrapper .bi.bi-search {
@@ -457,6 +458,8 @@ header .cart:hover {
   text-decoration: none;
 }
 header .logoContainer {
+  min-width: 150px;
+  max-width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -467,23 +470,7 @@ header .logoContainer {
   margin-right: 30px;
 }
 header .logoContainer img {
-  height: auto;
   width: 100%;
-  cursor: pointer;
-  padding: 10px;
-}
-@media screen and (min-width: 768px) {
-  header .logoContainer img {
-    margin-top: 0px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  header .logoContainer img {
-    padding: 0px 50px;
-    margin-top: 5px;
-    height: 70px;
-    width: auto;
-  }
 }
 .inputContainer {
   display: none;
@@ -492,7 +479,6 @@ header .logoContainer img {
   display: none;
 }
 .headerWrapper {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -546,20 +532,21 @@ header .logoContainer img {
 }
 .burgerStyle {
   width: 100%;
-  background-color: #111111;
+  background-color: black;
   display: flex;
   flex-direction: column;
   padding: 0px;
   font-size: 11pt;
   color: #fff !important;
   margin: 0px;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 .burgerStyle li {
   display: flex;
   padding-left: 20px;
   padding: 8px;
+  padding-left: 30px;
   width: 100%;
   list-style: none;
   cursor: pointer;
@@ -592,10 +579,14 @@ ul {
   header .inputContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-left: 50px;
+    height: 100%;
   }
   header .headerWrapper {
     width: 80%;
+    margin-right: 0px;
+    margin-left: 20px;
   }
   header .bi.bi-search {
     margin-left: -30px;
@@ -614,7 +605,7 @@ ul {
     border: none;
     padding: 17px 70px;
     font-weight: 600px;
-    background-color: #111111;
+    background-color: rgba(17, 17, 17, 0);
     color: white;
     font-size: 10pt;
     padding: 10px 70px 10px 10px;
@@ -636,8 +627,6 @@ ul {
 }
 @media screen and (min-width: 1100px) {
   .inputContainer {
-    padding-left: 200px;
-    margin-bottom: 20px;
     z-index: 3;
   }
 
@@ -646,20 +635,16 @@ ul {
     width: 500px;
   }
 
-  .burgerStyle {
-    display: none;
-  }
-
   header {
     position: fixed;
-    z-index: 3;
-    background-color: #111111;
+    z-index: 100;
+    background-color: black;
     display: flex;
     align-items: center;
     width: 100%;
   }
   header .headerWrapper {
-    margin-right: 85px;
+    justify-content: space-evenly;
   }
 
   nav {
@@ -672,9 +657,6 @@ ul {
   }
   nav .navlist-wrapper {
     width: 50%;
-    margin-top: 70px;
-    position: fixed;
-    z-index: 3;
     background-color: #111;
   }
   nav ul {
@@ -698,10 +680,6 @@ nav .bi.bi-brightness-high {
   nav .bi.bi-caret-down {
     margin-bottom: -5px;
     margin-left: 3px;
-  }
-
-  .menu-btn__burger {
-    display: none;
   }
 
   .hover-underline-animation {
@@ -771,13 +749,20 @@ nav .bi.bi-brightness-high {
     display: block;
   }
 
+  .dropdownWrapper {
+    position: fixed;
+    width: 100%;
+    padding-top: 14vh;
+    z-index: 10;
+  }
+
   .contact {
     display: inline-block;
     color: white;
     margin: 0px 20px 0px 0px;
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
-    font-size: 10pt;
+    font-size: 12pt;
     font-weight: 500;
   }
   .contact a {
@@ -1233,6 +1218,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+@media screen and (min-width: 1100px) {
+  main {
+    padding-top: 14vh;
+  }
 }
 #hero {
   background-image: url("hero.09303ce5.jpg");

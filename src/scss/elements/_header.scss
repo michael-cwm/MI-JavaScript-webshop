@@ -12,15 +12,17 @@ a {
 
 header {
   // background-color: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(117,117,117,1) 100%, rgba(245,245,245,1) 100%);
-  background-color: #111111;
+  background-color: black;
   display: flex;
   align-items: center;
+  height: 14vh;
 
   .headerWrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     width: 100%;
-    margin-right: 20px;
+    margin-right: 0px;
+    // margin-left: 30px;
 
     .bi.bi-cart,
     .bi.bi-search {
@@ -68,6 +70,8 @@ header {
   }
 
   .logoContainer {
+    min-width: 150px;
+    max-width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,25 +81,29 @@ header {
     margin-left: 20px;
     margin-right: 30px;
 
-
-    img {
-      height: auto;
+    img{
       width: 100%;
-      cursor: pointer;
-      padding: 10px;
-
-      @include mixins.tablet-only {
-        margin-top: 0px;
-      }
-
-      @include mixins.desktop-only {
-        padding: 0px 50px;
-        margin-top: 5px;
-        height: 70px;
-        width: auto;
-
-      }
     }
+
+
+    // img {
+    //   height: auto;
+    //   width: 100%;
+    //   cursor: pointer;
+    //   padding: 10px;
+
+    //   @include mixins.tablet-only {
+    //     margin-top: 0px;
+    //   }
+
+    //   @include mixins.desktop-only {
+    //     padding: 0px 50px;
+    //     margin-top: 5px;
+    //     height: 70px;
+    //     width: auto;
+
+    //   }
+    // }
   }
 
 }
@@ -109,7 +117,7 @@ header {
 }
 
 .headerWrapper {
-  position: relative;
+  // position: relative; // kommeterade ut nu
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,22 +185,23 @@ header {
 //dropdown-menyn till burgaren
 .burgerStyle {
   width: 100%;
-  background-color: #111111;
+  background-color: black;
   display: flex;
   flex-direction: column;
   padding: 0px;
   font-size: 11pt;
   color: #fff !important;
   margin: 0px;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 10px;
 
 
+
   li {
-    // text-align: center;
     display: flex;
     padding-left: 20px;
     padding: 8px;
+    padding-left: 30px;
     width: 100%;
     list-style: none;
     cursor: pointer;
@@ -223,6 +232,7 @@ header {
 }
 
 
+
 ul {
   display: none;
 }
@@ -235,11 +245,15 @@ ul {
     .inputContainer {
       display: flex;
       justify-content: center;
+      align-items: center;
       padding-left: 50px;
+      height: 100%;
     }
 
     .headerWrapper {
       width: 80%;
+      margin-right: 0px;
+      margin-left: 20px;
     }
 
     .bi.bi-search {
@@ -262,7 +276,7 @@ ul {
       border: none;
       padding: 17px 70px;
       font-weight: 600px;
-      background-color: #111111;
+      background-color: rgba(17, 17, 17, 0.0);
       color: white;
       font-size: 10pt;
       padding: 10px 70px 10px 10px;
@@ -296,9 +310,10 @@ ul {
 
 @include mixins.desktop-only {
 
+
   .inputContainer {
-    padding-left: 200px;
-    margin-bottom: 20px;
+    // padding-left: 200px;
+    // margin-bottom: 20px;
     z-index: 3;
   }
 
@@ -308,20 +323,21 @@ ul {
   }
 
   .burgerStyle {
-    display: none;
+    // display: none;
+    // position: relative;
   }
 
   header {
     position: fixed;
-    z-index: 3;
+    z-index: 100;
     // background-color: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(117,117,117,1) 100%, rgba(245,245,245,1) 100%);
-    background-color: #111111;
+    background-color: black;
     display: flex;
     align-items: center;
     width: 100%;
 
     .headerWrapper {
-      margin-right: 85px;
+      justify-content: space-evenly;
     }
   }
 
@@ -337,9 +353,9 @@ ul {
     // border-bottom: 0.5px solid black;
     .navlist-wrapper {
       width: 50%;
-      margin-top: 70px;
-      position: fixed;
-      z-index: 3;
+      // margin-top: 70px;
+      // position: fixed;
+      // z-index: 3; 
       background-color: #111;
     }
 
@@ -372,7 +388,7 @@ ul {
   }
 
   .menu-btn__burger {
-    display: none;
+    // display: none;
   }
 
   //animation för underline till navbar
@@ -455,13 +471,20 @@ ul {
     }
   }
 
+  .dropdownWrapper{
+    position: fixed;
+    width: 100%;
+    padding-top: 14vh;
+    z-index: 10;
+  }
+
   .contact {
     display: inline-block;
     color: white;
     margin: 0px 20px 0px 0px;
     font-family: fonts.$primary-font;
     cursor: pointer;
-    font-size: 10pt;
+    font-size: 12pt;
     font-weight: 500;
 
     a {
