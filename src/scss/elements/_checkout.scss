@@ -7,11 +7,93 @@
     display: flex;
     background-color: #f5f5f5;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     @include mixins.desktop-only {
         padding-top: 50px;
     }
 
+    .total-container {
+        background-color: #fff;
+        width: 100%;
+        padding: 0px 30px;
+
+        @include mixins.tablet-only {
+            width: 80%;
+            padding: 30px 90px 0px;
+        }
+
+        @include mixins.desktop-only {
+            width: 80%;
+            padding: 30px 160px 0px;
+        }
+
+    }
+
+    .cart-total {
+        text-align: left;
+        color: #000;
+        font-weight: 600;
+        font-size: 1.1rem;
+
+    }
+
+    .checkout-cart {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        background-color: #fff;
+        padding: 70px 30px 30px;
+
+        @include mixins.tablet-only {
+            padding: 50px 90px 0px;
+            width: 80%;
+        }
+
+        @include mixins.desktop-only {
+            padding: 50px 160px 0px;
+            width: 80%;
+        }
+
+
+        .checkout-cart-item {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            span {
+                display: block;
+            }
+
+            .checkout-cart-name {
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+
+            .checkout-cart-price {
+                font-weight: 600;
+            }
+
+            .checkout-cart-details {
+                font-size: 0.8rem;
+
+                @include mixins.tablet-only {
+                    font-size: 0.9rem;
+                }
+            }
+
+
+        }
+
+        .checkout-img-container img {
+            width: 100%;
+            max-height: 100px;
+            object-fit: cover;
+        }
+    }
 
     .back-arrow-container {
         background-color: #edf2f4;
@@ -47,7 +129,17 @@
     justify-content: center;
     width: 100%;
     background-color: white;
-    height: 180vh;
+    height: 130vh;
+
+    @include mixins.tablet-only {
+        height: 100vh;
+    }
+
+    @include mixins.desktop-only {
+        height: 100%;
+        padding-bottom: 70px;
+    }
+
 
     .payment-container {
         display: flex;
@@ -57,8 +149,12 @@
         width: 100%;
         height: 100%;
 
+        @include mixins.desktop-only {
+            height: 150vh;
+        }
+    
+
         .payment {
-            margin-top: 20px;
             display: flex;
             align-items: center;
             height: 20%;
@@ -69,6 +165,7 @@
             @include mixins.tablet-only {
                 height: 15%;
             }
+
             @include mixins.desktop-only {
                 height: 20%;
             }
@@ -110,8 +207,8 @@
 
             @include mixins.desktop-only {
                 height: 60%;
-                   
-                }
+
+            }
 
             h4 {
                 margin-bottom: 30px;
