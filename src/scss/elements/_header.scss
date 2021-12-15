@@ -13,7 +13,6 @@ a {
 header {
   // background-color: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(117,117,117,1) 100%, rgba(245,245,245,1) 100%);
   background-color: #111111;
-  height: 12vh;
   display: flex;
   align-items: center;
 
@@ -43,13 +42,13 @@ header {
     font-size: 0.9rem;
     background-color: #3fc1c9;
     border-radius: 50%;
-    padding: 0px 8px;
     margin-right: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     height: 25px;
-  
+    width: 25px;
+    line-height: 25px;
+    display: inline-block;
+    text-align: center;
+
   }
 
   .cart {
@@ -57,7 +56,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
 
     &:hover {
       text-decoration: none;
@@ -91,7 +90,7 @@ header {
 
       @include mixins.desktop-only {
         padding: 0px 50px;
-        margin-top: 20px;
+        margin-top: 5px;
         height: 70px;
         width: auto;
 
@@ -115,7 +114,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 80px;
-  height: 80px;
+  height: 100px;
   transition: all .5s ease-in-out;
 }
 
@@ -163,6 +162,7 @@ header {
   transform: translateX(50px);
   background: transparent;
   box-shadow: none;
+  z-index: 4;
 }
 
 .menu-btn.open .menu-btn__burger::before {
@@ -182,9 +182,9 @@ header {
   flex-direction: column;
   padding: 0px;
   font-size: 11pt;
-  color: white;
-  margin-bottom: 0px;
-  padding-top: 10px;
+  color: #fff !important;
+  margin: 0px;
+  padding-top: 20px;
   padding-bottom: 10px;
 
 
@@ -197,12 +197,14 @@ header {
     list-style: none;
     cursor: pointer;
     font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff !important;
 
     a {
       display: flex;
       width: 100%;
       text-decoration: none;
-      color: white;
+      color: #fff;
     }
 
     &:hover {
@@ -296,6 +298,8 @@ ul {
 
   .inputContainer {
     padding-left: 200px;
+    margin-bottom: 20px;
+    z-index: 3;
   }
 
   input {
@@ -308,6 +312,12 @@ ul {
   }
 
   header {
+    position: fixed;
+    z-index: 3;
+    // background-color: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(117,117,117,1) 100%, rgba(245,245,245,1) 100%);
+    background-color: #111111;
+    display: flex;
+    align-items: center;
     width: 100%;
 
     .headerWrapper {
@@ -327,7 +337,10 @@ ul {
     // border-bottom: 0.5px solid black;
     .navlist-wrapper {
       width: 50%;
-      margin-bottom: 7px;
+      margin-top: 70px;
+      position: fixed;
+      z-index: 3;
+      background-color: #111;
     }
 
     ul {
@@ -337,6 +350,7 @@ ul {
       padding: 0px;
       margin: 0px;
       height: 100%;
+
 
       &:hover {
         cursor: pointer;
@@ -365,7 +379,7 @@ ul {
   .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: white;
+    color: white !important;
   }
 
   .hover-underline-animation:after {
@@ -400,16 +414,19 @@ ul {
     height: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
-    z-index: 1;
+    z-index: 3;
     list-style: none;
     padding: 0px;
 
     li {
       width: 200px;
-      padding-left: 5px;
       padding-top: 10px;
       padding-bottom: 10px;
+      color: #fff !important;
 
+      a {
+        color: #fff !important;
+      }
     }
 
     li:hover {
@@ -420,6 +437,7 @@ ul {
 
   li {
     transition: transform ease-in-out 0.2s;
+    color: #fff;
 
     &:hover {
       // transform: scale(1.1);

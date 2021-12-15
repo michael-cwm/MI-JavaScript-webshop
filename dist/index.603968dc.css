@@ -413,7 +413,6 @@ a {
 }
 header {
   background-color: #111111;
-  height: 12vh;
   display: flex;
   align-items: center;
 }
@@ -441,12 +440,12 @@ header .item-amount {
   font-size: 0.9rem;
   background-color: #3fc1c9;
   border-radius: 50%;
-  padding: 0px 8px;
   margin-right: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   height: 25px;
+  width: 25px;
+  line-height: 25px;
+  display: inline-block;
+  text-align: center;
 }
 header .cart {
   text-decoration: none;
@@ -481,7 +480,7 @@ header .logoContainer img {
 @media screen and (min-width: 1100px) {
   header .logoContainer img {
     padding: 0px 50px;
-    margin-top: 20px;
+    margin-top: 5px;
     height: 70px;
     width: auto;
   }
@@ -498,7 +497,7 @@ header .logoContainer img {
   justify-content: center;
   align-items: center;
   width: 80px;
-  height: 80px;
+  height: 100px;
   transition: all 0.5s ease-in-out;
 }
 .menu-btn {
@@ -537,6 +536,7 @@ header .logoContainer img {
   transform: translateX(50px);
   background: transparent;
   box-shadow: none;
+  z-index: 4;
 }
 .menu-btn.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(-35px, 35px);
@@ -551,9 +551,9 @@ header .logoContainer img {
   flex-direction: column;
   padding: 0px;
   font-size: 11pt;
-  color: white;
-  margin-bottom: 0px;
-  padding-top: 10px;
+  color: #fff !important;
+  margin: 0px;
+  padding-top: 20px;
   padding-bottom: 10px;
 }
 .burgerStyle li {
@@ -564,12 +564,14 @@ header .logoContainer img {
   list-style: none;
   cursor: pointer;
   font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff !important;
 }
 .burgerStyle li a {
   display: flex;
   width: 100%;
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 .burgerStyle li:hover {
   border-left: 4px solid #3fc1c9;
@@ -635,6 +637,8 @@ ul {
 @media screen and (min-width: 1100px) {
   .inputContainer {
     padding-left: 200px;
+    margin-bottom: 20px;
+    z-index: 3;
   }
 
   input {
@@ -647,6 +651,11 @@ ul {
   }
 
   header {
+    position: fixed;
+    z-index: 3;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
     width: 100%;
   }
   header .headerWrapper {
@@ -663,7 +672,10 @@ ul {
   }
   nav .navlist-wrapper {
     width: 50%;
-    margin-bottom: 7px;
+    margin-top: 70px;
+    position: fixed;
+    z-index: 3;
+    background-color: #111;
   }
   nav ul {
     display: flex;
@@ -695,7 +707,7 @@ nav .bi.bi-brightness-high {
   .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: white;
+    color: white !important;
   }
 
   .hover-underline-animation:after {
@@ -726,15 +738,18 @@ nav .bi.bi-brightness-high {
     height: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
-    z-index: 1;
+    z-index: 3;
     list-style: none;
     padding: 0px;
   }
   .dropdown-content li {
     width: 200px;
-    padding-left: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: #fff !important;
+  }
+  .dropdown-content li a {
+    color: #fff !important;
   }
   .dropdown-content li:hover {
     background-color: #3b3b3b;
@@ -743,6 +758,7 @@ nav .bi.bi-brightness-high {
 
   li {
     transition: transform ease-in-out 0.2s;
+    color: #fff;
   }
   li:hover {
     cursor: pointer;
