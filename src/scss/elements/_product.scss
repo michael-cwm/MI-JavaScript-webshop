@@ -5,7 +5,10 @@
 .wrapper-productpage {
     background-color: rgb(252, 252, 252);
     @include mixins.tablet-only {
-        padding: 40px 20px 50px;
+        padding: 60px 20px 50px;
+    }
+    @include mixins.desktop-only {
+        padding: 0px 20px 50px;
     }
 }
 
@@ -139,22 +142,60 @@
 
     }
 
-    .button-buy {
-        width: 100%;
-        z-index: 0;
-        position: relative;
-        overflow: hidden;
-
-        @include mixins.tablet-only {
-            width: 70%;
-
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+  
+        @include mixins.desktop-only {
+          gap: 20px;
         }
+      }
 
+      
+    .button-shop {
+        background-color: #fff;
+        color: #000 !important;
+        padding: 12px 7px;
+        transition: 0.2s;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        &:hover {
+          background-color: #53e1e9;
+        }
+  
+  
+        @include mixins.tablet-only {}
+  
+        @include mixins.desktop-only {
+          margin: 0 auto;
+          width: 180px;
+        }
+      }
+
+    .button-buy {
+        background-color: #3fc1c9;
+        color: #000 !important;
+        padding: 12px 0px;
+        transition: 0.2s;
+        width: 100%;
+  
+        &:hover {
+          background-color: #53e1e9;
+        }
+  
         @include mixins.desktop-only {
             width: 70%;
+          }
 
+        @include mixins.desktop-only {
+          width: 180px;
         }
-    }
+      }
 
     button {
         font-size: 1rem;
@@ -183,6 +224,19 @@
 
 
     }
+    .bi-x {
+        color: white;
+        text-align: right;
+        font-size: 2.4rem;
+        cursor: pointer;
+      }
+  
+      .bi-x:hover,
+      .bi-x:focus {
+        text-decoration: none;
+        cursor: pointer;
+        color: #53e1e9;
+      }
 }
 
 
@@ -197,8 +251,8 @@
     background-color: variables.$color-lightgrey;
     position: relative;
 
-    @include mixins.tablet-only {
-        padding-top: 70px;
+    @include mixins.desktop-only {
+        margin: 100px 0px;
     }
 
     .bi-arrow-left {
@@ -210,8 +264,8 @@
 
         @include mixins.tablet-only {
             font-size: 2.5rem;
-            margin: 17px 0px;
-
+            margin: 35px 0px;
+    
         }
 
         @include mixins.desktop-only {

@@ -11,8 +11,6 @@ a {
 }
 
 header {
-  position: fixed;
-  z-index: 3;
   // background-color: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(117,117,117,1) 100%, rgba(245,245,245,1) 100%);
   background-color: #111111;
   display: flex;
@@ -184,9 +182,9 @@ header {
   flex-direction: column;
   padding: 0px;
   font-size: 11pt;
-  color: white;
+  color: #fff !important;
   margin: 0px;
-  padding-top: 100px;
+  padding-top: 20px;
   padding-bottom: 10px;
 
 
@@ -199,12 +197,14 @@ header {
     list-style: none;
     cursor: pointer;
     font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff !important;
 
     a {
       display: flex;
       width: 100%;
       text-decoration: none;
-      color: white;
+      color: #fff;
     }
 
     &:hover {
@@ -312,6 +312,12 @@ ul {
   }
 
   header {
+    position: fixed;
+  z-index: 3;
+  // background-color: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(117,117,117,1) 100%, rgba(245,245,245,1) 100%);
+  background-color: #111111;
+  display: flex;
+  align-items: center;
     width: 100%;
 
     .headerWrapper {
@@ -344,6 +350,7 @@ ul {
       padding: 0px;
       margin: 0px;
       height: 100%;
+     
 
       &:hover {
         cursor: pointer;
@@ -372,7 +379,7 @@ ul {
   .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: white;
+    color: white !important;
   }
 
   .hover-underline-animation:after {
@@ -413,10 +420,13 @@ ul {
 
     li {
       width: 200px;
-      padding-left: px;
       padding-top: 10px;
       padding-bottom: 10px;
+      color: #fff !important;
 
+      a {
+        color: #fff !important;
+      }
     }
 
     li:hover {
@@ -427,6 +437,7 @@ ul {
 
   li {
     transition: transform ease-in-out 0.2s;
+    color: #fff;
 
     &:hover {
       // transform: scale(1.1);

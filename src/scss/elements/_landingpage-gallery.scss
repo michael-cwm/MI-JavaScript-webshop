@@ -29,6 +29,7 @@ main {
     display: flex;
     width: 100%;
     flex-direction: column-reverse;
+    padding: 0px 0px 30px;
     
 
     @include mixins.tablet-only {

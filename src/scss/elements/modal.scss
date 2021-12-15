@@ -57,7 +57,8 @@
     }
 
     @include mixins.tablet-only {
-    
+      margin: 15% auto;
+      width: 50%;
     }
 
     @include mixins.desktop-only {
@@ -99,7 +100,6 @@
       color: #000 !important;
       padding: 12px 7px;
       transition: 0.2s;
-      height: 50px;
       width: 70%;
 
       &:hover {
