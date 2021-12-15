@@ -42,12 +42,12 @@ header {
     font-size: 0.9rem;
     background-color: #3fc1c9;
     border-radius: 50%;
-    padding: 0px 9px;
     margin-right: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     height: 25px;
+    width: 25px;
+    line-height: 25px;
+    display: inline-block;
+    text-align: center;
 
   }
 
@@ -313,11 +313,11 @@ ul {
 
   header {
     position: fixed;
-  z-index: 3;
-  // background-color: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(117,117,117,1) 100%, rgba(245,245,245,1) 100%);
-  background-color: #111111;
-  display: flex;
-  align-items: center;
+    z-index: 3;
+    // background-color: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(117,117,117,1) 100%, rgba(245,245,245,1) 100%);
+    background-color: #111111;
+    display: flex;
+    align-items: center;
     width: 100%;
 
     .headerWrapper {
@@ -350,7 +350,7 @@ ul {
       padding: 0px;
       margin: 0px;
       height: 100%;
-     
+
 
       &:hover {
         cursor: pointer;
