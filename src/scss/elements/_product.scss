@@ -36,7 +36,7 @@
     }
 
     .product-info-section {
-        padding: 10px 20px;
+        padding: 10px 40px;
         position: relative;
         z-index: 1;
 
@@ -261,6 +261,7 @@
         position: fixed;
         color: #000;
         padding: 10px;
+        z-index: 3;
 
         @include mixins.tablet-only {
             font-size: 2.5rem;
