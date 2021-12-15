@@ -15,18 +15,20 @@
     }
 
     .shopping-cart-header {
-        width: 70%;
-        margin: 0 auto;
-        padding: 0px 80px 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0px 40px 20px;
         font-size: 2.4rem;
         font-weight: 700;
 
         @include mixins.tablet-only {
+            width: 70%;
             margin: 0;
             padding: 40px 50px;
         } 
 
         @include mixins.desktop-only {
+            width: 70%;
             padding: 20px 280px 0px;
         }
     }
@@ -103,7 +105,7 @@
             z-index: 2;
             color: #000;
             padding: 10px;
-            margin: 110px 0px;
+            margin: 5px 0px;
 
             @include mixins.tablet-only {
                 font-size: 2.5rem;
@@ -299,7 +301,7 @@
     display: flex;
     flex-direction: column;
     padding: 0px 10px 0px 0px;
-    background: rgb(247, 247, 247);
+    background: #fff;
 
     @include mixins.tablet-only {
         flex-direction: column;

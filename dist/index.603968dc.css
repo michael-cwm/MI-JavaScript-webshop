@@ -1544,20 +1544,22 @@ main {
   }
 }
 .wrapper .shopping-cart-header {
-  width: 70%;
-  margin: 0 auto;
-  padding: 0px 80px 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0px 40px 20px;
   font-size: 2.4rem;
   font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .wrapper .shopping-cart-header {
+    width: 70%;
     margin: 0;
     padding: 40px 50px;
   }
 }
 @media screen and (min-width: 1100px) {
   .wrapper .shopping-cart-header {
+    width: 70%;
     padding: 20px 280px 0px;
   }
 }
@@ -1631,7 +1633,7 @@ main {
   z-index: 2;
   color: #000;
   padding: 10px;
-  margin: 110px 0px;
+  margin: 5px 0px;
 }
 @media screen and (min-width: 768px) {
   .shopping-cart .back-arrow-container .bi-arrow-left {
@@ -1828,7 +1830,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 0px 10px 0px 0px;
-  background: #f7f7f7;
+  background: #fff;
 }
 @media screen and (min-width: 768px) {
   .shoppingcart-footer {
