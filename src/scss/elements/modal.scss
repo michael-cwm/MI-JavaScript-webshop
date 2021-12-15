@@ -21,11 +21,13 @@
     background-color: black;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 4px;
-    color: white;
+    color: white !important;
+    text-align: center;
     border: none;
     margin: 45% auto;
     padding: 20px;
     width: 90%;
+    z-index: 5;
     -webkit-animation-name: animatemodal;
     -webkit-animation-duration: 0.8s;
     animation-name: animatemodal;
@@ -47,7 +49,8 @@
       -webkit-animation-duration: 0.8s;
       animation-name: animatemodal;
       animation-duration: 0.8s;
-      p{
+
+      p {
         display: flex;
         justify-content: center;
         font-size: 17pt;
@@ -196,12 +199,6 @@
       cursor: pointer;
     }
 
-    // .bi-x:hover,
-    // .bi-x:focus {
-    //   text-decoration: none;
-    //   cursor: pointer;
-    //   color: #53e1e9;
-    // }
   }
 }
 .gif {

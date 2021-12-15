@@ -247,12 +247,15 @@
     object-fit: cover;
 }
 
+
+
+
 .back-arrow-container {
     background-color: variables.$color-lightgrey;
     position: relative;
 
     @include mixins.desktop-only {
-        margin: 100px 0px;
+        margin: 0px;
     }
 
     .bi-arrow-left {
@@ -271,13 +274,9 @@
 
         @include mixins.desktop-only {
             position: absolute;
-            margin: 30px 75px;
             padding: 0;
             font-size: 3rem;
         }
 
     }
-
-
-
 }

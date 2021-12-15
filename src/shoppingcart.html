@@ -15,56 +15,39 @@
 
 <body>
     <header>
-        <div class=logoContainer>
-            <a href="index.html"> 
-           <img src="assets/LoggaLiteStorreSlogan.png"/> 
-        </a>
+        <div class="logoContainer">
+            <a href="index.html">
+                <img src="assets/LoggaLiteStorreSlogan.png" id="homeButton" />
+            </a>
         </div>
         <div class="inputContainer">
             <form>
-                <input type="text" placeholder="Sök...">
+                <input type="text" placeholder="Sök kick..." />
                 <i class="bi bi-search"></i>
             </form>
         </div>
         <div class="headerWrapper">
             <i class="bi bi-search"></i>
-            <h5 class="contact"><a href="index.html#about">Om oss</a></h5>
-            <h5 class="contact"><a href="#footer">Kontakt</a></h5>
+            <h5 class="contact" id="aboutButton"><a href="#about">Om oss</a></h5>
+            <h5 class="contact" id="contactButton"><a href="#contact">Kontakt</a></h5>
             <a href="shoppingcart.html" class="cart"><i class="bi bi-cart" id="shoppingCart"></i>
-                <span class="item-amount"></span></a>
+            <span class="item-amount"></span></a>
+
             <div class="menu-btn" id="hamburgare">
                 <div class="menu-btn__burger"></div>
             </div>
-            </div>
+        </div>
     </header>
     <div class="dropdownWrapper">
-    <ul id="burgerDropdown">
-            <li><a href="#produkt.html">Upplevelser<span><i class="bi bi-arrow-right"></i></span></a></li>
+        <ul id="burgerDropdown">
+            <li><a href="index.html#popular-products">Upplevelser<span><i class="bi bi-arrow-right"></i></span></a></li>
             <li>Presentkort<span><i class="bi bi-arrow-right"></i></span></li>
             <li>Julklappar<span><i class="bi bi-arrow-right"></i></span></li>
             <li>Platser<span><i class="bi bi-arrow-right"></i></span></li>
             <li>Weekend<span><i class="bi bi-arrow-right"></i></span></li>
-    </ul>
-    </div>
-    <nav>
-        <div class="navlist-wrapper">
-        <ul>
-            <li class="hover-underline-animation"><i class="bi bi-box"></i>Upplevelser<i class="bi bi-caret-down"></i>
-                <ul class="dropdown-content">
-                    <li>Äventyr & action</li>
-                    <li>Mat & dryck</li>
-                    <li>Övernattning</li>
-                    <li>Hälsa & skönhet</li>
-                    <li>Kultur & underhållning</li>
-                </ul>
-            </li>
-            <li class="hover-underline-animation"><i class="bi bi-credit-card-2-back"></i>Presentkort</li>
-            <li class="hover-underline-animation"><i class="bi bi-gift"></i>Julklappar</li>
-            <li class="hover-underline-animation"><i class="bi bi-geo-alt"></i>Platser</li>
-            <li class="hover-underline-animation"><i class="bi bi-brightness-high"></i>Weekend</li>
         </ul>
-        </div>
-    </nav> 
+    </div>
+
     <main>
         <div class="wrapper">
             <div class="cart-header-container">
