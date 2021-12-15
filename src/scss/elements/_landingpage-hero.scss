@@ -2,6 +2,13 @@
 @use "../variables";
 @use "../mixins";
 
+@include mixins.desktop-only{
+  main{
+  padding-top: 14vh;
+  }
+}
+
+
 #hero {
   background-image: url("../assets/hero.jpg");
   background-position: center;
