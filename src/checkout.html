@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="ts/checkout.ts" type="module" defer></script>
@@ -19,42 +20,45 @@
 
   <header>
     <div class="logoContainer">
-        <a href="index.html">
-            <img src="assets/LoggaLiteStorreSlogan.png" id="homeButton" />
-        </a>
+      <a href="index.html">
+        <img src="assets/LoggaLiteStorreSlogan.png" id="homeButton" />
+      </a>
     </div>
     <div class="inputContainer">
-        <form>
-            <input type="text" placeholder="Sök kick..." />
-            <i class="bi bi-search"></i>
-        </form>
+      <form>
+        <input type="text" placeholder="Sök kick..." />
+        <i class="bi bi-search"></i>
+      </form>
     </div>
     <div class="headerWrapper">
-        <i class="bi bi-search"></i>
-        <h5 class="contact" id="aboutButton"><a href="#about">Om oss</a></h5>
-        <h5 class="contact" id="contactButton"><a href="#contact">Kontakt</a></h5>
-        <a href="shoppingcart.html" class="cart"><i class="bi bi-cart" id="shoppingCart"></i>
+      <i class="bi bi-search"></i>
+      <h5 class="contact" id="aboutButton"><a href="#about">Om oss</a></h5>
+      <h5 class="contact" id="contactButton"><a href="#contact">Kontakt</a></h5>
+      <a href="shoppingcart.html" class="cart"><i class="bi bi-cart" id="shoppingCart"></i>
         <span class="item-amount"></span></a>
 
-        <div class="menu-btn" id="hamburgare">
-            <div class="menu-btn__burger"></div>
-        </div>
+      <div class="menu-btn" id="hamburgare">
+        <div class="menu-btn__burger"></div>
+      </div>
     </div>
-</header>
-<div class="dropdownWrapper">
+  </header>
+  <div class="dropdownWrapper">
     <ul id="burgerDropdown">
-        <li><a href="#produkt.html">Upplevelser<span><i class="bi bi-arrow-right"></i></span></a></li>
-        <li>Presentkort<span><i class="bi bi-arrow-right"></i></span></li>
-        <li>Julklappar<span><i class="bi bi-arrow-right"></i></span></li>
-        <li>Platser<span><i class="bi bi-arrow-right"></i></span></li>
-        <li>Weekend<span><i class="bi bi-arrow-right"></i></span></li>
+      <li><a href="#produkt.html">Upplevelser<span><i class="bi bi-arrow-right"></i></span></a></li>
+      <li>Presentkort<span><i class="bi bi-arrow-right"></i></span></li>
+      <li>Julklappar<span><i class="bi bi-arrow-right"></i></span></li>
+      <li>Platser<span><i class="bi bi-arrow-right"></i></span></li>
+      <li>Weekend<span><i class="bi bi-arrow-right"></i></span></li>
     </ul>
-</div>
-<div class="back-arrow-container">
-  <i class="bi bi-arrow-left" id="arrowBack"></i>
+  </div>
+  <div class="back-arrow-container">
+    <i class="bi bi-arrow-left" id="arrowBack"></i>
+  </div>
+  <div class="header-container">
+  <h1>Kassa</h1>
 </div>
   <div class="bigWrapper">
-
+  
     <!-- The Modal -->
     <div id="myModal" class="modalContainer">
 
@@ -66,12 +70,11 @@
         <p>Thank you, you're far too kind</p>
         <div class="gif"></div>
       </div>
-
     </div>
-   
-   
+
+
     <div class="checkout-container">
-     
+
       <div class="payment-container">
         <div class="payment">
           <div class="payment-centering">
@@ -82,6 +85,7 @@
             <p>Få värdebeviset hem i brevlådan.</p>
           </div>
         </div>
+
         <div class="adress">
           <div>
             <h4>Dina uppgifter</h4>
@@ -136,39 +140,41 @@
               </div>
               <div class="col-12">
                 <button class="btn btn-secondary needs-validation" type="submit" id="myBtn">
-                  BESTÄLL
+                  Lägg beställning
                 </button>
               </div>
             </form>
           </section>
         </div>
+        
       </div>
+
     </div>
 
   </div>
   <footer id="contact">
     <div class="footer-logo">
-        <img src="assets/LoggaLiteStorreSlogan.png" />
+      <img src="assets/LoggaLiteStorreSlogan.png" />
     </div>
     <h3>Få vårt nyhetsbrev</h3>
     <p>Prenumerera på vårt nyhetsbrev och få förtur till nya upplevelser och unika erbjudanden.</p>
     <input type="text" placeholder="Din e-postadress"><button type="button"
-        class="button-newsletter">Prenumerera</button>
+      class="button-newsletter">Prenumerera</button>
     <div class="footer-container" id="footer">
-        <section>
-            <span>
-                <i class="bi bi-instagram"></i>
-            </span>
-            <span>
-                <i class="bi bi-twitter"></i>
-            </span>
-            <span>
-                <i class="bi bi-facebook"></i>
-            </span>
-        </section>
+      <section>
+        <span>
+          <i class="bi bi-instagram"></i>
+        </span>
+        <span>
+          <i class="bi bi-twitter"></i>
+        </span>
+        <span>
+          <i class="bi bi-facebook"></i>
+        </span>
+      </section>
     </div>
     <p><a href="mailto:kontakt@99kicks.com">kontakt@99kicks.com</a></p>
-</footer>
+  </footer>
 
 </body>
 

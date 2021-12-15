@@ -6,8 +6,11 @@ import {
   shoppingCartItems
 } from "./landingpage";
 
+import { bundledHeaderFunctions } from "./header";
+
 
 window.onload = function () {
+  bundledHeaderFunctions();
   displayItemAmount();
   loadCartinCheckout();
   formFunction();

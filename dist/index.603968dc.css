@@ -158,7 +158,7 @@ body {
   width: 70%;
 }
 .modalContainer .modalContent .button-shop:hover {
-  background-color: #53e1e9;
+  background-color: #53e1e9 !important;
 }
 @media screen and (min-width: 1100px) {
   .modalContainer .modalContent .button-shop {
@@ -196,14 +196,18 @@ body {
 }
 .bigWrapper {
   display: flex;
-  background-color: #f5f5f5;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .bigWrapper {
+    background-color: #fff;
+  }
+}
 @media screen and (min-width: 1100px) {
   .bigWrapper {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 }
 .bigWrapper .total-container {
@@ -213,14 +217,14 @@ body {
 }
 @media screen and (min-width: 768px) {
   .bigWrapper .total-container {
-    width: 80%;
-    padding: 30px 90px 0px;
+    width: 90%;
+    padding: 30px 80px 0px;
   }
 }
 @media screen and (min-width: 1100px) {
   .bigWrapper .total-container {
-    width: 80%;
-    padding: 30px 160px 0px;
+    width: 70%;
+    padding: 30px 150px 0px;
   }
 }
 .bigWrapper .cart-total {
@@ -232,22 +236,22 @@ body {
 .bigWrapper .checkout-cart {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   justify-content: center;
   gap: 10px;
   background-color: #fff;
-  padding: 70px 30px 30px;
+  padding: 30px 30px 30px;
 }
 @media screen and (min-width: 768px) {
   .bigWrapper .checkout-cart {
-    padding: 50px 90px 0px;
-    width: 80%;
+    padding: 50px 80px 0px;
+    width: 90%;
   }
 }
 @media screen and (min-width: 1100px) {
   .bigWrapper .checkout-cart {
-    padding: 50px 160px 0px;
-    width: 80%;
+    padding: 20px 150px 0px;
+    width: 70%;
   }
 }
 .bigWrapper .checkout-cart .checkout-cart-item {
@@ -278,31 +282,6 @@ body {
   max-height: 100px;
   object-fit: cover;
 }
-.bigWrapper .back-arrow-container {
-  background-color: #edf2f4;
-  position: relative;
-}
-.bigWrapper .back-arrow-container .bi-arrow-left {
-  cursor: pointer;
-  font-size: 2rem;
-  position: fixed;
-  color: #000;
-  padding: 10px;
-}
-@media screen and (min-width: 768px) {
-  .bigWrapper .back-arrow-container .bi-arrow-left {
-    font-size: 2.5rem;
-    margin: 35px 0px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .bigWrapper .back-arrow-container .bi-arrow-left {
-    position: absolute;
-    margin: 0px 75px;
-    padding: 0;
-    font-size: 3rem;
-  }
-}
 .checkout-container {
   display: flex;
   justify-content: center;
@@ -319,7 +298,12 @@ body {
   .checkout-container {
     height: 100%;
     padding-bottom: 70px;
+    width: 70%;
   }
+}
+.checkout-container #myBtn {
+  text-transform: uppercase;
+  padding: 13px 17px;
 }
 .checkout-container .payment-container {
   display: flex;
@@ -404,14 +388,58 @@ body {
 .btn.btn-secondary.needs-validation:hover {
   background-color: #67ced4;
 }
+.header-container {
+  background-color: #fff;
+  padding: 10px 0px 0px 70px;
+  width: 70%;
+}
 @media screen and (min-width: 768px) {
-  .checkout-container {
-    width: 80%;
+  .header-container {
+    background-color: #fff;
+    padding: 50px 0px 30px 80px;
+    width: 70%;
   }
 }
 @media screen and (min-width: 1100px) {
-  checkout-container {
-    width: 100%;
+  .header-container {
+    background-color: #fff;
+    padding: 95px 0px 0px 355px;
+    width: 70%;
+  }
+}
+.header-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.back-arrow-container {
+  position: relative;
+  background-color: #fff;
+}
+@media screen and (min-width: 1100px) {
+  .back-arrow-container {
+    padding: 50px 0px 0px 20px;
+  }
+}
+.back-arrow-container .bi-arrow-left {
+  cursor: pointer;
+  font-size: 2rem;
+  position: fixed;
+  color: #000;
+  padding: 10px;
+  z-index: 3;
+}
+@media screen and (min-width: 768px) {
+  .back-arrow-container .bi-arrow-left {
+    font-size: 2.5rem;
+    margin: 35px 0px 0px 15px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .back-arrow-container .bi-arrow-left {
+    position: absolute;
+    padding: 0;
+    font-size: 3rem;
+    margin: 80px 0px 0px 45px;
   }
 }
 footer {
@@ -478,7 +506,13 @@ footer input:focus {
   }
 }
 footer p {
-  margin: 10px 0px 7px;
+  font-size: 0.9rem;
+  margin: 10px 0px 20px;
+}
+@media screen and (min-width: 1100px) {
+  footer p {
+    font-size: 1rem;
+  }
 }
 footer .button-newsletter {
   background-color: #fff;
@@ -515,7 +549,7 @@ footer button {
 footer h3 {
   padding: 0;
   margin: 0px 0px 15px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 footer .footer-container {
@@ -1496,18 +1530,36 @@ main {
   }
 }
 .wrapper {
-  background-color: snow;
-  padding: 120px 20px 50px;
+  background-color: #fff;
+  padding: 10px;
 }
 @media screen and (min-width: 768px) {
   .wrapper {
-    padding: 50px 20px;
+    padding: 0px 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 0px 30px 50px;
   }
 }
 .wrapper .shopping-cart-header {
   width: 70%;
   margin: 0 auto;
-  padding: 0px 0px 20px;
+  padding: 0px 80px 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .wrapper .shopping-cart-header {
+    margin: 0;
+    padding: 40px 50px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .wrapper .shopping-cart-header {
+    padding: 20px 80px 0px;
+  }
 }
 .wrapper .total {
   padding: 20px 0px 0px;
@@ -1568,11 +1620,10 @@ main {
 .wrapper .checkout-button .button-buy:hover {
   background-color: #53e1e9;
 }
-.wrapper .back-arrow-container {
-  background-color: #edf2f4;
+.shopping-cart .back-arrow-container {
   position: relative;
 }
-.wrapper .back-arrow-container .bi-arrow-left {
+.shopping-cart .back-arrow-container .bi-arrow-left {
   z-index: 2;
   cursor: pointer;
   font-size: 2rem;
@@ -1583,21 +1634,23 @@ main {
   margin: 110px 0px;
 }
 @media screen and (min-width: 768px) {
-  .wrapper .back-arrow-container .bi-arrow-left {
+  .shopping-cart .back-arrow-container .bi-arrow-left {
     font-size: 2.5rem;
     margin: 30px 0px;
   }
 }
 @media screen and (min-width: 1100px) {
-  .wrapper .back-arrow-container .bi-arrow-left {
+  .shopping-cart .back-arrow-container .bi-arrow-left {
     position: absolute;
-    margin: 40px 75px;
+    margin: 10px 75px;
     padding: 0;
     font-size: 3rem;
   }
 }
 #shoppingcart-container {
   display: flex;
+  width: 80%;
+  margin: 0 auto;
   flex-direction: column;
   padding: 0px 10px 0px 0px;
   background: #fff;
@@ -1615,7 +1668,7 @@ main {
 @media screen and (min-width: 1100px) {
   #shoppingcart-container {
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     justify-content: center;
     margin: 0 auto;
     padding: 20px 0px 0px 20px;
@@ -1623,9 +1676,6 @@ main {
 }
 #shoppingcart-container .cart-header-container {
   display: flex;
-}
-#shoppingcart-container h1 {
-  text-align: left;
 }
 #shoppingcart-container .cart-items {
   padding: 10px 20px;
@@ -1719,17 +1769,23 @@ main {
   }
 }
 #shoppingcart-container .product-amount {
-  font-size: 1rem;
-  text-align: left;
-  margin: 0px 14px;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   #shoppingcart-container .product-amount {
+    display: inline;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0px 14px;
     margin: 0px 15px;
   }
 }
 @media screen and (min-width: 1100px) {
   #shoppingcart-container .product-amount {
+    display: inline;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0px 14px;
     font-size: 1rem;
     margin: 0px 25px;
   }
@@ -1792,17 +1848,65 @@ main {
     padding: 20px 0px 60px 0px;
   }
 }
+.bi-dash-lg,
+.bi-plus-lg {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .bi-dash-lg,
+.bi-plus-lg {
+    display: inline;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .bi-dash-lg,
+.bi-plus-lg {
+    display: inline;
+  }
+}
 .wrapper-productpage {
-  background-color: #fcfcfc;
+  background-color: #fff;
 }
 @media screen and (min-width: 768px) {
   .wrapper-productpage {
-    padding: 60px 20px 50px;
+    padding: 40px 20px 50px;
   }
 }
 @media screen and (min-width: 1100px) {
   .wrapper-productpage {
     padding: 0px 20px 50px;
+  }
+}
+.wrapper-productpage .back-arrow-container {
+  position: relative;
+  background-color: #fff;
+}
+@media screen and (min-width: 1100px) {
+  .wrapper-productpage .back-arrow-container {
+    padding: 30px 0px 0px 20px;
+  }
+}
+.wrapper-productpage .back-arrow-container .bi-arrow-left {
+  cursor: pointer;
+  font-size: 2rem;
+  position: fixed;
+  color: #000;
+  padding: 10px;
+  z-index: 3;
+}
+@media screen and (min-width: 768px) {
+  .wrapper-productpage .back-arrow-container .bi-arrow-left {
+    font-size: 2.5rem;
+    margin: 0px 0px 0px 15px;
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .wrapper-productpage .back-arrow-container .bi-arrow-left {
+    position: absolute;
+    padding: 0px;
+    font-size: 3rem;
+    margin: 0px 0px 0px 25px;
   }
 }
 #product-display-container {
@@ -1813,10 +1917,11 @@ main {
 @media screen and (min-width: 768px) {
   #product-display-container {
     flex-direction: row;
-    width: 90%;
+    width: 70%;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 15px auto;
     gap: 50px;
+    background: #fafafa;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -1827,6 +1932,7 @@ main {
     margin: 0 auto;
     gap: 50px;
     padding: 50px;
+    background: #fafafa;
   }
 }
 #product-display-container .product-info-section {
@@ -2025,36 +2131,6 @@ main {
   max-height: 600px;
   object-fit: cover;
 }
-.back-arrow-container {
-  background-color: #edf2f4;
-  position: relative;
-}
-@media screen and (min-width: 1100px) {
-  .back-arrow-container {
-    margin: 0px;
-  }
-}
-.back-arrow-container .bi-arrow-left {
-  cursor: pointer;
-  font-size: 2rem;
-  position: fixed;
-  color: #000;
-  padding: 10px;
-  z-index: 3;
-}
-@media screen and (min-width: 768px) {
-  .back-arrow-container .bi-arrow-left {
-    font-size: 2.5rem;
-    margin: 35px 0px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .back-arrow-container .bi-arrow-left {
-    position: absolute;
-    padding: 0;
-    font-size: 3rem;
-  }
-}
 * {
   box-sizing: border-box;
 }
@@ -2064,5 +2140,16 @@ html {
 body {
   padding: 0;
   margin: 0;
+  background-color: #fff;
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #fff;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body {
+    background-color: #fff;
+  }
 }
 /*# sourceMappingURL=index.603968dc.css.map */

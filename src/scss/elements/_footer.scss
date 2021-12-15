@@ -9,7 +9,6 @@ footer {
   padding: 30px 20px;
   text-align: center;
 
-
   @include mixins.tablet-only {
     text-align: center;
   }
@@ -26,7 +25,7 @@ footer {
     font-weight: 400;
 
     &:hover {
-      color:#3fc1c9;
+      color: #3fc1c9;
       text-decoration: none;
     }
   }
@@ -67,113 +66,108 @@ footer {
     @include mixins.desktop-only {
       width: 400px;
     }
-
-
-
-
   }
 
+  p {
+    font-size: 0.9rem;
+    margin: 10px 0px 20px;
 
-p {
-  margin: 10px 0px 7px;
-
-}
-
-.button-newsletter {
-  background-color: #fff;
-  transition: 0.2s;
-
-  &:hover {
-    background-color: #3fc1c9;
-    color: #000;
+    @include mixins.desktop-only {
+      font-size: 1rem;
+    }
   }
 
-}
+  .button-newsletter {
+    background-color: #fff;
+    transition: 0.2s;
 
-button {
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
-  width: 50%;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  letter-spacing: 1px;
-  margin: 10px 0px 20px;
-
-  @include mixins.tablet-only {
-    width: unset;
-    margin: 10px 10px 20px;
+    &:hover {
+      background-color: #3fc1c9;
+      color: #000;
+    }
   }
 
-  @include mixins.desktop-only {
-    width: unset;
-    margin: 5px 10px 30px;
-  }
-}
-
-
-h3 {
-  padding: 0;
-  margin: 0px 0px 15px;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0px 0px 7px;
-  justify-content: center;
-
-
-  @include mixins.tablet-only {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 20px 0px 2px;
-  }
-
-  @include mixins.desktop-only {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0px 8px;
-  }
-
-  section {
-    color: white;
-    line-height: 1.4rem;
-    padding: 8px 0px 0px;
-    font-size: 0.85rem;
+  button {
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 50%;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 10px 0px 20px;
 
     @include mixins.tablet-only {
-      padding: 0;
-      text-align: left;
+      width: unset;
+      margin: 10px 10px 20px;
     }
 
     @include mixins.desktop-only {
-      padding: 0;
-      text-align: left;
-    }
-
-    span {
-      display: block;
+      width: unset;
+      margin: 5px 10px 30px;
     }
   }
 
-  section:last-child span {
-    display: inline;
+  h3 {
+    padding: 0;
+    margin: 0px 0px 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
   }
 
-  .bi {
-    font-size: 2rem;
-    padding: 0px 10px;
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 7px;
+    justify-content: center;
 
-    &:hover {
-      color: #3fc1c9;
+    @include mixins.tablet-only {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 20px 0px 2px;
+    }
+
+    @include mixins.desktop-only {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0px 8px;
+    }
+
+    section {
+      color: white;
+      line-height: 1.4rem;
+      padding: 8px 0px 0px;
+      font-size: 0.85rem;
+
+      @include mixins.tablet-only {
+        padding: 0;
+        text-align: left;
+      }
+
+      @include mixins.desktop-only {
+        padding: 0;
+        text-align: left;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    section:last-child span {
+      display: inline;
+    }
+
+    .bi {
+      font-size: 2rem;
+      padding: 0px 10px;
+
+      &:hover {
+        color: #3fc1c9;
+      }
     }
   }
-}
 }
