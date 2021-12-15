@@ -5,7 +5,7 @@ body {
 .modalContainer {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   left: 0;
   top: 0;
   width: 100%;
@@ -23,9 +23,9 @@ body {
   border-radius: 4px;
   color: white;
   border: none;
-  margin: 5% auto;
+  margin: 45% auto;
   padding: 20px;
-  width: 40%;
+  width: 90%;
   -webkit-animation-name: animatemodal;
   -webkit-animation-duration: 0.8s;
   animation-name: animatemodal;
@@ -91,6 +91,19 @@ body {
   top: 0;
   opacity: 1;
 }
+@media screen and (min-width: 768px) {
+  .modalContainer .modalContent {
+    margin: 15% auto;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .modalContainer .modalContent {
+    margin: 5% auto;
+    padding: 20px;
+    width: 40%;
+  }
+}
 .modalContainer .modalContent a {
   font-size: 0.9rem;
   font-weight: 600;
@@ -101,7 +114,6 @@ body {
   text-decoration: none;
   text-align: center;
   width: 40%;
-  margin: 15px auto;
 }
 .modalContainer .modalContent .modalHeader {
   text-align: center;
@@ -111,6 +123,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 20px;
+}
+@media screen and (min-width: 1100px) {
+  .modalContainer .modalContent .button-container {
+    gap: 20px;
+  }
 }
 .modalContainer .modalContent .button-container .closeWrapper {
   display: flex;
@@ -133,21 +151,38 @@ body {
 .modalContainer .modalContent .button-shop {
   background-color: #fff;
   color: #000 !important;
-  padding: 12px 0px;
+  padding: 12px 7px;
   transition: 0.2s;
+  width: 70%;
 }
 .modalContainer .modalContent .button-shop:hover {
   background-color: #53e1e9;
+}
+@media screen and (min-width: 1100px) {
+  .modalContainer .modalContent .button-shop {
+    width: 180px;
+  }
 }
 .modalContainer .modalContent .button-buy {
   background-color: #3fc1c9;
   color: #000 !important;
   padding: 12px 0px;
   transition: 0.2s;
-  width: 150px;
+  width: 70%;
 }
 .modalContainer .modalContent .button-buy:hover {
   background-color: #53e1e9;
+}
+@media screen and (min-width: 1100px) {
+  .modalContainer .modalContent .button-buy {
+    width: 180px;
+  }
+}
+.modalContainer .modalContent .bi-x {
+  color: white;
+  text-align: right;
+  font-size: 2.4rem;
+  cursor: pointer;
 }
 .gif {
   background-image: url("giphy.2eb4234f.gif");
@@ -162,11 +197,11 @@ body {
   background-color: #f5f5f5;
   justify-content: center;
 }
-.bi.bi-arrow-left {
+.bigWrapper .bi.bi-arrow-left {
   font-size: 30pt;
   margin-top: 60px;
 }
-.bi.bi-arrow-left:hover {
+.bigWrapper .bi.bi-arrow-left:hover {
   cursor: pointer;
 }
 .checkout-container {
@@ -818,6 +853,7 @@ main {
   display: flex;
   width: 100%;
   flex-direction: column-reverse;
+  padding: 0px 0px 30px;
 }
 @media screen and (min-width: 768px) {
   .about-container {
@@ -1266,7 +1302,7 @@ main {
   text-align: center;
   color: #fff;
   width: 100%;
-  padding-top: 145px;
+  padding-top: 185px;
 }
 @media screen and (min-width: 768px) {
   .hero-text {
@@ -1291,6 +1327,7 @@ main {
   font-weight: 700;
   letter-spacing: 1px;
   box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
+  box-shadow: 0 0 10px #e9edee;
   transition: 0.4s;
 }
 .hero-text .hero-btn:hover {
@@ -1336,6 +1373,7 @@ main {
 }
 .wrapper {
   background-color: snow;
+  padding: 120px 20px 50px;
 }
 @media screen and (min-width: 768px) {
   .wrapper {
@@ -1405,6 +1443,34 @@ main {
 }
 .wrapper .checkout-button .button-buy:hover {
   background-color: #53e1e9;
+}
+.wrapper .back-arrow-container {
+  background-color: #edf2f4;
+  position: relative;
+}
+.wrapper .back-arrow-container .bi-arrow-left {
+  z-index: 2;
+  cursor: pointer;
+  font-size: 2rem;
+  position: fixed;
+  z-index: 2;
+  color: #000;
+  padding: 10px;
+  margin: 110px 0px;
+}
+@media screen and (min-width: 768px) {
+  .wrapper .back-arrow-container .bi-arrow-left {
+    font-size: 2.5rem;
+    margin: 30px 0px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .wrapper .back-arrow-container .bi-arrow-left {
+    position: absolute;
+    margin: 40px 75px;
+    padding: 0;
+    font-size: 3rem;
+  }
 }
 #shoppingcart-container {
   display: flex;
@@ -1578,33 +1644,6 @@ main {
     max-width: 160px;
   }
 }
-.back-arrow-container {
-  background-color: #edf2f4;
-  position: relative;
-}
-.back-arrow-container .bi-arrow-left {
-  z-index: 2;
-  cursor: pointer;
-  font-size: 2rem;
-  position: fixed;
-  z-index: 2;
-  color: #000;
-  padding: 10px;
-}
-@media screen and (min-width: 768px) {
-  .back-arrow-container .bi-arrow-left {
-    font-size: 2.5rem;
-    margin: 30px 0px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .back-arrow-container .bi-arrow-left {
-    position: absolute;
-    margin: 40px 75px;
-    padding: 0;
-    font-size: 3rem;
-  }
-}
 .shoppingcart-footer {
   display: flex;
   flex-direction: column;
@@ -1634,7 +1673,12 @@ main {
 }
 @media screen and (min-width: 768px) {
   .wrapper-productpage {
-    padding: 50px 20px;
+    padding: 60px 20px 50px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .wrapper-productpage {
+    padding: 0px 20px 50px;
   }
 }
 #product-display-container {
@@ -1664,6 +1708,7 @@ main {
 #product-display-container .product-info-section {
   padding: 10px 20px;
   position: relative;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   #product-display-container .product-info-section {
@@ -1750,7 +1795,7 @@ main {
     width: 100%;
     flex-direction: column;
     justify-content: flex-end;
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
   }
@@ -1760,22 +1805,59 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+  }
+}
+#product-display-container .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (min-width: 1100px) {
+  #product-display-container .button-container {
+    gap: 20px;
+  }
+}
+#product-display-container .button-shop {
+  background-color: #fff;
+  color: #000 !important;
+  padding: 15px 0px;
+  transition: 0.2s;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#product-display-container .button-shop:hover {
+  background-color: #53e1e9;
+}
+@media screen and (min-width: 1100px) {
+  #product-display-container .button-shop {
+    margin: 0 auto;
+    width: 180px;
   }
 }
 #product-display-container .button-buy {
+  background-color: #3fc1c9;
+  color: #000 !important;
+  padding: 15px 0px;
+  transition: 0.2s;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+#product-display-container .button-buy:hover {
+  background-color: #53e1e9;
+}
+@media screen and (min-width: 1100px) {
   #product-display-container .button-buy {
     width: 70%;
   }
 }
 @media screen and (min-width: 1100px) {
   #product-display-container .button-buy {
-    width: 70%;
+    width: 180px;
   }
 }
 #product-display-container button {
@@ -1802,6 +1884,18 @@ main {
     width: 100%;
   }
 }
+#product-display-container .bi-x {
+  color: white;
+  text-align: right;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+#product-display-container .bi-x:hover,
+#product-display-container .bi-x:focus {
+  text-decoration: none;
+  cursor: pointer;
+  color: #53e1e9;
+}
 .product-img-section img {
   width: 100%;
   max-height: 600px;
@@ -1810,6 +1904,11 @@ main {
 .back-arrow-container {
   background-color: #edf2f4;
   position: relative;
+}
+@media screen and (min-width: 1100px) {
+  .back-arrow-container {
+    margin: 100px 0px;
+  }
 }
 .back-arrow-container .bi-arrow-left {
   cursor: pointer;
@@ -1821,7 +1920,7 @@ main {
 @media screen and (min-width: 768px) {
   .back-arrow-container .bi-arrow-left {
     font-size: 2.5rem;
-    margin: 30px 0px;
+    margin: 35px 0px;
   }
 }
 @media screen and (min-width: 1100px) {
