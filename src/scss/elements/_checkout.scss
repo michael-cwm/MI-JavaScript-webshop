@@ -3,9 +3,11 @@
 @use "../fonts";
 @use "modal";
 
-body{
+.bigWrapper{
+    display: flex;
     background-color: #f5f5f5;
     justify-content: center;
+
 }
 
 
