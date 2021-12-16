@@ -2136,6 +2136,50 @@ main {
   max-height: 600px;
   object-fit: cover;
 }
+.wrapper-confirmation-page {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0px;
+}
+@media screen and (min-width: 768px) {
+  .wrapper-confirmation-page {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .wrapper-confirmation-page {
+    width: 60%;
+  }
+}
+.wrapper-confirmation-page .confirmation {
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 10px 20px 20px;
+}
+@media screen and (min-width: 768px) {
+  .wrapper-confirmation-page .confirmation {
+    padding: 20px 100px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .wrapper-confirmation-page .confirmation {
+    padding: 20px 100px;
+  }
+}
+.wrapper-confirmation-page .confirmation p {
+  font-size: 1.2rem;
+}
+.wrapper-confirmation-page .confirmation a {
+  color: #000;
+  font-weight: 500;
+}
+.wrapper-confirmation-page .confirmation a:hover {
+  text-decoration: underline;
+}
+.wrapper-confirmation-page .confirmation .confirmation-image img {
+  width: 100%;
+  height: auto;
+}
 * {
   box-sizing: border-box;
 }

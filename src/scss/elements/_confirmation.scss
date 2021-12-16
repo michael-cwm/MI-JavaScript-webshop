@@ -1,3 +1,49 @@
 @use "../fonts";
 @use "../variables";
 @use "../mixins";
+
+.wrapper-confirmation-page {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0px;
+
+    @include mixins.tablet-only {
+        width: 80%;
+    }
+
+    @include mixins.desktop-only {
+        width: 60%;
+    }
+
+    .confirmation {
+        text-align: center;
+        background-color: whitesmoke;
+        padding: 10px 20px 20px;
+
+        @include mixins.tablet-only {
+            padding: 20px 100px;
+        }
+
+        @include mixins.desktop-only {
+            padding: 20px 100px;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        a {
+            color: #000;
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .confirmation-image img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
