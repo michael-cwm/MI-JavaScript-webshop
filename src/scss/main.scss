@@ -22,4 +22,13 @@ html {
 body {
     padding: 0;
     margin: 0;
+    background-color: #fff;
+
+    @include mixins.tablet-only {
+        background-color: #fff;
+    }
+    @include mixins.desktop-only {
+        background-color: #fff;
+    }
+ 
 }

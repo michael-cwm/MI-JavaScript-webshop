@@ -55,7 +55,7 @@ function loadProduct(
     arrowContainer.appendChild(arrow);
     arrow.setAttribute("class", "bi bi-arrow-left");
 
-    wrapper.before(arrowContainer);
+    wrapper.appendChild(arrowContainer);
     let modal: HTMLDivElement = document.createElement("div");
 
     window.onclick = function (event) {
