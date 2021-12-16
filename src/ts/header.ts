@@ -23,7 +23,8 @@ window.onload = function(){
     function burgerToggle(){
       let element:HTMLDivElement = document.getElementById("burgerDropdown") as HTMLDivElement;
       element.classList.toggle("burgerStyle");
-    }
+    
+  }
 }
 
 
