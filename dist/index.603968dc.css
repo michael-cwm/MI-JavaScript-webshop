@@ -1842,10 +1842,10 @@ main {
 @media screen and (min-width: 1100px) {
   .shoppingcart-footer {
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     justify-content: center;
     margin: 0 auto;
-    padding: 20px 0px 60px 0px;
+    padding: 10px 0px 40px 0px;
   }
 }
 .bi-dash-lg,
