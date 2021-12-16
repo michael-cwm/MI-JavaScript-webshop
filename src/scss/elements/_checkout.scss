@@ -19,7 +19,7 @@
 
     .total-container {
         background-color: #fff;
-        width: 100%;
+        width: 90%;
         padding: 0px 30px;
 
         @include mixins.tablet-only {
@@ -87,11 +87,15 @@
             }
         }
 
-        .checkout-img-container img {
+        .checkout-img-container {
+            min-width: 100px;
+
+            img {
             width: 100%;
-            max-height: 100px;
+            max-height: 120px;
             object-fit: cover;
         }
+    }
     }
 }
 
