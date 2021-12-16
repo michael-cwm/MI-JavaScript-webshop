@@ -191,8 +191,18 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 400px;
+  height: 200px;
   margin: 0px 40px;
+}
+@media screen and (min-width: 768px) {
+  .gif {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .gif {
+    height: 400px;
+  }
 }
 .bigWrapper {
   display: flex;
@@ -307,6 +317,8 @@ body {
 .checkout-container #myBtn {
   text-transform: uppercase;
   padding: 13px 17px;
+  color: #fff;
+  font-weight: 500;
 }
 .checkout-container .payment-container {
   display: flex;
@@ -1378,7 +1390,7 @@ main {
   font-size: 1.3rem;
   border-radius: 6px;
   font-family: "Montserrat", sans-serif;
-  color: #b3b3b3;
+  color: #c9c9c9;
   background-color: #000;
   border: none;
   padding: 12px 20px;
@@ -2017,6 +2029,11 @@ main {
     width: 100%;
   }
 }
+@media screen and (min-width: 1100px) {
+  #product-display-container button {
+    font-size: 1rem;
+  }
+}
 #product-display-container .bi-x {
   color: white;
   text-align: right;
@@ -2098,7 +2115,7 @@ main {
 }
 .hero-text .back-to-startpage-button {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
   background-color: #000;
   border-radius: 8px;

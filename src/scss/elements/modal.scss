@@ -203,7 +203,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 400px;
+    height: 200px;
     margin: 0px 40px;
+
+    @include mixins.tablet-only {
+      height: 400px;
+    }
+    @include mixins.desktop-only {
+      height: 400px;
+    }
 }
 

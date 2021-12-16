@@ -6,50 +6,46 @@ import {
     addToShoppingCart
 } from "./landingpage";
 
-
 import {
     shoppingCartItems
 } from "./landingpage";
-
-
 
 
 import {
     Product
 } from "./models/productcatalog";
 
-import { bundledHeaderFunctions } from "./header";
+import { loadNavigation } from "./header";
 import { displayItemAmount } from "./shoppingcart";
 
 window.onload = function () {
 
-    bundledHeaderFunctions();  
+    loadNavigation();  
+
     displayItemAmount()
-    // Get the ID from the URL
-    let url = window.location.search;
-    let urlParams = new URLSearchParams(url);
+    
+    // To display the right product, get the ID from the URL
+    let url: string = window.location.search;
+    let urlParams: URLSearchParams = new URLSearchParams(url);
 
     for (let value of urlParams.values()) {
-        let id = value;
+        let idfromURL: string = value;
 
-        // Look through the product catalog for the ID
-        for (let i = 0; i < productcatalog.length; i++) {
-            let productIds = productcatalog[i].id.toString();
+        // Look through the product catalog for the ID and compare it to ID in URL
+        for (let i: number = 0; i < productcatalog.length; i++) {
+            let idFromObject: string = productcatalog[i].id.toString();
 
-            if (productIds === id) {
+            if (idFromObject === idfromURL) {
                 loadProduct(productcatalog[i])
             }
         }
     }
-
 }
 
-
-function loadProduct(
-    Product) {
-
+// Create HTML for product
+function loadProduct(Product: Product) {
     let wrapper: HTMLDivElement = document.querySelector(".wrapper-productpage");
-    let arrowContainer = document.createElement("div");
+    let arrowContainer: HTMLDivElement = document.createElement("div");
     arrowContainer.classList.add("back-arrow-container");
     let arrow = document.createElement("i");
     arrowContainer.appendChild(arrow);
@@ -63,6 +59,7 @@ function loadProduct(
             modal.style.display = "none";
         }
     }
+
     modal.classList.add("modalContainer");
     modal.id = "modal-container"
 
@@ -73,11 +70,9 @@ function loadProduct(
     wrapper.after(modal)
     modal.appendChild(modalContent);
 
-
     let close: HTMLSpanElement = document.createElement("span");
     close.classList.add("bi", "bi-x");
     modalContent.appendChild(close);
-
 
     let modalHeader: HTMLParagraphElement = document.createElement("p");
     modalHeader.innerHTML = "Upplevelsen lades till i kundkorgen!";
@@ -100,18 +95,16 @@ function loadProduct(
         modal.style.display = "none";
     })
 
-
     buttonContainer.appendChild(keepShoppingButton);
     buttonContainer.appendChild(checkoutButton);
     modalHeader.after(buttonContainer);
-
 
     arrow.addEventListener("click", () => {
         window.history.back();
 
     });
 
-    let productContainer = document.createElement("div");
+    let productContainer: HTMLDivElement = document.createElement("div");
     productContainer.id = "product-display-container";
 
     wrapper.appendChild(productContainer);
@@ -119,7 +112,7 @@ function loadProduct(
     let productImgSection: HTMLDivElement = document.createElement("div");
     productImgSection.classList.add("product-img-section");
 
-    let productImage = document.createElement("img");
+    let productImage: HTMLImageElement = document.createElement("img");
     productImage.setAttribute("src", Product.img);
     productImgSection.appendChild(productImage);
 
@@ -170,17 +163,13 @@ function loadProduct(
     let button: HTMLButtonElement = document.createElement("button");
     button.innerHTML = "Köp nu";
     button.classList.add("button-buy");
-    button.setAttribute("data-id", Product.id);
+    button.setAttribute("data-id", Product.id.toString());
 
     button.addEventListener("click", (e) => {
         addToShoppingCart(Product);
         modal.style.display = "block";
-        console.log(shoppingCartItems);
         displayItemAmount()
 
     })
-
-
     footerContainer.appendChild(button);
-
 }

@@ -1,8 +1,8 @@
 window.onload = function(){
-  bundledHeaderFunctions()
+  loadNavigation()
 }
 
-    export function bundledHeaderFunctions(){
+    export function loadNavigation(){
 
     const menuBtn = document.querySelector('.menu-btn');
     let menuOpen = false;

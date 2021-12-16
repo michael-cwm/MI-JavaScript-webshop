@@ -8,12 +8,14 @@ import {
 } from "./landingpage";
 
 import {
-    bundledHeaderFunctions
+    loadNavigation
 } from "./header";
 
 window.onload = function () {
-    bundledHeaderFunctions();
+    loadNavigation();
+
     getShoppingCart()
+    
     displayItemAmount()
 }
 
@@ -21,7 +23,7 @@ let sum: number = 0;
 
 // HTML for wrapper, arrow-icon at the top and shopping cart footer
 let wrapper: HTMLDivElement = document.querySelector(".wrapper");
-let arrowContainer = document.createElement("div");
+let arrowContainer: HTMLDivElement = document.createElement("div");
 arrowContainer.classList.add("back-arrow-container");
 let arrow = document.createElement("i");
 arrowContainer.appendChild(arrow);
@@ -49,7 +51,6 @@ checkoutButton.classList.add("button-buy");
 checkoutButton.setAttribute("href", "checkout.html");
 checkoutButtonContainer.appendChild(checkoutButton);
 shoppingCartFooter.appendChild(checkoutButtonContainer)
-
 
 checkoutButton.addEventListener("click", () => {
     location.href = "checkout.html";
@@ -131,7 +132,6 @@ function loadShoppingCart(element: Product) {
     cartIcons.appendChild(closeIcon);
 
     closeIcon.addEventListener("click", (e) => { // Add event listeners to remove icons
-        console.log("element: " + JSON.stringify(element));
         updatePrice(sum);
         deleteItem(element); // If remove icon is clicked, call this function
     })
@@ -140,11 +140,9 @@ function loadShoppingCart(element: Product) {
 
 // Delete item from cart
 function deleteItem(itemToDelete: Product) {
-    console.log("Item to delete: " + JSON.stringify(itemToDelete));
     let objectIndex: number = shoppingCartItems.indexOf(itemToDelete); // Find index on object to remove
-    console.log(objectIndex);
     shoppingCartItems.splice(objectIndex, 1); // Use splice to remove object
-    localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
+    localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems)); // Update local storage
     displayItemAmount();
     
     getShoppingCart();
@@ -154,9 +152,7 @@ function deleteItem(itemToDelete: Product) {
 function totalPrice(element: number) {
     let price: number = element;
     sum += price;
-    console.log(sum);
     updatePrice(sum);
-    
 }
 
 // Update sum

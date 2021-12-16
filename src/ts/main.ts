@@ -1,4 +1,4 @@
-import { bundledHeaderFunctions } from "./header";
+import { loadNavigation } from "./header";
 
 import { loadLandingPage } from "./landingpage";
 
@@ -10,6 +10,8 @@ export let shoppingCartArray = [];
 
 window.onload = function () {
     loadLandingPage();
-    bundledHeaderFunctions();   
+
+    loadNavigation();   
+
     displayItemAmount()
 }

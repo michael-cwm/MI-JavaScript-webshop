@@ -6,13 +6,18 @@ import {
   shoppingCartItems
 } from "./landingpage";
 
-import { bundledHeaderFunctions } from "./header";
+import {
+  loadNavigation
+} from "./header";
 
 
 window.onload = function () {
-  bundledHeaderFunctions();
+  loadNavigation();
+
   displayItemAmount();
+
   loadCartinCheckout();
+
   formFunction();
 }
 
@@ -29,6 +34,7 @@ container.prepend(totalContainer);
 totalContainer.appendChild(total);
 
 function loadCartinCheckout() {
+  // Loop through all items in the shopping cart and create HTML
   for (let i = 0; i < shoppingCartItems.length; i++) {
     let cartItem: HTMLDivElement = document.createElement("div");
     cartItem.classList.add("checkout-cart-item");
@@ -60,21 +66,25 @@ function loadCartinCheckout() {
 
 getProductPrice();
 
+// Loop through shopping cart items and grab the price
 function getProductPrice() {
   shoppingCartItems.forEach(element => {
     getTotal(element.price);
   })
 }
 
+// Sum up the shopping cart total 
 function getTotal(productprice: number) {
   let price: number = productprice;
   sum += price;
   displayTotalAmount(sum);
 }
 
+// Display total amount on page
 function displayTotalAmount(sum: number) {
   total.innerHTML = "Totalt: " + sum.toLocaleString() + " kr";
 }
+
 
 function formFunction() {
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -98,11 +108,13 @@ function formFunction() {
   });
 
 
-
+// Arrow
   document.getElementById("arrowBack").addEventListener("click", () => {
     window.history.back();
   })
 
+  // Modal
+  
   // Get the modal
   var modal = document.getElementById("myModal");
 
@@ -130,8 +142,6 @@ function formFunction() {
       location.href = "confirmation.html";
     }
   }
-
-
 }
 
 export default (function () {

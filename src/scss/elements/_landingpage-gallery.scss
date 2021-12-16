@@ -35,14 +35,12 @@ main {
     @include mixins.tablet-only {
         flex-direction: column-reverse;
         padding: 0px 0px 30px;
-
     }
 
     @include mixins.desktop-only {
         flex-direction: row;
         gap: 30px;
         padding: 50px;
-
     }
 
     img {
@@ -59,8 +57,6 @@ main {
         @include mixins.desktop-only {
             max-width: 1600px;
         }
-
-
     }
 
     .about-text {
@@ -71,7 +67,6 @@ main {
         @include mixins.tablet-only {
             padding: 20px 20px 50px;
         }
-
 
         @include mixins.desktop-only {
             padding: 0px;
@@ -86,14 +81,12 @@ main {
             margin: 0px;
         }
 
-
         p {
             font-size: 1.3rem;
             margin: 30px 0px 40px;
             line-height: 2rem;
 
         }
-
     }
 
     .new-adventures-btn {
@@ -111,7 +104,6 @@ main {
         transition: 0.4s;
         margin: 0 auto;
         text-align: center;
-
 
         &:hover {
             background-color: #000000;
@@ -155,8 +147,6 @@ main {
 
 
         }
-
-
     }
 
     .video-overlay {
@@ -322,8 +312,6 @@ main {
         }
     }
 
-
-
     .product-name {
         font-weight: 500;
         font-size: 1.5rem;
@@ -331,7 +319,6 @@ main {
 
         @include mixins.desktop-only {
             font-size: 1.6rem;
-
         }
     }
 
@@ -396,7 +383,6 @@ main {
     }
 
     .price {
-
         font-weight: 700;
     }
 
@@ -428,7 +414,6 @@ main {
         }
     }
 
-
     .button-info {
         background-color: #111111;
         color: white !important;
@@ -451,7 +436,6 @@ main {
         }
     }
 
-
     .product-footer {
         display: flex;
         flex-direction: column;
@@ -462,7 +446,6 @@ main {
             left: 0;
             width: 100%;
             padding: 0px 10px;
-
         }
 
         @include mixins.desktop-only {
@@ -483,6 +466,5 @@ main {
             justify-content: space-between;
             align-items: flex-end;
         }
-
     }
 }
