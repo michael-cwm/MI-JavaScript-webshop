@@ -2136,49 +2136,82 @@ main {
   max-height: 600px;
   object-fit: cover;
 }
-.wrapper-confirmation-page {
-  width: 90%;
-  margin: 0 auto;
-  padding: 50px 0px;
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("mountains.b080397a.jpg");
+  /* Set a specific height */
+  height: 60vh;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
-  .wrapper-confirmation-page {
-    width: 80%;
+  .hero-image {
+    height: 70vh;
   }
 }
 @media screen and (min-width: 1100px) {
-  .wrapper-confirmation-page {
-    width: 60%;
+  .hero-image {
+    height: 95vh;
   }
 }
-.wrapper-confirmation-page .confirmation {
+/* Place text in the middle of the image */
+.hero-text {
   text-align: center;
-  background-color: whitesmoke;
-  padding: 10px 20px 20px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 @media screen and (min-width: 768px) {
-  .wrapper-confirmation-page .confirmation {
-    padding: 20px 100px;
+  .hero-text {
+    top: 15%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-text {
+    top: 10%;
+  }
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+}
+.hero-text .confirmation-button {
+  padding: 50px 0px 0px;
+}
+@media screen and (min-width: 768px) {
+  .hero-text .confirmation-button {
+    padding: 20px 0px 0px;
   }
 }
 @media screen and (min-width: 1100px) {
-  .wrapper-confirmation-page .confirmation {
-    padding: 20px 100px;
+  .hero-text .confirmation-button {
+    padding: 20px 0px 0px;
   }
 }
-.wrapper-confirmation-page .confirmation p {
-  font-size: 1.2rem;
+.hero-text .back-to-startpage-button {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  background-color: #000;
+  border-radius: 8px;
+  padding: 13px 20px;
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
+  transition: 0.4s;
 }
-.wrapper-confirmation-page .confirmation a {
+.hero-text .back-to-startpage-button:hover {
+  background-color: #2f9fa6;
   color: #000;
-  font-weight: 500;
-}
-.wrapper-confirmation-page .confirmation a:hover {
-  text-decoration: underline;
-}
-.wrapper-confirmation-page .confirmation .confirmation-image img {
-  width: 100%;
-  height: auto;
 }
 * {
   box-sizing: border-box;
