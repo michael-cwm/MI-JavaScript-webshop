@@ -741,7 +741,7 @@ ul {
   }
   header .inputContainer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding-left: 50px;
     height: 100%;
@@ -790,12 +790,11 @@ ul {
 }
 @media screen and (min-width: 1100px) {
   .inputContainer {
-    z-index: 3;
+    width: 55%;
   }
 
   input {
     padding: 12px 70px 12px 10px;
-    width: 500px;
   }
 
   header {
@@ -808,6 +807,8 @@ ul {
   }
   header .headerWrapper {
     justify-content: space-evenly;
+    width: 25%;
+    margin-left: 30px;
   }
 
   nav {
@@ -1438,10 +1439,10 @@ main {
   }
 }
 .hero-text .hero-btn {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-radius: 6px;
   font-family: "Montserrat", sans-serif;
-  color: #fff;
+  color: #b3b3b3;
   background-color: #000;
   border: none;
   padding: 12px 20px;
