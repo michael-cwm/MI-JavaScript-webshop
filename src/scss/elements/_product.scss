@@ -258,7 +258,10 @@
             font-size: 0.8rem;
             padding: 15px 20px;
             width: 100%;
+        }
 
+        @include mixins.desktop-only {
+            font-size: 1rem;
         }
 
 

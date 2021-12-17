@@ -29,7 +29,7 @@ export const productcatalog: Product[] = [
         price: 20999,
         users: "1-2",
         img: "https://images.unsplash.com/photo-1638862925201-4e373cb6a630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-        details: "En naturnära övernattning i Nevada-öknen.",
+        details: "En naturnära övernattning i Nevadaöknen. The truth is out there.",
         id: 101
     },
 
@@ -38,7 +38,7 @@ export const productcatalog: Product[] = [
         price: 10999,
         users: "1-4",
         img: "https://images.unsplash.com/photo-1560761069-ce1ebcc652a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-        details: "Ölkyl i duschen. Tappkran på rummet. Utsikt över bergen. Skål.",
+        details: "Meditationsretreat och bryggerihotell i ett!",
         id: 102
     },
 
@@ -47,7 +47,7 @@ export const productcatalog: Product[] = [
         price: 3999000,
         users: "1",
         img: "https://images.unsplash.com/photo-1541873676-a18131494184?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=718&q=80",
-        details: "När världen blivit för tråkig.",
+        details: "När du behöver lite space.",
         id: 103
     },
 
@@ -56,7 +56,7 @@ export const productcatalog: Product[] = [
         price: 99000,
         users: "1",
         img: "https://images.unsplash.com/photo-1636542980176-cd7822b5a5cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
-        details: "Den perfekta upplevelsen för alla äventyrslystna!",
+        details: "Den perfekta upplevelsen för alla äventyrslystna.",
         id: 104
     },
     

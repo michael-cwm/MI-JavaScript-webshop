@@ -35,14 +35,12 @@ main {
     @include mixins.tablet-only {
         flex-direction: column-reverse;
         padding: 0px 0px 30px;
-
     }
 
     @include mixins.desktop-only {
         flex-direction: row;
         gap: 30px;
         padding: 50px;
-
     }
 
     img {
@@ -59,8 +57,6 @@ main {
         @include mixins.desktop-only {
             max-width: 1600px;
         }
-
-
     }
 
     .about-text {
@@ -71,7 +67,6 @@ main {
         @include mixins.tablet-only {
             padding: 20px 20px 50px;
         }
-
 
         @include mixins.desktop-only {
             padding: 0px;
@@ -86,14 +81,12 @@ main {
             margin: 0px;
         }
 
-
         p {
             font-size: 1.3rem;
             margin: 30px 0px 40px;
             line-height: 2rem;
 
         }
-
     }
 
     .new-adventures-btn {
@@ -111,7 +104,11 @@ main {
         transition: 0.4s;
         margin: 0 auto;
         text-align: center;
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 702b914ff3b2c2266bd0502f9c1c1790b685b30f
         &:hover {
             background-color: #000000;
             color: #fff;
@@ -158,8 +155,6 @@ a:hover{
 
 
         }
-
-
     }
 
     .video-overlay {
@@ -325,8 +320,6 @@ a:hover{
         }
     }
 
-
-
     .product-name {
         font-weight: 500;
         font-size: 1.5rem;
@@ -334,7 +327,6 @@ a:hover{
 
         @include mixins.desktop-only {
             font-size: 1.6rem;
-
         }
     }
 
@@ -399,7 +391,6 @@ a:hover{
     }
 
     .price {
-
         font-weight: 700;
     }
 
@@ -431,7 +422,6 @@ a:hover{
         }
     }
 
-
     .button-info {
         background-color: #111111;
         color: white !important;
@@ -454,7 +444,6 @@ a:hover{
         }
     }
 
-
     .product-footer {
         display: flex;
         flex-direction: column;
@@ -465,7 +454,6 @@ a:hover{
             left: 0;
             width: 100%;
             padding: 0px 10px;
-
         }
 
         @include mixins.desktop-only {
@@ -486,6 +474,5 @@ a:hover{
             justify-content: space-between;
             align-items: flex-end;
         }
-
     }
 }

@@ -42,11 +42,9 @@ export function loadLandingPage() {
     container.after(modal)
     modal.appendChild(modalContent);
 
-
     let close: HTMLSpanElement = document.createElement("span");
     close.classList.add("bi", "bi-x");
     modalContent.appendChild(close);
-
 
     let modalHeader: HTMLParagraphElement = document.createElement("p");
     modalHeader.innerHTML = "Upplevelsen lades till i kundkorgen!";
@@ -72,7 +70,6 @@ export function loadLandingPage() {
     buttonContainer.appendChild(keepShoppingButton);
     buttonContainer.appendChild(checkoutButton);
     modalHeader.after(buttonContainer);
-
 
     // Loop through the product catalog
     for (let i = 0; i < productcatalog.length; i++) {
@@ -115,7 +112,6 @@ export function loadLandingPage() {
         productCard.appendChild(productName);
         productName.after(productRating);
         productRating.after(productUsers);
-
 
         // Product footer
         let productFooter: HTMLDivElement = document.createElement("div");
@@ -164,7 +160,4 @@ export function loadLandingPage() {
 export function addToShoppingCart(item: Product) {
     shoppingCartItems.push(item);
     localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems));
-
-    // Skapa ett CartItem-objekt
-
 }

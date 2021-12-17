@@ -1,5 +1,5 @@
-import { bundledHeaderFunctions } from "./header";
+import { loadNavigation } from "./header";
 
 window.onload = function() {
-    bundledHeaderFunctions()
+    loadNavigation()
 }
