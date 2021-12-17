@@ -622,6 +622,7 @@ header {
 header .headerWrapper {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   margin-right: 0px;
 }
@@ -643,7 +644,6 @@ header .item-amount {
   font-size: 0.9rem;
   background-color: #3fc1c9;
   border-radius: 50%;
-  margin-right: 10px;
   height: 25px;
   width: 25px;
   line-height: 25px;
@@ -845,8 +845,10 @@ ul {
   }
   header .headerWrapper {
     justify-content: space-evenly;
-    width: 25%;
-    margin-left: 30px;
+    width: 28%;
+  }
+  header .headerWrapper * {
+    margin: 0 auto;
   }
 
   .dropdownWrapper {
@@ -1001,6 +1003,9 @@ main {
     padding: 12px 17px;
     margin: 40px 0px 0px;
   }
+}
+a:hover {
+  text-decoration: none;
 }
 .video-container {
   display: none;
