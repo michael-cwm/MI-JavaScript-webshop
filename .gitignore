@@ -1,3 +1,7 @@
 node_modules
 .parcel-cache
+<<<<<<< HEAD
 dist
+=======
+.parcel-cache/f29bd700a54591da.txt
+>>>>>>> 23c065e90b310c8030c080e14c3fd52b787a14e0
