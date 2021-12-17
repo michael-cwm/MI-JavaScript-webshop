@@ -2,10 +2,11 @@ window.onload = function(){
   loadNavigation()
 }
 
+// Load navigation and hamburger menu
     export function loadNavigation(){
 
-    const menuBtn = document.querySelector('.menu-btn');
-    let menuOpen = false;
+    const menuBtn: HTMLDivElement = document.querySelector('.menu-btn');
+    let menuOpen: boolean = false;
     menuBtn.addEventListener('click', () => {
       if(!menuOpen) {
         menuBtn.classList.add('open');
@@ -16,12 +17,12 @@ window.onload = function(){
       }
     });
 
-    let xyz = document.getElementById('hamburgare');
+    let hamburger = document.getElementById('hamburgare');
     
-    xyz.addEventListener("click", burgerToggle);
+    hamburger.addEventListener("click", burgerToggle);
     
     function burgerToggle(){
-      let element:HTMLDivElement = document.getElementById("burgerDropdown") as HTMLDivElement;
+      let element: HTMLDivElement = document.getElementById("burgerDropdown") as HTMLDivElement;
       element.classList.toggle("burgerStyle");
     
   }

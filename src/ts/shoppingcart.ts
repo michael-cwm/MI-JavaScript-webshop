@@ -112,26 +112,12 @@ function loadShoppingCart(element: Product) {
     // Cart Icons
     let cartIcons: HTMLDivElement = document.createElement("div");
     cartIcons.classList.add("cart-icons");
-    item.after(cartIcons);
+    item.after(cartIcons)
+    let removeIcon: HTMLSpanElement = document.createElement("span");
+    removeIcon.classList.add("bi", "bi-x");
+    cartIcons.appendChild(removeIcon);
 
-    let minusicon = document.createElement("i");
-    minusicon.setAttribute("class", "bi bi-dash-lg");
-    cartIcons.appendChild(minusicon);
-
-    let productAmount: HTMLSpanElement = document.createElement("span");
-    cartIcons.appendChild(productAmount);
-    productAmount.classList.add("product-amount");
-    productAmount.innerHTML = "1";
-
-    let plusicon = document.createElement("i");
-    plusicon.setAttribute("class", "bi bi-plus-lg");
-    cartIcons.appendChild(plusicon);
-
-    let closeIcon: HTMLSpanElement = document.createElement("span");
-    closeIcon.classList.add("bi", "bi-x");
-    cartIcons.appendChild(closeIcon);
-
-    closeIcon.addEventListener("click", (e) => { // Add event listeners to remove icons
+    removeIcon.addEventListener("click", (e) => { // Add event listeners to remove icons
         updatePrice(sum);
         deleteItem(element); // If remove icon is clicked, call this function
     })
@@ -144,7 +130,6 @@ function deleteItem(itemToDelete: Product) {
     shoppingCartItems.splice(objectIndex, 1); // Use splice to remove object
     localStorage.setItem("Shopping cart", JSON.stringify(shoppingCartItems)); // Update local storage
     displayItemAmount();
-    
     getShoppingCart();
 }
 
