@@ -1,7 +1,14 @@
 node_modules
+dist
 .parcel-cache
+<<<<<<< HEAD
 <<<<<<< HEAD
 dist
 =======
 .parcel-cache/f29bd700a54591da.txt
 >>>>>>> 23c065e90b310c8030c080e14c3fd52b787a14e0
+=======
+.parcel-cache/data.mdb
+data.mbd
+lock.mbd
+>>>>>>> develop
