@@ -1,4 +1,4 @@
-# Webshop - Experience gifts
+# Webshop
 School project built with TypeScript featuring basic functionality such as adding/removing items in shopping cart.
 
 ## Screenshot
