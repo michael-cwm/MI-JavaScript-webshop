@@ -127,6 +127,7 @@ function formFunction() {
   // When the user clicks on the button, open the modal
   btn.addEventListener("click", () => {
     modal.style.display = "block";
+    localStorage.removeItem('Shopping cart'); // Clear shopping cart after purchase
   });
 
   // When the user clicks on <span> (x), close the modal
