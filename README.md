@@ -20,11 +20,9 @@ Visit localhost:1234 to view the project
 
 ## Built with
 
-- HTML
-- SASS
-- Parcel
-- NPM
+- HTML & SASS
 - TypeScript
 - Bootstrap
+- Parcel
+- NPM
 - Mobile-first workflow
-
